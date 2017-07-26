@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox id="main" width="800" height="600">
+    <style source="../css/main.css" />
+    
+    <!--
+    <tabview width="100%" height="100%">
+        <import source="all.xml" />
+    </tabview>
+    -->
+    
+    <style>
+        #itemList {
+            padding: 0;
+        }
+        
+        #itemList .scrollview-contents {
+            padding: 0;
+            __padding-right: -1px;
+            spacing: 0;
+        }
+        
+        .header {
+            background: #EEEEEE #BBBBBB;
+            padding: 5px;
+            border:1px solid #888888;
+            color:#444444;
+            width: 100%;
+        }
+        
+        .header-container {
+            width: 100%;
+        }
+        
+        .group-items {
+            width:100%;
+            border-width:0;
+        }
+    </style>
+    
+    <hbox width="100%" height="100%">
+        <scrollview id="itemList" width="200" height="100%" contentWidth="100%" scrollMode="inertial">
+        </scrollview>
+        
+        <box id="tabContainer" width="100%" height="100%">
+            <tabview id="tabs" width="100%" height="100%">
+            </tabview>
+        </box>    
+    </hbox>    
+    
+</vbox>

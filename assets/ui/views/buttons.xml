@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hbox width="100%" style="padding: 5px;">
+    <style source="buttons.css" />
+    <script source="buttons.hscript" />
+
+    <vbox>
+        <grid columns="2" style="spacing: 10px;">
+            <vbox>
+                <button id="defaultButton" text="Default" icon="haxeui-core/styles/default/haxeui_small.png" width="140" height="85" onclick="onDefaultClicked()" />
+                <label text="Click count: 0" id="defaultClickCount" style="horizontal-align:center;" />
+            </vbox>
+            <vbox>
+                <button id="styledButton" text="Styled" icon="haxeui-core/styles/default/haxeui_small.png" width="140" height="85" onclick="onStyledClicked()" />
+                <label text="Click count: 0" id="styledClickCount" style="horizontal-align:center;" />
+            </vbox>
+            <vbox>
+                <button id="bitmapButton" text="Bitmap" icon="haxeui-core/styles/default/haxeui_small.png" width="140" height="85" onclick="onBitmapClicked()" />
+                <label text="Click count: 0" id="bitmapClickCount" style="horizontal-align:center;" />
+            </vbox>
+            <vbox>
+                <button id="nativeButton" text="Native" icon="haxeui-core/styles/default/haxeui_small.png" native="true" width="140" height="85" onclick="onNativeClicked()" />
+                <label text="Click count: 0" id="nativeClickCount" style="horizontal-align:center;" />
+            </vbox>
+        </grid>
+
+        <button id="fullWidthButton" width="100%" text="100%" icon="haxeui-core/styles/default/haxeui_small.png" />
+        <button id="autoSizedButton" text="Autosized" icon="haxeui-core/styles/default/haxeui_small.png" />
+    </vbox>    
+    
+    <spacer width="100%" />
+    
+    <grid columns="2">
+        <label text="Width:" style="vertical-align:center;" />
+        <hslider id="widthValue" onchange="setWidth()" min="110" pos="140" max="140" />
+        
+        <label text="Height:" style="vertical-align:center;" />
+        <hslider id="heightValue" onchange="setHeight()" min="60" pos="85" max="175"  />
+        
+        <label text="Icon Position:" />
+        <vbox>
+            <optionbox id="iconPositionValue" group="iconPosition" text="Left" userData="left" selected="true" onchange="setIconPosition()" />
+            <optionbox group="iconPosition" text="Right" userData="right" onchange="setIconPosition()" />
+            <optionbox group="iconPosition" text="Top" userData="top" onchange="setIconPosition()" />
+            <optionbox group="iconPosition" text="Bottom" userData="bottom" onchange="setIconPosition()" />
+        </vbox>
+        
+        <label text="Icon:" style="vertical-align:center;" />
+        <dropdown id="iconValue" text="HaxeUI" width="130" onchange="setIcon()">
+            <data>
+                <item value="HaxeUI" path="haxeui-core/styles/default/haxeui_small.png" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item value="Cross" path="haxeui-core/styles/default/dialogs/cross-circle.png" icon="haxeui-core/styles/default/dialogs/cross-circle-small.png" />
+                <item value="Exclamation" path="haxeui-core/styles/default/dialogs/exclamation.png" icon="haxeui-core/styles/default/dialogs/exclamation-small.png" />
+                <item value="Information" path="haxeui-core/styles/default/dialogs/information.png" icon="haxeui-core/styles/default/dialogs/information-small.png" />
+                <item value="Question" path="haxeui-core/styles/default/dialogs/question.png" icon="haxeui-core/styles/default/dialogs/question-small.png" />
+            </data>
+        </dropdown>
+        
+        <!--
+        <label text="Font Size:" style="vertical-align:center;hidden:true;" />
+        <hslider id="fontSizeValue" onchange="setFontSize()" min="8" pos="13" max="20" style="hidden:true;" />
+        -->    
+        
+        <label text="Toggle:" style="vertical-align:center;" />
+        <checkbox id="toggleValue" onchange="setToggle()" style="vertical-align:center;" />
+        
+        <label text="Disabled:" style="vertical-align:center;" />
+        <checkbox id="disabledValue" onchange="setDisabled()" style="vertical-align:center;" />
+        
+        <label text="Text Align:" />
+        <vbox>
+            <optionbox id="textAlignValue" group="textAlign" text="Left" userData="left" onchange="setTextAlign()" />
+            <optionbox group="textAlign" text="Center" userData="center" selected="true" onchange="setTextAlign()" />
+            <optionbox group="textAlign" text="Right" userData="right" onchange="setTextAlign()" />
+        </vbox>
+        
+        <label text="Repeater:" style="vertical-align:center;" />
+        <checkbox id="repeaterValue" onchange="setRepeater()" style="vertical-align:center;" />
+
+        <label text="Remain Pressed:" style="vertical-align:center;" />
+        <checkbox id="remainPressedValue" onchange="setRemainPressed()" style="vertical-align:center;" />
+    </grid>
+</hbox>

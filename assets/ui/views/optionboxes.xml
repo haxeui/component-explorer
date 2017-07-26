@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox style="padding: 5px;">
+    <style source="optionboxes.css" />
+    
+    <grid columns="2" style="spacing: 50px;">
+        <vbox>
+            <optionbox id="defaultA" group="group1" text="Default A" selected="true" />
+            <optionbox id="defaultB" group="group1" text="Default B" />
+            <optionbox id="defaultC" group="group1" text="Default C" />
+        </vbox>
+        
+        <vbox>
+            <optionbox id="styledA" group="group2" styleName="styled-optionbox" text="Styled A" selected="true" />
+            <optionbox id="styledB" group="group2" styleName="styled-optionbox" text="Styled B" />
+            <optionbox id="styledC" group="group2" styleName="styled-optionbox" text="Styled C" />
+        </vbox>
+
+        <vbox>
+            <optionbox id="bitmapA" group="group3" styleName="bitmap-optionbox" text="Bitmap A" selected="true" />
+            <optionbox id="bitmapB" group="group3" styleName="bitmap-optionbox" text="Bitmap B" />
+            <optionbox id="bitmapC" group="group3" styleName="bitmap-optionbox" text="Bitmap C" />
+        </vbox>
+        
+        <vbox>
+            <optionbox id="nativeA" group="group4" text="Native A" native="true" selected="true" />
+            <optionbox id="nativeB" group="group4" text="Native B" native="true" />
+            <optionbox id="nativeC" group="group4" text="Native C" native="true" />
+        </vbox>
+    </grid>    
+</vbox>

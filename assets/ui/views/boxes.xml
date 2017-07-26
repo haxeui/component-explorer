@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hbox width="100%" style="padding: 5px;">
+    <script source="layouts-shared.hscript">
+        // hide unused controls
+        spacingLabel.hidden = true;
+        spacingValue.hidden = true;
+    </script>
+    
+    <box id="container" width="300" height="300" clip="true" style="border: 1px solid #DDDDDD;padding:5px;">
+        <button id="button1" width="50" height="50" text="1" onclick="setSelectedChild(0)" />
+        <button id="button2" width="50" height="50" text="2" horizontalAlign="center" onclick="setSelectedChild(1)" />
+        <button id="button3" width="50" height="50" text="3" horizontalAlign="right" onclick="setSelectedChild(2)" />
+        
+        <button id="button4" width="50" height="50" text="4" verticalAlign="center" onclick="setSelectedChild(3)" />
+        <button id="button5" width="50" height="50" text="5" verticalAlign="center" horizontalAlign="center" onclick="setSelectedChild(4)" />
+        <button id="button6" width="50" height="50" text="6" verticalAlign="center" horizontalAlign="right" onclick="setSelectedChild(5)" />
+        
+        <button id="button7" width="50" height="50" text="7" verticalAlign="bottom" onclick="setSelectedChild(6)" />
+        <button id="button8" width="50" height="50" text="8" verticalAlign="bottom" horizontalAlign="center" onclick="setSelectedChild(7)" />
+        <button id="button9" width="50" height="50" text="9" verticalAlign="bottom" horizontalAlign="right" onclick="setSelectedChild(8)" />
+    </box>
+    
+    <spacer width="100%" />
+    
+    <import source="layout-controls.xml" />
+</hbox>

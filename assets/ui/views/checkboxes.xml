@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox style="padding: 5px;">
+    <style source="checkboxes.css" />
+    
+    <grid columns="2" style="spacing: 50px;">
+        <vbox>
+            <checkbox id="defaultA" text="Default A" selected="true" />
+            <checkbox id="defaultB" text="Default B" />
+            <checkbox id="defaultC" text="Default C" />
+        </vbox>
+        
+        <vbox>
+            <checkbox id="styledA" styleName="styled-checkbox" text="Styled A" selected="true" />
+            <checkbox id="styledB" styleName="styled-checkbox" text="Styled B" />
+            <checkbox id="styledC" styleName="styled-checkbox" text="Styled C" />
+        </vbox>
+
+        <vbox>
+            <checkbox id="bitmapA" styleName="bitmap-checkbox" text="Bitmap A" selected="true" />
+            <checkbox id="bitmapB" styleName="bitmap-checkbox" text="Bitmap B" />
+            <checkbox id="bitmapC" styleName="bitmap-checkbox" text="Bitmap C" />
+        </vbox>
+        
+        <vbox>
+            <checkbox id="nativeA" text="Native A" native="true" selected="true" />
+            <checkbox id="nativeB" text="Native B" native="true" />
+            <checkbox id="nativeC" text="Native C" native="true" />
+        </vbox>
+    </grid>    
+</vbox>
