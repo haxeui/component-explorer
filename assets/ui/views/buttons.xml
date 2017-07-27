@@ -30,11 +30,11 @@
     <spacer width="100%" />
     
     <grid columns="2">
-        <label text="Width:" style="vertical-align:center;" />
-        <hslider id="widthValue" onchange="setWidth()" min="110" pos="140" max="140" />
+        <label text="Width2:" style="vertical-align:center;" />
+        <hslider id="widthValue" onchange="setWidth()" min="110" pos="140" max="140" width="100%" />
         
         <label text="Height:" style="vertical-align:center;" />
-        <hslider id="heightValue" onchange="setHeight()" min="60" pos="85" max="175"  />
+        <hslider id="heightValue" onchange="setHeight()" min="60" pos="85" max="175" width="100%"  />
         
         <label text="Icon Position:" />
         <vbox>
