@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<module>
+<module preload="all">
     <resources>
-        <resource path="../assets/bitmap" prefix="demo" />
-        <resource path="../assets/icons" prefix="icons" />
-        <resource path="../assets/styled" prefix="styled" />
-        <resource path="../assets/ui/views" prefix="views" />
-        <resource path="../assets/css" prefix="css" />
+        <resource path="assets/icons" prefix="icons" />
+        <resource path="assets/views" prefix="views" />
     </resources>
-    <themes>
-        <global>
-            <style resource="css/hxwidgets.css" if="haxeui_hxwidgets != null" />
-        </global>
-    </themes>
 </module>

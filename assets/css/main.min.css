@@ -1,9 +1,0 @@
-#main{__padding:10px;}
-.bordered{border:1px solid #CCCCCC;padding:5px;}
-#itemList .inc{hidden:true;}
-#itemList .deinc{hidden:true;}
-#itemList .vscroll{width:10px;padding:2px;}
-#itemList .vscroll .thumb{width:6px;border-radius:5px;}
-#itemList .hscroll{height:10px;padding:2px;}
-#itemList .hscroll .thumb{height:6px;border-radius:5px;}
-

@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="build\html5\component-explorer.js" />
+    <movie path="build\html5\Main.js" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />

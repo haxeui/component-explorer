@@ -1,0 +1,46 @@
+<hbox width="100%" height="100%" style="spacing: 0;">
+    <style>
+        #viewList {
+            border: none;
+            padding: 0;
+        }
+        
+        #viewList .scroll {
+            width: 8px;
+            padding: 1px;
+        }
+        
+        #viewList .scroll .inc,  #viewList .scroll .deinc {
+            hidden: true;
+        }
+        
+        #viewList .scroll .thumb {
+            width: 6px;
+            border-radius: 3px;
+        }
+        
+        #viewTabs .tabview-content {
+            border: none;
+        }
+        
+        .view-container {
+            padding: 5px;
+        }
+    </style>
+    
+    <listview id="viewList" width="200" height="100%" selectedIndex="0">
+        <item-renderer layoutName="horizontal" width="100%">
+            <label id="title" verticalAlign="center" />
+            <spacer width="100%" />
+            <image id="largeIcon" />
+        </item-renderer>
+    </listview>    
+    
+    <component width="1" height="100%" style="background-color: #ababab" />
+    
+    <box width="100%" height="100%" style="padding-top: 10px;">
+        <tabview id="viewTabs" width="100%" height="100%">
+            
+        </tabview>
+    </box>
+</hbox>
