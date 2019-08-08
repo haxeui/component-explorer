@@ -2,6 +2,11 @@
 <module preload="all">
     <resources>
         <resource path="assets/icons" prefix="icons" />
+        <resource path="assets/images" prefix="images" />
         <resource path="assets/views" prefix="views" />
     </resources>
+    
+    <scriptlets>
+        <import class="util.Logger" static="true" />
+    </scriptlets>
 </module>

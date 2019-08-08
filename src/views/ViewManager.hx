@@ -3,6 +3,7 @@ import haxe.Resource;
 import haxe.ui.components.TextArea;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.TabView;
+import util.Logger;
 
 typedef ViewInfo = {
     var title:String;
@@ -36,21 +37,6 @@ class ViewManager {
     
     public function showView(info:ViewInfo) {
         viewTabs.removeAllPages();
-        /*
-        viewContent.removeAllComponents();
-
-        var tabs = new TabView();
-        tabs.percentWidth = 100;
-        tabs.percentHeight = 100;
-        var viewContainer = new Box();
-        viewContainer.addClass("view-container");
-        viewContainer.text = info.title;
-        tabs.addComponent(viewContainer);
-        viewContent.addComponent(tabs);
-        
-        var view:View = Type.createInstance(info.viewClass, []);
-        viewContainer.addComponent(view);
-        */
         
         var viewContainer = new Box();
         viewContainer.addClass("view-container");
@@ -66,6 +52,8 @@ class ViewManager {
         for (f in info.relevantFiles) {
             createRelevantFileView(f);
         }
+        
+        Logger.clear();
     }
     
     private function createRelevantFileView(file:String) {

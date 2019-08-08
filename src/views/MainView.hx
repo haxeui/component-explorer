@@ -3,6 +3,7 @@ package views;
 import haxe.ui.containers.Box;
 import haxe.ui.data.ListDataSource;
 import haxe.ui.events.UIEvent;
+import util.Logger;
 import views.ViewManager.ViewInfo;
 
 @:build(haxe.ui.macros.ComponentMacros.build("assets/main.xml"))
@@ -10,6 +11,7 @@ class MainView extends Box {
     public function new() {
         super();
         
+        Logger.logData = logData;
         ViewManager.instance.viewTabs = viewTabs;
         
         percentWidth = 100;

@@ -1,4 +1,89 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox>
-    <button text="Bob" />
-</vbox>
+<vbox style="spacing: 20px;">
+    <!-- normal -->
+    <vbox>
+        <hbox>
+            <button text="Normal" onclick="Logger.log('Button clicked')" />
+            <button text="Toggle" toggle="true" selected="true" onclick="Logger.log('Toogle selected: ' + this.selected)" />
+            <button text="Repeater" repeater="true" onclick="Logger.log('Repeater clicked')" />
+        </hbox>    
+        <grid columns="2">
+            <button text="Left" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Right" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="right" />
+            <button text="Top" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="top" width="100%" />
+            <button text="Bottom" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" width="100%" />
+        </grid>
+    </vbox>
+    
+    <!-- css styled -->
+    <vbox>
+        <style>
+            .styled-button {
+                background: #79bbff #378de5;
+                border: 3px solid #337bc4;
+                border-radius:20px;
+                padding:10px 25px;
+                font-size: 16px;
+                color: white;
+                filter: drop-shadow(1, 45, #000000, 0.2, 0, 0, 0, 3, false);
+            }
+            
+            .styled-button:hover {
+                background: #add6ff #66a8eb;
+            }
+            
+            .styled-button:down {
+                background: #47a3ff #1b75d0;
+                border-color: #28619a;
+            }
+        </style>
+        
+        <hbox>
+            <button text="Styled" onclick="Logger.log('Button clicked')" styleName="styled-button" />
+            <button text="Toggle" toggle="true" selected="true" onclick="Logger.log('Toogle selected: ' + this.selected)" styleName="styled-button" />
+            <button text="Repeater" repeater="true" onclick="Logger.log('Repeater clicked')" styleName="styled-button" />
+        </hbox>    
+        <grid columns="2">
+            <button text="Left" icon="haxeui-core/styles/default/haxeui_small.png" styleName="styled-button" />
+            <button text="Right" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="right" styleName="styled-button" />
+            <button text="Top" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="top" width="100%" styleName="styled-button" />
+            <button text="Bottom" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" width="100%" styleName="styled-button" />
+        </grid>
+    </vbox>
+    
+    <!-- css styled -->
+    <vbox style="background-color: #272727;padding: 10px;">
+        <style>
+            .bitmap-button {
+                background: none;
+                padding: 6px 8px;
+                border: none;
+                color: #CCCCCC;
+                background-image: "images/bitmap_button.png";
+                background-image-clip: 0px 0px 26px 65px;
+                background-image-slice: 3px 3px 24px 62px;
+            }
+            
+            .bitmap-button:hover {
+                color: white;
+            }
+            
+            .bitmap-button:down {
+                background-image-clip: 0px 68px 26px 133px;
+            }
+        </style>
+        
+        <hbox>
+            <button text="Bitmap" onclick="Logger.log('Button clicked')" styleName="bitmap-button" />
+            <button text="Toggle" toggle="true" selected="true" onclick="Logger.log('Toogle selected: ' + this.selected)" styleName="bitmap-button" />
+            <button text="Repeater" repeater="true" onclick="Logger.log('Repeater clicked')" styleName="bitmap-button" />
+        </hbox>    
+        <grid columns="2">
+            <button text="Left" icon="haxeui-core/styles/default/haxeui_small.png" styleName="bitmap-button" />
+            <button text="Right" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="right" styleName="bitmap-button" />
+            <button text="Top" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="top" width="100%" styleName="bitmap-button" />
+            <button text="Bottom" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" width="100%" styleName="bitmap-button" />
+        </grid>
+    </vbox>
+        
+</vbox>    
