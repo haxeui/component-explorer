@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%">
+    <!-- normal -->
+    <label text="Normal Dropdowns:" />
+    <box width="100%" height="1" style="background-color: #000000;" />
+    
+    <hbox>
+        <dropdown text="Select Item">
+            <data>
+                <item value="Item 1" />
+                <item value="Item 2" />
+                <item value="Item 3" />
+                <item value="Item 4" />
+                <item value="Item 5" />
+                <item value="Item 6" />
+                <item value="Item 7" />
+                <item value="Item 8" />
+                <item value="Item 9" />
+            </data>
+        </dropdown>
+        
+        <dropdown text="Select Date" type="date" />
+    </hbox>    
+</vbox>

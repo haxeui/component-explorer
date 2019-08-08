@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox style="spacing: 20px;">
+<vbox width="100%">
     <!-- normal -->
+    <label text="Normal Button:" />
+    <box width="100%" height="1" style="background-color: #000000;" />
     <vbox>
         <hbox>
             <button text="Normal" onclick="Logger.log('Button clicked')" />
@@ -15,7 +17,11 @@
         </grid>
     </vbox>
     
+    <spacer height="10" />
+    
     <!-- css styled -->
+    <label text="Styled Buttons:" />
+    <box width="100%" height="1" style="background-color: #000000;" />
     <vbox>
         <style>
             .styled-button {
@@ -51,7 +57,11 @@
         </grid>
     </vbox>
     
-    <!-- css styled -->
+    <spacer height="10" />
+        
+    <!-- bitmap styled -->
+    <label text="Bitmap Buttons:" />
+    <box width="100%" height="1" style="background-color: #000000;" />
     <vbox style="background-color: #272727;padding: 10px;">
         <style>
             .bitmap-button {

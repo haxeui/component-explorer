@@ -39,11 +39,15 @@ class ViewManager {
         viewTabs.removeAllPages();
         
         var viewContainer = new Box();
+        viewContainer.percentWidth = 100;
+        viewContainer.percentHeight = 100;
         viewContainer.addClass("view-container");
         viewContainer.text = info.title;
         viewContainer.icon = info.smallIcon;
         
         var view:View = Type.createInstance(info.viewClass, []);
+        view.percentWidth = 100;
+        view.percentHeight = 100;
         viewContainer.addComponent(view);
         
         viewTabs.addComponent(viewContainer);
