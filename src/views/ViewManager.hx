@@ -1,8 +1,9 @@
 package views;
+
 import haxe.Resource;
-import haxe.ui.components.TextArea;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.TabView;
+import haxe.ui.editors.code.CodeEditor;
 import util.Logger;
 
 typedef ViewInfo = {
@@ -69,11 +70,26 @@ class ViewManager {
         viewContainer.percentWidth = 100;
         viewContainer.percentHeight = 100;
         
+        /*
         var textarea = new TextArea();
         textarea.percentWidth = 100;
         textarea.percentHeight = 100;
+        textarea.wrap = false;
         textarea.text = Resource.getString(file);        
         viewContainer.addComponent(textarea);
+        */
+        var editor = new CodeEditor();
+        editor.percentWidth = 100;
+        editor.percentHeight = 100;
+        editor.readOnly = true;
+        if (ext == "hx") {
+            ext = "haxe";
+        } else if (ext == "xml") {
+            ext = "html";
+        }
+        editor.language = ext;
+        editor.text = Resource.getString(file);        
+        viewContainer.addComponent(editor);
         
         viewTabs.addComponent(viewContainer);
         

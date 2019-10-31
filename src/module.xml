@@ -6,6 +6,10 @@
         <resource path="assets/views" prefix="views" />
         <resource path="src/views" prefix="src/views" />
     </resources>
+
+    <components>
+        <component package="custom" />
+    </components>
     
     <scriptlets>
         <import class="util.Logger" static="true" />

@@ -30,6 +30,8 @@
   <haxelib>
     <library name="haxeui-core" />
     <library name="haxeui-html5" />
+    <library name="haxeui-code-editor" />
+    <library name="monaco-editor" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
@@ -42,7 +44,7 @@
   <!-- Executed before build -->
   <preBuildCommand />
   <!-- Executed after build -->
-  <postBuildCommand alwaysRun="False" />
+  <postBuildCommand alwaysRun="False">cmd /c copy C:\Work\HaxeUI\examples\component-explorer\build\html5\Main.js C:\Servers\wampstack-7.1.26-0_2\apps\haxeui\htdocs\explorer\Main.js /y</postBuildCommand>
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />

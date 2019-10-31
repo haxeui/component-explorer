@@ -1,7 +1,7 @@
-<hbox width="100%" height="100%" style="spacing: 0;">
+<hbox width="100%" height="100%" style="spacing: 10px;padding: 10px;">
     <style>
         #viewList {
-            border: none;
+            __border: none;
             padding: 0;
         }
         
@@ -20,7 +20,7 @@
         }
         
         #viewTabs .tabview-content {
-            border: none;
+            __border: none;
         }
         
         #logTabs .tabview-content {
@@ -35,17 +35,25 @@
         .view-container {
             padding: 5px;
         }
+        
+        .code-editor {
+            border: none;
+        }
     </style>
     
-    <listview id="viewList" width="200" height="100%" selectedIndex="0">
-        <item-renderer layoutName="horizontal" width="100%">
-            <label id="title" verticalAlign="center" />
-            <spacer width="100%" />
-            <image id="largeIcon" />
-        </item-renderer>
-    </listview>    
+    <box width="200" height="100%" style="padding-top:38px;">
+        <listview id="viewList" width="100%" height="100%" selectedIndex="0">
+            <item-renderer layoutName="horizontal" width="100%">
+                <label id="title" verticalAlign="center" />
+                <spacer width="100%" />
+                <image id="largeIcon" />
+            </item-renderer>
+        </listview>    
+    </box>    
     
+    <!--
     <component width="1" height="100%" style="background-color: #ababab" />
+    -->    
     
     <box width="100%" height="100%" style="padding-top: 10px;">
         <tabview id="viewTabs" width="100%" height="100%">
@@ -53,9 +61,9 @@
         </tabview>
     </box>
     
-    <component width="1" height="100%" style="background-color: #ababab" />
+    <component width="1" height="100%" style="background-color: #ababab" hidden="true" />
     
-    <box width="200" height="100%" style="padding-top: 10px;">
+    <box width="200" height="100%" style="padding-top: 10px;" hidden="true">
         <tabview id="logTabs" width="100%" height="100%">
             <box text="Log" icon="icons/16/document_editing.png" width="100%" height="100%">
                 <textarea text="" id="logData" width="100%" height="100%" style="padding-left: 5px;padding-top: 5px;" />
