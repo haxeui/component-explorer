@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <hbox>
+        <vbox>
+            <scroll pos="0" pageSize="50" />
+            <scroll pos="25" pageSize="50" />
+            <scroll pos="50" pageSize="50" />
+            <scroll pos="75" pageSize="50" />
+            <scroll pos="100" pageSize="50" />
+        </vbox>    
+        
+        <scroll pos="0" direction="vertical" pageSize="50" />
+        <scroll pos="25" direction="vertical" pageSize="50" />
+        <scroll pos="50" direction="vertical" pageSize="50" />
+        <scroll pos="75" direction="vertical" pageSize="50" />
+        <scroll pos="100" direction="vertical" pageSize="50" />
+    </hbox>    
+</vbox>

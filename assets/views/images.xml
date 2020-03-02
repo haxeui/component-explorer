@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <hbox style="spacing: 0;">
+        <vbox style="spacing: 0;">
+            <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid #ababab" />
+            <image resource="http://haxeui.org/img/logo_small.png" style="border:1px solid #ababab" width="100%" />
+        </vbox>    
+        <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="200" style="border:1px solid #ababab" />
+        <image resource="haxeui-core/styles/default/haxeui.png" width="100" height="200" style="border:1px solid #ababab" />
+        <image resource="haxeui-core/styles/default/haxeui.png" width="100" height="200" scaleMode="fitwidth" style="border:1px solid #ababab" />
+        <vbox style="spacing: 0">
+            <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="100" scaleMode="fitheight" style="border:1px solid #ababab" />
+            <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="100" style="border:1px solid #ababab" />
+        </vbox>    
+    </hbox>    
+</vbox>

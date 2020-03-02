@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%">
+    <grid width="100%">
+        <label text="First Name:" verticalAlign="center" />
+        <textfield width="100%" />
+        
+        <label text="Last Name:" verticalAlign="center" />
+        <textfield width="100%" />
+        
+        <label text="Sex:" verticalAlign="center" />
+        <dropdown width="100%" text="Unspecified">
+            <data>
+                <item value="Male" />
+                <item value="Female" />
+                <item value="Unspecified" />
+            </data>
+        </dropdown>
+        
+        <label text="DoB:" verticalAlign="center" />
+        <dropdown text="Unspecified" type="date" width="100%" />
+    </grid>
+</vbox>

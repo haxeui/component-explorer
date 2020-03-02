@@ -88,12 +88,12 @@ class ViewManager {
             ext = "html";
         }
         editor.language = ext;
-        editor.text = Resource.getString(file);        
+        var text = Resource.getString(file);
+        //text = StringTools.replace(text, "\\n", "\\n");
+        editor.text = text;
         viewContainer.addComponent(editor);
         
         viewTabs.addComponent(viewContainer);
-        
-        trace(ext);
     }
     
     private function iconForExtension(ext:String):String {

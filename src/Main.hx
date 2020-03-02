@@ -1,6 +1,7 @@
 package ;
 
 import haxe.ui.HaxeUIApp;
+import haxe.ui.containers.dialogs.MessageBox.MessageBoxType;
 import haxe.ui.editors.code.monaco.MonacoLoader;
 import views.MainView;
 

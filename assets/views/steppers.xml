@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <hbox>
+        <number-stepper />
+        <number-stepper pos="30" />
+        <number-stepper pos="30" step="10" />
+        <number-stepper pos="30" step="10" min="10" max="50" />
+        <number-stepper pos="30" step=".1" min="10" max="50" precision="2" />
+    </hbox>    
+</vbox>

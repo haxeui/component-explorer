@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
-    <progress pos="50" />
+    <hbox>
+        <vbox>
+            <progress pos="0" />
+            <progress pos="25" />
+            <progress pos="50" />
+            <progress pos="75" />
+            <progress pos="100" />
+            <progress indeterminate="true" />
+        </vbox>    
+        
+        <progress pos="0" direction="vertical" />
+        <progress pos="25" direction="vertical" />
+        <progress pos="50" direction="vertical" />
+        <progress pos="75" direction="vertical" />
+        <progress pos="100" direction="vertical" />
+        <progress indeterminate="true" direction="vertical" />
+    </hbox>    
 </vbox>

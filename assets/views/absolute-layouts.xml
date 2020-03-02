@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <grid>
+        <label text="Width:" verticalAlign="center" />
+        <slider pos="200" min="200" max="600" onchange="box1.width = this.value" />
+        
+        <label text="Height:" verticalAlign="center" />
+        <slider pos="200" min="200" max="600" onchange="box1.height = this.value" />
+    </grid>
+    <absolute id="box1" width="200" height="200" style="border: 1px solid #ababab">
+        <box left="25" top="25" width="50%" height="50%" style="background-color: red;border:1px solid red;background-opacity: .5" />
+        <box left="50" top="50" width="50%" height="50%" style="background-color: green;border:1px solid green;background-opacity: .5" />
+        <box left="75" top="75" width="50%" height="50%" style="background-color: blue;border:1px solid blue;background-opacity: .5" />
+    </absolute>
+</vbox>

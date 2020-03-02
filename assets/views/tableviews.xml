@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <hbox>
+        <tableview width="250" height="200" contentWidth="100%">
+            <header width="100%">
+                <column id="colA" text="Column A" width="75" />
+                <column id="colB" text="Column B" width="75" />
+                <column id="colC" text="Column C" width="100%" />
+            </header>
+            
+            <data>
+                <item colA="A1" colB="B1" colC="C1" />
+                <item colA="A2" colB="B2" colC="C2" />
+                <item colA="A3" colB="B3" colC="C3" />
+                <item colA="A4" colB="B4" colC="C4" />
+                <item colA="A5" colB="B5" colC="C5" />
+                <item colA="A6" colB="B6" colC="C6" />
+                <item colA="A7" colB="B7" colC="C7" />
+                <item colA="A8" colB="B8" colC="C8" />
+                <item colA="A9" colB="B9" colC="C9" />
+            </data>
+        </tableview>
+        
+        <tableview width="250" height="200">
+            <header>
+                <column id="colA" text="Column A" width="75" />
+                <column id="colB" text="Column B" width="200" />
+                <column id="colC" text="Column C" width="75" />
+            </header>
+            
+            <data>
+                <item colA="A1" colB="B1" colC="C1" />
+                <item colA="A2" colB="B2" colC="C2" />
+                <item colA="A3" colB="B3" colC="C3" />
+                <item colA="A4" colB="B4" colC="C4" />
+                <item colA="A5" colB="B5" colC="C5" />
+                <item colA="A6" colB="B6" colC="C6" />
+                <item colA="A7" colB="B7" colC="C7" />
+                <item colA="A8" colB="B8" colC="C8" />
+                <item colA="A9" colB="B9" colC="C9" />
+            </data>
+        </tableview>
+        
+        <tableview width="250" height="200" contentWidth="100%">
+            <header width="100%">
+                <column id="colX" text="X" width="26" />
+                <column id="colA" text="Column A" width="100%" />
+                <column id="colB" text="Column B" width="75" />
+            </header>
+            
+            <item-renderer verticalAlign="center">
+                <checkbox id="colX" />
+            </item-renderer>
+            <item-renderer verticalAlign="center">
+                <label id="colA" width="100%" />
+            </item-renderer>
+            <item-renderer>
+                <button id="colB" width="100%" />
+            </item-renderer>
+            
+            <data>
+                <item colX="true" colA="A1" colB="B1" />
+                <item colX="true" colA="A2" colB="B2" />
+                <item colX="false" colA="A3" colB="B3" />
+                <item colX="false" colA="A4" colB="B4" />
+                <item colX="true" colA="A5" colB="B5" />
+                <item colX="true" colA="A6" colB="B6" />
+                <item colX="false" colA="A7" colB="B7" />
+                <item colX="true" colA="A8" colB="B8" />
+                <item colX="true" colA="A9" colB="B9" />
+            </data>
+        </tableview>
+    </hbox>
+</vbox>

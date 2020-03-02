@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <grid>
+        <label text="Width:" verticalAlign="center" />
+        <slider pos="130" min="130" max="600" onchange="box1.width = this.value" />
+        
+        <label text="Height:" verticalAlign="center" />
+        <slider pos="130" min="130" max="600" onchange="box1.height = this.value" />
+    </grid>
+    <box width="130" id="box1" height="130" style="border: 1px solid #ababab;padding: 5px;">
+        <box width="25" height="25" style="background-color: red;border:1px solid red;background-opacity: .5" />
+        <box width="50%" height="25" style="background-color: red;border:1px solid red;background-opacity: .5" horizontalAlign="center" />
+        <box width="25" height="25" style="background-color: red;border:1px solid red;background-opacity: .5" horizontalAlign="right" />
+        
+        <box width="25" height="50%" style="background-color: green;border:1px solid green;background-opacity: .5" verticalAlign="center" />
+        <box width="50%" height="50%" style="background-color: green;border:1px solid green;background-opacity: .5" verticalAlign="center" horizontalAlign="center" />
+        <box width="25" height="50%" style="background-color: green;border:1px solid green;background-opacity: .5" verticalAlign="center" horizontalAlign="right" />
+        
+        <box width="25" height="25" style="background-color: blue;border:1px solid blue;background-opacity: .5" verticalAlign="bottom" />
+        <box width="50%" height="25" style="background-color: blue;border:1px solid blue;background-opacity: .5" verticalAlign="bottom" horizontalAlign="center" />
+        <box width="25" height="25" style="background-color: blue;border:1px solid blue;background-opacity: .5" verticalAlign="bottom" horizontalAlign="right" />
+    </box>
+</vbox>

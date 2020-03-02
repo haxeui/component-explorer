@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <hbox>
+        <vbox>
+            <slider pos="0" />
+            <slider pos="25" />
+            <slider pos="50" />
+            <slider pos="75" />
+            <slider pos="100" />
+            <slider start="25" end="75" />
+        </vbox>    
+        
+        <slider pos="0" direction="vertical" />
+        <slider pos="25" direction="vertical" />
+        <slider pos="50" direction="vertical" />
+        <slider pos="75" direction="vertical" />
+        <slider pos="100" direction="vertical" />
+        <slider start="25" end="75" direction="vertical" />
+    </hbox>    
+</vbox>

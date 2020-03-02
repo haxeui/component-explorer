@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <hbox>
+        <button text="Info" onclick="Screen.instance.messageBox('Info message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Info', 'info')" icon="haxeui-core/styles/default/dialogs/information.png" />
+        <button text="Question" onclick="Screen.instance.messageBox('Question message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Question', 'question')" icon="haxeui-core/styles/default/dialogs/question.png" />
+        <button text="Warning" onclick="Screen.instance.messageBox('Warning message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Warning', 'warning')" icon="haxeui-core/styles/default/dialogs/exclamation.png" />
+        <button text="Error" onclick="Screen.instance.messageBox('Error message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Error', 'error')" icon="haxeui-core/styles/default/dialogs/cross-circle.png" />
+    </hbox>  
+
+    <hbox>
+        <button id="customModalDialog" text="Custom Modal Dialog" />
+        <button id="customNonModalDialog" text="Custom Non-Modal Dialog" />
+    </hbox>    
+</vbox>

@@ -1,0 +1,26 @@
+<vbox width="100%">
+    <menubar width="100%">
+        <menu text="File">
+            <menuitem text="Item 1" />
+            <menu text="Sub Menu">
+                <menuitem text="Item 1" />
+                <menuitem text="Item 2" />
+                <menuitem text="Item 3" />
+                <menuseparator />
+                <menucheckbox text="Item 4" />
+                <menucheckbox text="Item 5" />
+                <menucheckbox text="Item 6" />
+                <menuseparator />
+                <menuoptionbox text="Item 7" />
+                <menuoptionbox text="Item 8" />
+                <menuoptionbox text="Item 9" />
+            </menu>
+        </menu>
+        <menu text="Edit">
+            <menuitem text="Item 1" />
+        </menu>
+        <menu text="Help">
+            <menuitem text="Item 1" />
+        </menu>
+    </menubar>
+</vbox>

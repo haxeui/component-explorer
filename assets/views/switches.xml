@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox>
+    <switch />
+    <switch styleName="square-switch" />
+    <switch styleName="pill-switch" />
+</vbox>

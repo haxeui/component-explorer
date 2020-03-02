@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox style="padding:10px;border:1px solid #ABABAB;spacing:10px;">
+    <hbox style="spacing:10px;">
+        <vbox>
+            <checkbox id="checkbox1" text="Checkbox 1" selected="true" />
+            <checkbox id="checkbox2" text="Checkbox 2" />
+            <checkbox id="checkbox3" text="Checkbox 3" selected="true" />
+        </vbox>    
+        <vbox>
+            <optionbox id="optionbox1" text="Option 1" />
+            <optionbox id="optionbox2" text="Option 2" selected="true" />
+            <optionbox id="optionbox3" text="Option 3" />
+        </vbox>    
+    </hbox>
+    <button id="applyButton" text="Apply selection" horizontalAlign="right" />
+</vbox>
