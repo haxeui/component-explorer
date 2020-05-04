@@ -4,5 +4,7 @@
 -lib haxeui-core
 -lib haxeui-html5
 -lib hscript
+-lib haxeui-code-editor
+-lib monaco-editor
 
 -js build/html5/Main.js
