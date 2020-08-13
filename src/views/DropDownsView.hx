@@ -60,7 +60,9 @@ class MyDropDownHandler extends DropDownHandler {
         return _view;
     }
     
+    /*
     public override function show() {
         Screen.instance.addComponent(_view);
     }
+    */
 }

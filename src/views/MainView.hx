@@ -1,21 +1,19 @@
 package views;
 
 import haxe.ui.containers.Box;
+import haxe.ui.containers.HBox;
 import haxe.ui.data.ListDataSource;
 import haxe.ui.events.UIEvent;
 import util.Logger;
 import views.ViewManager.ViewInfo;
 
 @:build(haxe.ui.macros.ComponentMacros.build("assets/main.xml"))
-class MainView extends Box {
+class MainView extends HBox {
     public function new() {
         super();
         
         Logger.logData = logData;
         ViewManager.instance.viewTabs = viewTabs;
-        
-        percentWidth = 100;
-        percentHeight = 100;
         
         ViewManager.instance.registerView({ title: "Buttons", smallIcon: "icons/16/buttons.png", largeIcon: "icons/32/buttons.png", viewClass: ButtonsView, relevantFiles: ["views/buttons.xml"] });
         ViewManager.instance.registerView({ title: "Check Boxes", smallIcon: "icons/16/check_boxes.png", largeIcon: "icons/32/check_boxes.png", viewClass: CheckBoxesView, relevantFiles: ["views/checkboxes.xml"] });
