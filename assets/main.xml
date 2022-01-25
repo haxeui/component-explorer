@@ -20,6 +20,7 @@
             padding: 10px;
             cursor: pointer;
             pointer-events: true;
+            margin-left: 1px;
         }
         
         .side-item #image {
@@ -122,6 +123,7 @@
 
 .label, .button, .textfield, .textarea {
     font-name: "fonts/Roboto-Regular.ttf";
+    font-size: 13px;
 }
     </style>
     
