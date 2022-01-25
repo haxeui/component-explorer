@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="300">
     <grid width="100%">
         <label text="First Name:" verticalAlign="center" />
         <textfield width="100%" />
@@ -10,9 +10,9 @@
         <label text="Sex:" verticalAlign="center" />
         <dropdown width="100%" text="Unspecified">
             <data>
-                <item value="Male" />
-                <item value="Female" />
-                <item value="Unspecified" />
+                <item text="Male" />
+                <item text="Female" />
+                <item text="Unspecified" />
             </data>
         </dropdown>
         

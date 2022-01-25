@@ -2,6 +2,7 @@ package views;
 
 import haxe.Resource;
 import haxe.ui.containers.Box;
+import haxe.ui.containers.ScrollView;
 import haxe.ui.containers.TabView;
 import haxe.ui.editors.code.CodeEditor;
 import util.Logger;
@@ -46,10 +47,17 @@ class ViewManager {
         viewContainer.text = info.title;
         viewContainer.icon = info.smallIcon;
         
+        var scrollview = new ScrollView();
+        scrollview.addClass("view-container-scrollview");
+        scrollview.percentWidth = 100;
+        scrollview.percentHeight = 100;
+        scrollview.percentContentWidth = 100;
+        viewContainer.addComponent(scrollview);
+        
         var view:View = Type.createInstance(info.viewClass, []);
         view.percentWidth = 100;
-        view.percentHeight = 100;
-        viewContainer.addComponent(view);
+        //view.percentHeight = 100;
+        scrollview.addComponent(view);
         
         viewTabs.addComponent(viewContainer);
         viewTabs.pageIndex = 0;

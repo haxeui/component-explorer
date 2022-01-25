@@ -16,6 +16,7 @@ container-src/temp/
 local.properties
 .classpath
 .settings/
+.dump/
 .loadpath
 
 # External tool builders

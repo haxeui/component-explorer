@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
+    <!-- normal -->
+    <label text="Default Sliders:" />
+    <box width="100%" height="1" style="background-color: #000000;" />
+    
     <hbox>
         <vbox>
             <slider pos="0" />
@@ -7,6 +11,7 @@
             <slider pos="50" />
             <slider pos="75" />
             <slider pos="100" />
+            <slider pos="50" center="50" />
             <slider start="25" end="75" />
         </vbox>    
         
@@ -15,6 +20,33 @@
         <slider pos="50" direction="vertical" />
         <slider pos="75" direction="vertical" />
         <slider pos="100" direction="vertical" />
+        <slider pos="50" center="50" direction="vertical" />
         <slider start="25" end="75" direction="vertical" />
+    </hbox>    
+    
+    <spacer height="10" />
+    
+    <!-- normal -->
+    <label text="Ticked Sliders:" />
+    <box width="100%" height="1" style="background-color: #000000;" />
+    
+    <hbox>
+        <vbox>
+            <slider pos="0" minorTicks="5" majorTicks="10" />
+            <slider pos="25" minorTicks="5" majorTicks="10" />
+            <slider pos="50" minorTicks="5" majorTicks="10" />
+            <slider pos="75" minorTicks="5" majorTicks="10" />
+            <slider pos="100" minorTicks="5" majorTicks="10" />
+            <slider pos="50" center="50" minorTicks="5" majorTicks="10" />
+            <slider start="25" end="75" minorTicks="5" majorTicks="10" />
+        </vbox>    
+        
+        <slider pos="0" direction="vertical" minorTicks="5" majorTicks="10" />
+        <slider pos="25" direction="vertical" minorTicks="5" majorTicks="10" />
+        <slider pos="50" direction="vertical" minorTicks="5" majorTicks="10" />
+        <slider pos="75" direction="vertical" minorTicks="5" majorTicks="10" />
+        <slider pos="100" direction="vertical" minorTicks="5" majorTicks="10" />
+        <slider pos="50" center="50" direction="vertical" minorTicks="5" majorTicks="10" />
+        <slider start="25" end="75" direction="vertical" minorTicks="5" majorTicks="10" />
     </hbox>    
 </vbox>

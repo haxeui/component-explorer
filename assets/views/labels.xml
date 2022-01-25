@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
-    <label text="Plain label" />
+<vbox width="100%" style="clip:true;">
+    <box width="100%">
+        <label text="Plain label" />
+        <label horizontalAlign="right" htmlText="HTML label, <font color='red'>red</font>, <font color='green'>green</font>, <font color='blue'>blue</font>" />
+    </box>
+    
+    <box width="100%">
+        <label text="Custom font" style="font-name:'fonts/custom1.ttf';font-size:20px;color:red;" />
+        <label horizontalAlign="right" htmlText="HTML label and custom font, <font color='red'>red</font>, <font color='green'>green</font>, <font color='blue'>blue</font>" style="font-name:'fonts/custom1.ttf';font-size:20px" />
+    </box>        
+    
     <label text="Center aligned label" textAlign="center" width="100%"/>
     <label text="Right aligned label" textAlign="right" width="100%"/>
-    <!-- TODO: Sample for htmlText /> -->
-    <label text="11px style" style="font-size: 11px;"/>
-    <label text="32px style" style="font-size: 32px;"/>
-    <label text="32px red style" style="font-size: 32px;color:red;"/>
+    
+    <box width="100%">
+        <label text="32px italic style" style="font-size: 32px;font-italic: true;"/>
+        <label horizontalAlign="right" text="32px style" style="font-size: 32px;background-color: blue;color:white;"/>
+    </box>
+    
+    <box width="100%">
+        <label text="32px underlined style" style="font-size: 32px;font-underline: true;"/>
+        <label horizontalAlign="right" text="32px red style" style="font-size: 32px;color:red;background-color:yellow;"/>
+    </box>
+    
+    <box width="100%">
+        <label text="32px bold style" style="font-size: 32px;font-bold: true;"/>
+        <label horizontalAlign="right" text="32px bordered style" style="font-size: 32px;color:green;background-color:yellow;border:1px solid green"/>
+    </box>
+    
     <hbox width="100%" style="spacing: 30px;">
         <label width="25%" textAlign="left" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." />
         <label width="25%" textAlign="justify" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." />

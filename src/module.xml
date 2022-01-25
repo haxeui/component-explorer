@@ -4,6 +4,7 @@
         <resource path="assets/icons" prefix="icons" />
         <resource path="assets/images" prefix="images" />
         <resource path="assets/views" prefix="views" />
+        <resource path="assets/fonts" prefix="fonts" />
         <resource path="src/views" prefix="src/views" />
     </resources>
 

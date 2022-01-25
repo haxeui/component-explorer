@@ -1,0 +1,4 @@
+<item-renderer styleNames="side-item" width="100%" layoutName="horizontal">
+    <image id="image" verticalAlign="center" />
+    <label id="label" text="Item" verticalAlign="center" style="" />
+</item-renderer>

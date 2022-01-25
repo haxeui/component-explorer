@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%">
     <!-- normal -->
-    <label text="Normal Listviews:" />
+    <label text="Default Listviews:" />
     <box width="100%" height="1" style="background-color: #000000;" />
     
     <script>
     // we wont use this for 100,000 items as hscript is slow (even in looping)
-    function addItems(lv, count) {
+    function addItems(lv:haxe.ui.containers.ListView, count) {
         lv.dataSource.allowCallbacks = false; // speeds things up a little
         for (i in 0...count) {
             lv.dataSource.add({ // we going to add data in that is right for both listviews, just to avoid duplication
-                value: "Item " + (lv.dataSource.size + 1),
+                text: "Item " + (lv.dataSource.size + 1),
                 item: "Item " + (lv.dataSource.size + 1),
                 complete: true,
                 image: "haxeui-core/styles/default/haxeui_tiny.png"
@@ -22,7 +22,7 @@
     
     <hbox>
         <label text="Scroll mode:" />
-        <group layout="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData; virtualList1.scrollMode = event.target.userData;">
+        <group layoutName="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData; virtualList1.scrollMode = event.target.userData;">
             <optionbox text="Drag" userData="drag" selected="true" />
             <optionbox text="Inertial" userData="inertial" />
         </group>
@@ -31,15 +31,15 @@
         <vbox>
             <listview id="lv1" width="200" height="150" selectedIndex="0">
                 <data>
-                    <item value="Item 1" />
-                    <item value="Item 2" />
-                    <item value="Item 3" />
-                    <item value="Item 4" />
-                    <item value="Item 5" />
-                    <item value="Item 6" />
-                    <item value="Item 7" />
-                    <item value="Item 8" />
-                    <item value="Item 9" />
+                    <item text="Item 1" />
+                    <item text="Item 2" />
+                    <item text="Item 3" />
+                    <item text="Item 4" />
+                    <item text="Item 5" />
+                    <item text="Item 6" />
+                    <item text="Item 7" />
+                    <item text="Item 8" />
+                    <item text="Item 9" />
                 </data>
             </listview>
             <vbox>
