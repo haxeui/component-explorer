@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
-    <!-- normal -->
-    <label text="Default Images:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="Default Images" />
     
     <hbox style="spacing: 0;">
         <vbox style="spacing: 0;">
             <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid #ababab" />
             <image resource="http://haxeui.org/img/logo_small.png" style="border:1px solid #ababab" width="100%" />
+            <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid #ababab" disabled="true" />
         </vbox>    
         <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="200" style="border:1px solid #ababab" />
         <image resource="haxeui-core/styles/default/haxeui.png" width="100" height="200" style="border:1px solid #ababab" />

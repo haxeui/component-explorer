@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
-    <!-- normal -->
-    <label text="Default Sliders:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="Default Sliders" />
     
     <hbox>
         <vbox>
             <slider pos="0" />
             <slider pos="25" />
-            <slider pos="50" />
+            <slider pos="50" step="10" />
             <slider pos="75" />
             <slider pos="100" />
             <slider pos="50" center="50" />
             <slider start="25" end="75" />
+            
+            <slider start="25" end="75" disabled="true" />
+            <slider pos="50" disabled="true" />
         </vbox>    
         
         <slider pos="0" direction="vertical" />
         <slider pos="25" direction="vertical" />
-        <slider pos="50" direction="vertical" />
+        <slider pos="50" direction="vertical" step="10" />
         <slider pos="75" direction="vertical" />
         <slider pos="100" direction="vertical" />
         <slider pos="50" center="50" direction="vertical" />
         <slider start="25" end="75" direction="vertical" />
+        
+        <slider start="25" end="75" direction="vertical" disabled="true" />
+        <slider pos="50" direction="vertical" disabled="true" />
     </hbox>    
     
-    <spacer height="10" />
-    
-    <!-- normal -->
-    <label text="Ticked Sliders:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="Ticked Sliders" />
     
     <hbox>
         <vbox>

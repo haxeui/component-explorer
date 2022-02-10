@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
+    <section-header text="Default Scrollbars" />
     <hbox>
         <vbox>
             <scroll pos="0" pageSize="50" />
@@ -7,6 +8,7 @@
             <scroll pos="50" pageSize="50" />
             <scroll pos="75" pageSize="50" />
             <scroll pos="100" pageSize="50" />
+            <scroll pos="100" pageSize="50" disabled="true" />
         </vbox>    
         
         <scroll pos="0" direction="vertical" pageSize="50" />
@@ -14,5 +16,37 @@
         <scroll pos="50" direction="vertical" pageSize="50" />
         <scroll pos="75" direction="vertical" pageSize="50" />
         <scroll pos="100" direction="vertical" pageSize="50" />
+        <scroll pos="100" direction="vertical" pageSize="50" disabled="true" />
+    </hbox>    
+    
+    <section-header text="Classic Scrollbars" />
+    <hbox>
+        <vbox>
+            <scroll pos="0" pageSize="50" styleName="classic-scrolls" />
+            <scroll pos="25" pageSize="50" styleName="classic-scrolls" />
+            <scroll pos="50" pageSize="50" styleName="classic-scrolls" />
+            <scroll pos="75" pageSize="50" styleName="classic-scrolls" />
+            <scroll pos="100" pageSize="50" styleName="classic-scrolls" />
+        </vbox>    
+        
+        <scroll pos="0" direction="vertical" pageSize="50" styleName="classic-scrolls" />
+        <scroll pos="25" direction="vertical" pageSize="50" styleName="classic-scrolls" />
+        <scroll pos="50" direction="vertical" pageSize="50" styleName="classic-scrolls" />
+        <scroll pos="75" direction="vertical" pageSize="50" styleName="classic-scrolls" />
+        <scroll pos="100" direction="vertical" pageSize="50" styleName="classic-scrolls" />
+        
+        <listview width="200" height="150" selectedIndex="0" styleName="classic-scrolls">
+            <data>
+                <item text="Haxe" icon="icons/logo-haxe.png" />
+                <item text="Java" icon="icons/logo-java.png" />
+                <item text="Javascript" icon="icons/logo-javascript.png" />
+                <item text="C++" icon="icons/logo-cpp.png" />
+                <item text="PHP" icon="icons/logo-php.png" />
+                <item text="C#" icon="icons/logo-cs.png" />
+                <item text="F#" icon="icons/logo-fs.png" />
+                <item text="OCaml" icon="icons/logo-ocaml.png" />
+                <item text="Assembler" icon="icons/logo-asm.png" />
+            </data>
+        </listview>
     </hbox>    
 </vbox>

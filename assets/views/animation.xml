@@ -1,0 +1,28 @@
+<vbox>
+    <section-header text="Built In Animations" />
+    <frame text="Fade In / Out">
+        <hbox>
+            <vbox>
+                <button text="Fade Out" onclick="lv1.fadeOut();" />
+                <button text="Fade In" onclick="lv1.fadeIn();" width="100%" />
+            </vbox>
+            <listview id="lv1" width="200" height="150">
+                <data>
+                    <item text="Haxe" icon="icons/logo-haxe.png" />
+                    <item text="Java" icon="icons/logo-java.png" />
+                    <item text="Javascript" icon="icons/logo-javascript.png" />
+                    <item text="C++" icon="icons/logo-cpp.png" />
+                    <item text="PHP" icon="icons/logo-php.png" />
+                    <item text="C#" icon="icons/logo-cs.png" />
+                    <item text="F#" icon="icons/logo-fs.png" />
+                    <item text="OCaml" icon="icons/logo-ocaml.png" />
+                    <item text="Assembler" icon="icons/logo-asm.png" />
+                </data>
+            </listview>
+        </hbox>
+    </frame>
+
+    <section-header text="Position Animations" />
+
+    <section-header text="Color Animations" />
+</vbox>

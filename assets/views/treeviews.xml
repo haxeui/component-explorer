@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%">
-    <label text="Default Treeview" />
-    <box width="100%" height="1" style="background-color: #000000;" />
-
-    <hbox>
-        <tree-view id="tv0" width="200" height="300" />
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Default Treeviews" />
+            <hbox>
+                <tree-view id="tv1" width="360" height="200" />
+            </hbox>
+        </vbox>
         
-        <tree-view id="tv1" width="500" height="300" styleName="full-width">
-            <item-renderer layoutName="horizontal" width="100%">
-                <checkbox id="checked" verticalAlign="center" />
-                <image id="icon" verticalAlign="center" />
-                <label id="text" verticalAlign="center" width="100%" />
-                <progress id="progress" verticalAlign="center" />
-                <image resource="haxeui-core/styles/default/tiny-close-button.png" verticalAlign="center" />
-            </item-renderer>
-            <item-renderer id="expandable" layoutName="horizontal" width="100%">
-                <image resource="haxeui-core/styles/default/folder.png" verticalAlign="center" />
-                <label id="text" width="100%" verticalAlign="center" />
-                <hbox style="background-color: #eeeeee;border-radius:3px;padding: 1px 3px;spacing:0;" verticalAlign="center">
-                    <label id="count" style="color:#888888;font-size: 11px;" />
-                    <label text=" children" style="color:#888888;font-size: 11px;" />
-                </hbox>
-                <switch verticalAlign="center" />
-            </item-renderer>
-        </tree-view>    
-    </hbox>
+        <vbox width="200">
+            <section-header text="Options" />
+            <checkbox text="Disable" onchange="tv1.disabled = this.selected" />
+        </vbox>
+    </hbox>    
+    
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Custom Treeviews" />
+            <hbox>
+                <tree-view id="tv2" width="360" height="300" styleName="full-width">
+                    <item-renderer layoutName="horizontal" width="100%">
+                        <checkbox id="checked" verticalAlign="center" />
+                        <image id="icon" verticalAlign="center" />
+                        <label id="text" verticalAlign="center" width="100%" />
+                        <progress id="progress" verticalAlign="center" />
+                        <image resource="haxeui-core/styles/default/tiny-close-button.png" verticalAlign="center" />
+                    </item-renderer>
+                    <item-renderer id="expandable" layoutName="horizontal" width="100%">
+                        <image resource="haxeui-core/styles/default/folder.png" verticalAlign="center" />
+                        <label id="text" width="100%" verticalAlign="center" />
+                        <hbox style="background-color: #eeeeee;border-radius:3px;padding: 1px 3px;spacing:0;" verticalAlign="center">
+                            <label id="count" style="color:#888888;font-size: 11px;" />
+                            <label text=" children" style="color:#888888;font-size: 11px;" />
+                        </hbox>
+                        <switch verticalAlign="center" />
+                    </item-renderer>
+                </tree-view>    
+            </hbox>
+        </vbox>
+        
+        <vbox width="200">
+            <section-header text="Options" />
+            <checkbox text="Disable" onchange="tv2.disabled = this.selected" />
+        </vbox>
+    </hbox>    
+    
+    
     
 </vbox>

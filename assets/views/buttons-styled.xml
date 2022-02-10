@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%">
+    <section-header text="Styled Buttons" />
+    <hbox>
+        <style>
+            .styled-button {
+                background: #79bbff #378de5;
+                border: 3px solid #337bc4;
+                border-radius:10px;
+                padding:10px 25px;
+                font-size: 16px;
+                color: white;
+                filter: drop-shadow(1, 45, #000000, 0.2, 0, 0, 0, 3, false);
+            }
+            
+            .styled-button:hover {
+                background: #add6ff #66a8eb;
+            }
+            
+            .styled-button:down {
+                background: #47a3ff #1b75d0;
+                border-color: #28619a;
+            }
+        </style>
+        
+        <hbox>
+            <button text="Styled" styleName="styled-button" />
+            <button text="Toggle" toggle="true" selected="true" styleName="styled-button" />
+            <button text="Repeater" repeater="true" styleName="styled-button" />
+        </hbox>    
+        <grid columns="2">
+            <button text="Left" icon="haxeui-core/styles/default/haxeui_small.png" styleName="styled-button" />
+            <button text="Right" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="right" styleName="styled-button" />
+            <button text="Top" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="top" width="100%" styleName="styled-button" />
+            <button text="Bottom" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" width="100%" styleName="styled-button" />
+        </grid>
+    </hbox>
+</vbox>    

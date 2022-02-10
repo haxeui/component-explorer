@@ -1,8 +1,8 @@
 <vbox width="100%">
     <menubar width="100%">
         <menu text="Normal">
-            <menuitem text="Item 1" />
-            <menuitem text="Item 2" />
+            <menuitem text="Item 1" shortcutText="Shortcut" />
+            <menuitem text="Item 2 (disabled)" disabled="true" shortcutText="Ctrl+A" />
             <menu text="Sub Menu">
                 <menuitem text="Item 1" />
                 <menuitem text="Item 2" />
@@ -20,18 +20,18 @@
                 <menuoptionbox text="Item 11" group="somegroup" selected="true" />
                 <menuoptionbox text="Item 12" group="somegroup" />
             </menu>
-            <menuitem text="Item 3" />
-            <menuitem text="Item 4" />
+            <menuitem text="Item 3" shortcutText="Ctrl+B" />
+            <menuitem text="Item 4" shortcutText="Ctrl+C" />
             <menuseparator />
-            <menuitem text="Item 5" />
+            <menuitem text="Item 5" shortcutText="Ctrl+D" />
         </menu>
 
         <menu text="Icons">
-            <menuitem text="Item 1" icon="icons/16/scroll_pane_text.png" />
-            <menuitem text="Item 2" icon="icons/16/scroll_pane_text_image.png" />
-            <menuitem text="Item 3" icon="icons/16/tab_content.png" />
-            <menuitem text="Item 4" icon="icons/16/table.png" />
-            <menuitem text="Item 5" icon="icons/16/list_box.png" />
+            <menuitem text="Item 1" icon="icons/16/scroll_pane_text.png" shortcutText="Ctrl+A" />
+            <menuitem text="Item 2" icon="icons/16/scroll_pane_text_image.png" shortcutText="Ctrl+B" />
+            <menuitem text="Item 3 (disabled)" icon="icons/16/tab_content.png" disabled="true" shortcutText="Ctrl+C" />
+            <menuitem text="Item 4" icon="icons/16/table.png" shortcutText="Ctrl+D" />
+            <menuitem text="Item 5" icon="icons/16/list_box.png" shortcutText="Ctrl+E" />
         </menu>
 
         <menu text="Any Content #1">
@@ -118,16 +118,15 @@
                 <slider width="100%" majorTicks="10" minorTicks="5" pos="50" />
                 <spacer height="5" />
                 <button-bar selectedIndex="1" width="100%">
-                    <button text="Item 1" width="33%" />
-                    <button text="Item 2" width="34%" />
-                    <button text="Item 3" width="33%" />
+                    <button text="A" width="33%" />
+                    <button text="B" width="34%" />
+                    <button text="C" width="33%" />
                 </button-bar>
             </vbox>
         </menu>    
         
         <spacer width="100%" />
         
-        <progress indeterminate="true" verticalAlign="center" />
         <button text="A Button" />
         <menu text="Help">
             <menuitem text="Item 1" />

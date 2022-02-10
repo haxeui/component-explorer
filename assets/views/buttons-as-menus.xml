@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%">
+    <section-header text="Left / Right Button Menus" />
+    
+    <hbox style="border: 1px solid #d2d2d2;padding-left:1px;padding-right:1px;" width="100%">
+        <button-bar styleName="left-menu" direction="vertical" selectedIndex="0" onchange="stack1.selectedIndex = this.selectedIndex">
+            <button text="Item 1A" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 1B" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 1C" icon="haxeui-core/styles/default/haxeui_small.png" />
+        </button-bar>
+        
+        <hbox width="100%" height="100%">
+            <stack id="stack1" width="50%" height="100%">
+                <box width="100%" height="100%"><label text="Content 1A" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 1B" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 1C" verticalAlign="center" horizontalAlign="center" /></box>
+            </stack>
+            <stack id="stack2" width="50%" height="100%">
+                <box width="100%" height="100%"><label text="Content 2A" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 2B" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 2C" verticalAlign="center" horizontalAlign="center" /></box>
+            </stack>
+        </hbox>
+        
+        <button-bar styleName="right-menu" direction="vertical" selectedIndex="2" onchange="stack2.selectedIndex = this.selectedIndex">
+            <button text="Item 2A" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 2B" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 2C" icon="haxeui-core/styles/default/haxeui_small.png" />
+        </button-bar>
+    </hbox>
+    
+    <section-header text="Top / Bottom Button Menus" />
+    
+    <vbox style="border: 1px solid #d2d2d2;padding-top:1px;padding-bottom:1px;padding-right: 1px;" width="100%">
+        <button-bar width="100%" styleName="top-menu" selectedIndex="0" onchange="stack3.selectedIndex = this.selectedIndex">
+            <button text="Item 3A" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 3B" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 3C" icon="haxeui-core/styles/default/haxeui_small.png" />
+        </button-bar>
+        
+        <vbox width="100%" height="100">
+            <stack id="stack3" width="100%" height="50%">
+                <box width="100%" height="100%"><label text="Content 3A" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 3B" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 3C" verticalAlign="center" horizontalAlign="center" /></box>
+            </stack>
+            <stack id="stack4" width="100%" height="50%">
+                <box width="100%" height="100%"><label text="Content 4A" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 4B" verticalAlign="center" horizontalAlign="center" /></box>
+                <box width="100%" height="100%"><label text="Content 4C" verticalAlign="center" horizontalAlign="center" /></box>
+            </stack>
+        </vbox>
+        
+        <button-bar width="100%" styleName="bottom-menu" selectedIndex="0" onchange="stack4.selectedIndex = this.selectedIndex">
+            <button text="Item 4A" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 4B" icon="haxeui-core/styles/default/haxeui_small.png" />
+            <button text="Item 4C" icon="haxeui-core/styles/default/haxeui_small.png" />
+        </button-bar>
+    </vbox>    
+</vbox>    

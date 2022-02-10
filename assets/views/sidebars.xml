@@ -1,0 +1,29 @@
+<vbox>
+    <section-header text="Default Side Bars" />
+
+    <vbox>
+        <grid columns="5">
+            <label text="Position:" verticalAlign="center" />
+            <optionbox id="showSideBarLeft" text="Left" selected="true" group="position" />
+            <optionbox id="showSideBarRight" text="Right" group="position" />
+            <optionbox id="showSideBarTop" text="Top" group="position" />
+            <optionbox id="showSideBarBottom" text="Bottom" group="position" />
+            
+            <label text="Mode:" verticalAlign="center" />
+            <optionbox id="sideBarShift" text="Shift" selected="true" group="mode" />
+            <optionbox id="sideBarSquash" text="Squash" group="mode" />
+            <optionbox id="sideBarFloat" text="Float" group="mode" />
+            <spacer />
+            
+            <spacer />
+            <checkbox id="sideBarModal" text="Modal" selected="true" />
+        </grid>
+        
+        <button id="showSideBar1" text="Show" horizontalAlign="right" />
+    </vbox> 
+    
+    <hbox width="100%" style="padding:50px;spacing:50px;">
+        <label width="50%" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." />
+        <label style="text-align:right;" width="50%" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." />
+    </hbox>    
+</vbox>

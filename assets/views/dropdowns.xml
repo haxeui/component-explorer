@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%">
-    <!-- normal -->
-    <label text="List Dropdowns:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="List Dropdowns" />
     
     <hbox>
         <dropdown text="Select Item">
@@ -36,93 +34,83 @@
         
         <dropdown width="100">
             <data>
-                <item text="Item 1" />
-                <item text="Item 2" />
-                <item text="Item 3" />
-                <item text="Item 4" />
-                <item text="Item 5" />
-                <item text="Item 6" />
-                <item text="Item 7" />
-                <item text="Item 8" />
-                <item text="Item 9" />
+                <item text="Item 1" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 3" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 4" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 5" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 6" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 7" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 8" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 9" icon="haxeui-core/styles/default/haxeui_tiny.png" />
             </data>
         </dropdown>
         
         <dropdown width="100" dropdownWidth="200">
             <data>
-                <item text="Item 1" />
-                <item text="Item 2" />
-                <item text="Item 3" />
-                <item text="Item 4" />
-                <item text="Item 5" />
-                <item text="Item 6" />
-                <item text="Item 7" />
-                <item text="Item 8" />
-                <item text="Item 9" />
+                <item text="Item 1" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 3" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 4" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 5" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 6" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 7" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 8" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 9" icon="haxeui-core/styles/default/haxeui_tiny.png" />
             </data>
         </dropdown>
         
         <dropdown width="100" dropdownWidth="200" dropdownSize="6">
             <data>
-                <item text="Item 1" />
-                <item text="Item 2" />
-                <item text="Item 3" />
-                <item text="Item 4" />
-                <item text="Item 5" />
-                <item text="Item 6" />
-                <item text="Item 7" />
-                <item text="Item 8" />
-                <item text="Item 9" />
+                <item text="Item 1" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 3" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 4" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 5" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 6" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 7" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 8" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 9" icon="haxeui-core/styles/default/haxeui_tiny.png" />
             </data>
         </dropdown>
         
         <dropdown width="100" dropdownWidth="200" dropdownSize="-1">
             <data>
-                <item text="Item 1" />
-                <item text="Item 2" />
-                <item text="Item 3" />
-                <item text="Item 4" />
-                <item text="Item 5" />
-                <item text="Item 6" />
-                <item text="Item 7" />
-                <item text="Item 8" />
-                <item text="Item 9" />
+                <item text="Item 1" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 3" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 4" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 5" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 6" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 7" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 8" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                <item text="Item 9" icon="haxeui-core/styles/default/haxeui_tiny.png" />
             </data>
         </dropdown>
     </hbox>    
 
-    <spacer height="10" />
-    
-    <label text="Searchable Dropdowns:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="Searchable Dropdowns" />
     <hbox>
         <dropdown width="150" dropdownWidth="200" searchable="true" searchPrompt="Find Language">
             <data>
-                <item text="Haxe" />
-                <item text="Java" />
-                <item text="Javascript" />
-                <item text="C++" />
-                <item text="PHP" />
-                <item text="C#" />
-                <item text="F#" />
-                <item text="OCaml" />
-                <item text="Assembler" />
+                <item text="Haxe" icon="icons/logo-haxe.png" />
+                <item text="Java" icon="icons/logo-java.png" />
+                <item text="Javascript" icon="icons/logo-javascript.png" />
+                <item text="C++" icon="icons/logo-cpp.png" />
+                <item text="PHP" icon="icons/logo-php.png" />
+                <item text="C#" icon="icons/logo-cs.png" />
+                <item text="F#" icon="icons/logo-fs.png" />
+                <item text="OCaml" icon="icons/logo-ocaml.png" />
+                <item text="Assembler" icon="icons/logo-asm.png" />
             </data>
         </dropdown>
     </hbox>
     
-    <spacer height="10" />
-    
-    <label text="Calendar Dropdowns:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="Calendar Dropdowns" />
 
     <dropdown text="Select Date" type="date" />
     
-    <spacer height="10" />
-    
-    
-    <label text="Custom Handler:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
+    <section-header text="Custom Handler" />
     
     <dropdown text="Select Item(s)" type="myDropDownHandler" width="160" />
 </vbox>

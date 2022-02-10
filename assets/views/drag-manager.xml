@@ -1,0 +1,36 @@
+<vbox width="100%" height="100%">
+    <section-header text="Basic Drag" />
+    
+    <box id="box1" width="50" height="50" style="background-color: red;border:1px solid red;background-opacity: .3" draggable="true" />
+
+    <section-header text="Mouse Target" />
+    
+    <box id="box2" width="50" height="50" style="background-color: grey;border:1px solid grey;background-opacity: .3">
+        <box id="mouseTargetBox2" width="25" height="25" style="background-color: red;border:1px solid red;background-opacity: .3" verticalAlign="bottom" horizontalAlign="right" />
+    </box>    
+    
+    <section-header text="Drag Bounds" />
+    
+    <box width="600" height="300" style="background-color: grey;border:1px solid grey;background-opacity: .3">
+        <box id="box3" width="50" height="50" style="background-color: red;border:1px solid red;background-opacity: .3" />
+    </box>
+    
+    <section-header text="Styles" />
+    <style>
+        .button {
+            opacity: 1;
+        }
+    
+        .button.draggable {
+            border: 1px solid red;
+        }
+        
+        .button.dragging {
+            opacity: .2;
+        }
+    </style>
+    <button text="Drag me!" draggable="true" />
+    <button text="Me too!" draggable="true" />
+    <button text="Not me!" />
+    
+</vbox>

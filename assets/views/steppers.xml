@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
-    <!-- normal -->
-    <label text="Number Steppers:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
-    
+    <section-header text="Number Steppers" />
     <hbox>
         <number-stepper />
         <number-stepper pos="30" />
         <number-stepper pos="30" step="10" />
         <number-stepper pos="30" step="10" min="10" max="50" />
         <number-stepper pos="30" step=".1" min="10" max="50" precision="2" />
+        <number-stepper pos="30" step=".1" min="10" max="50" precision="2" disabled="true" />
     </hbox>    
     
-    <spacer height="10" />
-    
-    <!-- normal -->
-    <label text="Option Steppers:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
-    
+    <section-header text="Option Steppers:" />
     <hbox>
         <option-stepper width="100">
+            <data>
+                <item text="Haxe" />
+                <item text="Java" />
+                <item text="Javascript" />
+                <item text="C++" />
+                <item text="PHP" />
+                <item text="C#" />
+                <item text="F#" />
+                <item text="OCaml" />
+                <item text="Assembler" />
+            </data>
+        </option-stepper>
+        <option-stepper width="100" disabled="true">
             <data>
                 <item text="Haxe" />
                 <item text="Java" />

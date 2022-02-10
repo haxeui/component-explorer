@@ -1,22 +1,73 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="300">
-    <grid width="100%">
-        <label text="First Name:" verticalAlign="center" />
-        <textfield width="100%" />
-        
-        <label text="Last Name:" verticalAlign="center" />
-        <textfield width="100%" />
-        
-        <label text="Sex:" verticalAlign="center" />
-        <dropdown width="100%" text="Unspecified">
-            <data>
-                <item text="Male" />
-                <item text="Female" />
-                <item text="Unspecified" />
-            </data>
-        </dropdown>
-        
-        <label text="DoB:" verticalAlign="center" />
-        <dropdown text="Unspecified" type="date" width="100%" />
-    </grid>
+<vbox width="500">
+    <tabview width="100%">
+        <hbox width="100%" text="Main Details">
+            <vbox width="100%">
+                <grid width="100%">
+                    <label text="First Name:" verticalAlign="center" />
+                    <textfield text="Ian" width="100%" />
+                    
+                    <label text="Last Name:" verticalAlign="center" />
+                    <textfield text="Harrigan" width="100%" />
+                    
+                    <label text="Sex:" verticalAlign="center" />
+                    <dropdown width="100%" text="Unspecified">
+                        <data>
+                            <item text="Male" />
+                            <item text="Female" />
+                            <item text="Unspecified" />
+                        </data>
+                    </dropdown>
+                    
+                    <label text="DoB:" verticalAlign="center" />
+                    <dropdown text="Unspecified" type="date" width="100%" />
+                </grid>
+                    
+                <hbox>
+                    <optionbox text="Option 1" />
+                    <optionbox text="Option 2" selected="true" />
+                    <optionbox text="Option 3" />
+                </hbox>
+                
+                <hbox>
+                    <checkbox text="Check 1" selected="true" />
+                    <checkbox text="Check 2" />
+                    <checkbox text="Check 3" selected="true" />
+                </hbox>
+                
+                <hbox>
+                    <switch />
+                </hbox>
+            </vbox>
+            
+            <vbox>
+                <listview id="lv2" width="200" height="170" selectedIndex="1">
+                    <item-renderer layoutName="horizontal" width="100%">
+                        <checkbox id="complete" />
+                        <label width="100%" id="item" verticalAlign="center" />
+                        <image id="image" />
+                    </item-renderer>
+                    <data>
+                        <item complete="false" item="Item 1" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="true" item="Item 2" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="true" item="Item 3" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="false" item="Item 4" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="true" item="Item 5" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="true" item="Item 6" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="false" item="Item 7" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="true" item="Item 8" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="false" item="Item 9" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                    </data>
+                </listview>
+
+                <buttonbar selectedIndex="1">
+                    <button text="Item 1" />
+                    <button text="Item 2" />
+                    <button text="Item 3" />
+                </buttonbar>
+            </vbox>    
+        </hbox> 
+        <box text="Additional Details" />
+        <box text="Even More Details" />
+    </tabview>
 </vbox>

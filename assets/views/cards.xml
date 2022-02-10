@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%">
-    <!-- normal -->
-    <label text="Default Cards:" style="color: #464646;" />
-    <box width="100%" height="1" style="background-color: #d9d9d9;" />
+    <section-header text="Default Cards" />
 
-    <hbox style="spacing:20px;padding:20px;" styleName="default-background-solid">
-        <card width="300" height="500" text="Some Card">
-            <box width="100%" height="100%">
-                <label text="content" verticalAlign="center" horizontalAlign="center" styleName="card-title-label" />
-            </box>    
-        </card>    
-
-        <vbox style="spacing:20px;">
-            <card width="230" height="100" text="Some Other Card">
+    <vbox style="spacing:20px;padding:20px;" styleName="default-background-solid">
+        <hbox style="spacing:20px;">
+            <card width="288" height="220" text="Some Card">
                 <box width="100%" height="100%">
                     <label text="content" verticalAlign="center" horizontalAlign="center" styleName="card-title-label" />
                 </box>    
             </card>    
-            <card width="230" height="100">
-                <box width="100%" height="100%">
-                    <label text="content" verticalAlign="center" horizontalAlign="center" styleName="card-title-label" />
-                </box>    
-            </card> 
-        </vbox>    
+
+            <vbox style="spacing:20px;">
+                <card width="288" height="100" text="Some Other Card">
+                    <box width="100%" height="100%">
+                        <label text="content" verticalAlign="center" horizontalAlign="center" styleName="card-title-label" />
+                    </box>    
+                </card>    
+                <card width="288" height="100">
+                    <box width="100%" height="100%">
+                        <label text="content" verticalAlign="center" horizontalAlign="center" styleName="card-title-label" />
+                    </box>    
+                </card> 
+            </vbox>    
+        </hbox>    
         
-        <vbox style="spacing:20px">
+        <hbox style="spacing:20px">
             <card style="padding: 0px;">
                 <image resource="images/img_avatar.png" width="288" height="288" style="border-radius: 4px;" />
                 <vbox style="padding: 15px;" width="100%">
@@ -64,7 +64,7 @@
                     </hbox>
                 </vbox>
             </card>
-        </vbox>    
-    </hbox>
+        </hbox>    
+    </vbox>
     
 </vbox>

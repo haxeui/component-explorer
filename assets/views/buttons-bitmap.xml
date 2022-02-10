@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%">
+    <section-header text="Bitmap Buttons" style="color: #464646;" />
+    <hbox style="background-color: #272727;padding: 10px;">
+        <style>
+            .bitmap-button {
+                background: none;
+                padding: 6px 8px;
+                border: none;
+                color: #CCCCCC;
+                background-image: "images/bitmap_button.png";
+                background-image-clip: 0px 0px 26px 65px;
+                background-image-slice: 3px 3px 24px 62px;
+            }
+            
+            .bitmap-button:hover {
+                color: white;
+            }
+            
+            .bitmap-button:down {
+                background-image-clip: 0px 68px 26px 133px;
+            }
+        </style>
+        
+        <hbox>
+            <button text="Bitmap" styleName="bitmap-button" />
+            <button text="Toggle" toggle="true" selected="true" styleName="bitmap-button" />
+            <button text="Repeater" repeater="true" styleName="bitmap-button" />
+        </hbox>    
+        <grid columns="2">
+            <button text="Left" icon="haxeui-core/styles/default/haxeui_small.png" styleName="bitmap-button" />
+            <button text="Right" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="right" styleName="bitmap-button" />
+            <button text="Top" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="top" width="100%" styleName="bitmap-button" />
+            <button text="Bottom" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" width="100%" styleName="bitmap-button" />
+        </grid>
+    </hbox>
+        
+</vbox>    

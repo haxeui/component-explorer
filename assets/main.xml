@@ -1,134 +1,25 @@
-<hbox width="100%" height="100%" style="padding: 0px;spacing:0px">
+<hbox width="100%" height="100%" style="padding: 0px;spacing:0px;padding-bottom:10px;">
     <style>
-        #mainList {
+        .code-editor {
             border: none;
-            padding: 0;
-            mode: mobile;
-        }
-        
-        #mainList .scrollview-contents {
-            padding: 0;
-            spacing: 0;
-        }
-        
-        .side-item {
-            background-color: white;
-            border: 1px solid white;
-            border-right-color: #d9d9d9;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            padding: 10px;
-            cursor: pointer;
-            pointer-events: true;
-            margin-left: 1px;
-        }
-        
-        .side-item #image {
-            opacity: .2;
-        }
-        
-        .side-item #label {
-            color: #464646;
-        }
-        
-        .side-item:hover #label {
-            color: #666666;
-        }
-        
-        .side-item:hover #image {
-            opacity: .9;
-        }
-        
-        .side-item.selected {
-            background-color: white;
-            border: 1px solid #d9d9d9;
-            border-right-color: white;
-        }
-        
-        .side-item.selected #label {
-            color: #464646;
-        }
-        
-        .side-item.selected #image {
-            opacity: 1;
-        }
-        
-        #mainList .vertical-scroll .deinc, #mainList .vertical-scroll .inc {
-            hidden: true;
-        }
-        
-        #mainList .vertical-scroll {
-            background-color: none;
-            width: 9px;
-            padding: 2px;
-        }
-        
-        #mainList .vertical-scroll .thumb {
-            background-opacity: .3;
-            width: 5px;
-            border-radius: 4px;
-        }
-        
-        .scroll-icon {
-            opacity: .3;
-            cursor: pointer;
-            pointer-events: true;
-        }
-        
-        .scroll-icon:hover {
-            opacity: .5;
         }
 
-#mainTabs > .tabview-content {
-    border-color: #d9d9d9;
-    __border-color: black;
-}
-        
-#mainTabs > .tabbar:bottom {
-    border-top-color: #d9d9d9;
-    padding-left: 0;
-}
+        .view-container {
+            padding: 0px;
+        }
 
-#mainTabs > .tabbar .tabbar-contents {
-    border-top-color: #d9d9d9;
-    spacing: 5px;
-}
-        
-#mainTabs > .tabbar .tabbar-button {
-    border: 1px solid #d9d9d9;
-            border-bottom-right-radius: 3px;
-            border-bottom-left-radius: 3px;
-}
+        .view-container-scrollview {
+            border: none;
+        }
 
-#mainTabs > .tabbar .tabbar-button-selected:bottom {
-    border-radius: 0px;
-
-    border: 1px solid #d9d9d9;
-    border-top-width: 1px;
-    border-top-color: white;
-    background-color: white;
-}
-
-.code-editor {
-    border: none;
-}
-
-.view-container {
-    padding: 0px;
-}
-
-.view-container-scrollview {
-    border: none;
-}
-
-.label, .button, .textfield, .textarea {
-    font-name: "fonts/Roboto-Regular.ttf";
-    font-size: 13px;
-}
+        .label, .button, .textfield, .textarea {
+            font-name: "fonts/Roboto-Regular.ttf";
+            font-size: 13px;
+        }
     </style>
     
     <box width="100%" height="100%">
-        <tabview id="mainTabs" width="80%" height="100%" tabPosition="bottom" horizontalAlign="right">
+        <tabview id="mainTabs" width="75%" height="100%" tabPosition="bottom" horizontalAlign="right">
             <vbox text="View" icon="icons/16/progressbar.png">
                 <button text="bob" />
             </vbox>
@@ -137,105 +28,19 @@
             </vbox>
         </tabview>
         
-        <vbox width="20%" height="100%" style="padding-top: 10px;">
-            <image id="scrollUpIcon" styleNames="scroll-icon" resource="images/up_arrow.png" horizontalAlign="center" />
-            <scrollview id="mainList" width="100%" height="100%" contentWidth="100%" style="margin-right: -1px;">
-                <vbox width="100%" style="spacing: 0;">
-                    <!--
-                    <hbox height="50" styleNames="side-item selected" width="100%">
-                        <label text="Item 1" />
-                    </hbox>
-                    <hbox height="50" styleNames="side-item" width="100%">
-                        <label text="Item 1" />
-                    </hbox>
-                    <hbox height="50" styleNames="side-item" width="100%">
-                        <label text="Item 1" />
-                    </hbox>
-                    <hbox height="50" styleNames="side-item" width="100%">
-                        <label text="Item 1" />
-                    </hbox>
-                    <hbox height="50" styleNames="side-item" width="100%">
-                        <label text="Item 1" />
-                    </hbox>
-                    <hbox height="50" styleNames="side-item" width="100%">
-                        <label text="Item 1" />
-                    </hbox>
-                        -->
-                </vbox>
-            </scrollview>
-            <image id="scrollDownIcon" styleNames="scroll-icon" resource="images/down_arrow.png" horizontalAlign="center" />
+        <vbox width="25%" height="100%" style="padding-top: 0px;">
+            <hbox width="100%" height="100%">
+                <treeview id="mainTree" width="100%" height="100%" styleName="full-width" style="border: none;" />
+            </hbox>    
         </vbox>    
     </box>   
-  
-    
-    
-    
-    
-    <style>
-    /*
-        #viewList {
-            __border: none;
-            padding: 0;
-        }
-        
-        #viewList .scroll {
-            width: 8px;
-            padding: 1px;
-        }
-        
-        #viewList .scroll .inc,  #viewList .scroll .deinc {
-            hidden: true;
-        }
-        
-        #viewList .scroll .thumb {
-            width: 6px;
-            border-radius: 3px;
-        }
-        
-        #viewTabs .tabview-content {
-            __border: none;
-        }
-        
-        #logTabs .tabview-content {
-            border: none;
-            padding: 0;
-        }
-        
-        #logData {
-            border: none;
-        }
-        
-        .view-container {
-            padding: 5px;
-        }
-        
-        .code-editor {
-            border: none;
-        }
-        */
-    </style>
-    
-    <box width="200" height="100%" style="padding-top:38px;" hidden="true">
-        <listview id="viewList" width="100%" height="100%" selectedIndex="0">
-            <item-renderer layoutName="horizontal" width="100%">
-                <label id="title" verticalAlign="center" />
-                <spacer width="100%" />
-                <image id="largeIcon" />
-            </item-renderer>
-        </listview>    
-    </box>    
-    
-    <!--
-    <component width="1" height="100%" style="background-color: #ababab" />
-    -->    
+
     
     <box width="100%" height="100%" style="padding-top: 10px;" hidden="true">
         <tabview id="viewTabs" width="100%" height="100%">
             
         </tabview>
     </box>
-    
-    <component width="1" height="100%" style="background-color: #ababab" hidden="true" />
     
     <box width="200" height="100%" style="padding-top: 10px;" hidden="true">
         <tabview id="logTabs" width="100%" height="100%">

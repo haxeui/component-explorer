@@ -1,103 +1,105 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%">
-    <!-- normal -->
-    <label text="Default Listviews:" />
-    <box width="100%" height="1" style="background-color: #000000;" />
-    
-    <script>
-    // we wont use this for 100,000 items as hscript is slow (even in looping)
-    function addItems(lv:haxe.ui.containers.ListView, count) {
-        lv.dataSource.allowCallbacks = false; // speeds things up a little
-        for (i in 0...count) {
-            lv.dataSource.add({ // we going to add data in that is right for both listviews, just to avoid duplication
-                text: "Item " + (lv.dataSource.size + 1),
-                item: "Item " + (lv.dataSource.size + 1),
-                complete: true,
-                image: "haxeui-core/styles/default/haxeui_tiny.png"
-            });
-        }
-        lv.dataSource.allowCallbacks = true;
-    }
-    </script>
-    
-    <hbox>
-        <label text="Scroll mode:" />
-        <group layoutName="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData; virtualList1.scrollMode = event.target.userData;">
-            <optionbox text="Drag" userData="drag" selected="true" />
-            <optionbox text="Inertial" userData="inertial" />
-        </group>
-    </hbox>
-    <hbox>
-        <vbox>
-            <listview id="lv1" width="200" height="150" selectedIndex="0">
-                <data>
-                    <item text="Item 1" />
-                    <item text="Item 2" />
-                    <item text="Item 3" />
-                    <item text="Item 4" />
-                    <item text="Item 5" />
-                    <item text="Item 6" />
-                    <item text="Item 7" />
-                    <item text="Item 8" />
-                    <item text="Item 9" />
-                </data>
-            </listview>
-            <vbox>
-                <button text="Add 100 items (via script)" onclick="addItems(lv1, 100)" />
-                <button text="Add 100 items (via code)" id="addItems1" />
-            </vbox>
-        </vbox>    
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Normal Listviews" />
+            <hbox>
+                <vbox>
+                    <listview id="lv1" width="200" height="150" selectedIndex="0">
+                        <data>
+                            <item text="Haxe" icon="icons/logo-haxe.png" />
+                            <item text="Java" icon="icons/logo-java.png" />
+                            <item text="Javascript" icon="icons/logo-javascript.png" />
+                            <item text="C++" icon="icons/logo-cpp.png" />
+                            <item text="PHP" icon="icons/logo-php.png" />
+                            <item text="C#" icon="icons/logo-cs.png" />
+                            <item text="F#" icon="icons/logo-fs.png" />
+                            <item text="OCaml" icon="icons/logo-ocaml.png" />
+                            <item text="Assembler" icon="icons/logo-asm.png" />
+                        </data>
+                    </listview>
+                    <button text="Add 100 items" id="addItems1" width="100%" />
+                </vbox>    
+
+                <vbox>
+                    <listview id="lv2" width="200" height="150" selectedIndex="1">
+                        <item-renderer layoutName="horizontal" width="100%">
+                            <checkbox id="complete" />
+                            <label width="100%" id="item" verticalAlign="center" />
+                            <image id="image" />
+                        </item-renderer>
+                        <data>
+                            <item complete="false" item="Item 1" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 2" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 3" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="false" item="Item 4" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 5" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 6" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="false" item="Item 7" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 8" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="false" item="Item 9" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        </data>
+                    </listview>
+                    <button text="Add 100 items" id="addItems2" width="100%" />
+                </vbox>    
+            </hbox>    
+        </vbox>
         
-        <!-- custom renderer -->
-        <vbox>
-            <listview id="lv2" width="200" height="150" selectedIndex="1">
-                <item-renderer layoutName="horizontal" width="100%">
-                    <checkbox id="complete" />
-                    <label width="100%" id="item" />
-                    <image id="image" />
-                </item-renderer>
-                <data>
-                    <item complete="false" item="Item 1" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 2" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 3" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="false" item="Item 4" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 5" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 6" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="false" item="Item 7" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 8" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="false" item="Item 9" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                </data>
-            </listview>
-            <vbox>
-                <button text="Add 100 items (via script)" onclick="addItems(lv2, 100)" />
-                <button text="Add 100 items (via code)" id="addItems2" />
-            </vbox>
-        </vbox>    
+        <vbox width="200">
+            <section-header text="Options" />
+            <hbox>
+                <label text="Scroll mode:" verticalAlign="center" />
+                <group layoutName="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData;">
+                    <optionbox text="Drag" userData="drag" selected="true" />
+                    <optionbox text="Inertial" userData="inertial" />
+                </group>
+            </hbox>
+            <checkbox text="Disable" onchange="lv1.disabled = lv2.disabled = this.selected" />
+        </vbox>
+    </hbox>     
+    
+    <spacer height="10" />
+    
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Virtual Listviews" />
+            <hbox>
+                <vbox>
+                    <listview id="virtualList1" width="200" height="150" selectedIndex="2" virtual="true">
+                        <item-renderer layoutName="horizontal" width="100%">
+                            <checkbox id="complete" />
+                            <label width="100%" id="item" verticalAlign="center" />
+                            <image id="image" />
+                        </item-renderer>
+                        <data>
+                            <item complete="false" item="Item 1" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 2" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 3" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="false" item="Item 4" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 5" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 6" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="false" item="Item 7" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="true" item="Item 8" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                            <item complete="false" item="Item 9" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        </data>
+                    </listview>
+                    <button text="Add 100k virtual items" id="addVirtualItems1" width="100%" />
+                </vbox>    
+            </hbox>    
+        </vbox>
         
-        <!-- virtual + custom renderer -->
-        <vbox>
-            <listview id="virtualList1" width="200" height="150" selectedIndex="2" virtual="true">
-                <item-renderer layoutName="horizontal" width="100%">
-                    <checkbox id="complete" />
-                    <label width="100%" id="item" />
-                    <image id="image" />
-                </item-renderer>
-                <data>
-                    <item complete="false" item="Item 1" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 2" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 3" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="false" item="Item 4" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 5" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 6" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="false" item="Item 7" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="true" item="Item 8" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <item complete="false" item="Item 9" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                </data>
-            </listview>
-            <vbox>
-                <button text="Add 100k virtual items (via code)" id="addVirtualItems1" />
-            </vbox>
-        </vbox>    
-    </hbox>
+        <vbox width="200">
+            <section-header text="Options" />
+            <hbox>
+                <label text="Scroll mode:" verticalAlign="center" />
+                <group layoutName="horizontal" onchange="virtualList1.scrollMode = event.target.userData;">
+                    <optionbox text="Drag" userData="drag" selected="true" />
+                    <optionbox text="Inertial" userData="inertial" />
+                </group>
+            </hbox>    
+            <checkbox text="Disable" onchange="virtualList1.disabled = this.selected" />
+        </vbox>
+    </hbox>     
+
     
 </vbox>

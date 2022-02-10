@@ -1,0 +1,66 @@
+<vbox width="100%">
+    <section-header text="Left List Menus" />
+    
+    <hbox style="border: 1px solid #d2d2d2;padding-top:1px;padding-bottom:1px;padding-left:1px;" width="100%" height="200">
+        <listview width="200" height="100%" styleName="left-menu" selectedIndex="0" onchange="stack1.selectedIndex = this.selectedIndex">
+            <data>
+                <item text="Item 1A" />
+                <item text="Item 1B" />
+                <item text="Item 1C" />
+                <item text="Item 1D" />
+                <item text="Item 1E" />
+                <item text="Item 1F" />
+                <item text="Item 1G" />
+                <item text="Item 1H" />
+                <item text="Item 1I" />
+            </data>
+        </listview>
+        
+        <stack id="stack1" width="100%" height="100%">
+            <box width="100%" height="100%"><label text="Content 1A" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1B" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1C" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1D" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1E" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1F" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1G" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1H" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 1I" verticalAlign="center" horizontalAlign="center" /></box>
+        </stack>
+    </hbox>    
+    
+    <section-header text="Custom Left List Menus" />
+    
+    <hbox style="border: 1px solid #d2d2d2;padding-top:1px;padding-bottom:1px;padding-left:1px;" width="100%" height="200">
+        <listview width="200" height="100%" styleName="left-menu" selectedIndex="0" onchange="stack2.selectedIndex = this.selectedIndex">
+            <item-renderer width="100%" layoutName="horizontal">
+                <checkbox id="checked" />
+                <label width="100%" id="text" verticalAlign="center" />
+                <label id="count" verticalAlign="center" style="background-color: #eeeeee;border-radius:3px;padding: 1px 3px;spacing:0;color:#888888;font-size: 11px;" />
+            </item-renderer>
+            <data>
+                <item checked="true" text="Item 2A" count="101" />
+                <item checked="true" text="Item 2B" count="202" />
+                <item checked="false" text="Item 2C" count="303" />
+                <item checked="false" text="Item 2D" count="404" />
+                <item checked="true" text="Item 2E" count="505" />
+                <item checked="false" text="Item 2F" count="606" />
+                <item checked="true" text="Item 2G" count="707" />
+                <item checked="false" text="Item 2H" count="808" />
+                <item checked="true" text="Item 2I" count="909" />
+            </data>
+        </listview>
+        
+        <stack id="stack2" width="100%" height="100%">
+            <box width="100%" height="100%"><label text="Content 2A" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2B" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2C" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2D" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2E" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2F" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2G" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2H" verticalAlign="center" horizontalAlign="center" /></box>
+            <box width="100%" height="100%"><label text="Content 2I" verticalAlign="center" horizontalAlign="center" /></box>
+        </stack>
+    </hbox>    
+</vbox>

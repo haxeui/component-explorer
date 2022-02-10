@@ -12,7 +12,7 @@ class ListViewsView extends View {
         lv1.dataSource.allowCallbacks = false; // speeds things up a little
         for (i in 0...100) {
             lv1.dataSource.add({
-                value: "Item " + (lv1.dataSource.size + 1)
+                text: "Item " + (lv1.dataSource.size + 1)
             });
         }
         lv1.dataSource.allowCallbacks = true;

@@ -1,6 +1,7 @@
 package views;
 
 import haxe.Resource;
+import haxe.ui.components.Image;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.ScrollView;
 import haxe.ui.containers.TabView;
@@ -13,6 +14,8 @@ typedef ViewInfo = {
     var largeIcon:String;
     var viewClass:Class<View>;
     @:optional var relevantFiles:Array<String>;
+    @:optional var group:String;
+    @:optional var subGroup:String;
 }
 
 class ViewManager {
@@ -33,8 +36,32 @@ class ViewManager {
     }
 
     public var views:Array<ViewInfo> = [];
+    public var viewGroups:Map<String, Array<ViewInfo>> = [];
     public function registerView(info:ViewInfo) {
+        var groupName = info.group;
+        if (groupName == null) {
+            groupName = "Ungrouped";
+        }
         views.push(info);
+        
+        if (info.subGroup == null) {
+            var list = viewGroups.get(groupName);
+            if (list == null) {
+                list = [];
+                viewGroups.set(groupName, list);
+            }
+            list.push(info);
+        }
+    }
+    
+    public function getItemsFromSubGroup(subGroup:String):Array<ViewInfo> {
+        var items = [];
+        for (v in views) {
+            if (v.subGroup == subGroup) {
+                items.push(v);
+            }
+        }
+        return items;
     }
     
     public function showView(info:ViewInfo) {
@@ -56,6 +83,9 @@ class ViewManager {
         
         var view:View = Type.createInstance(info.viewClass, []);
         view.percentWidth = 100;
+        if (view.percentHeight == 100) {
+            scrollview.percentContentHeight = 100;
+        }
         //view.percentHeight = 100;
         scrollview.addComponent(view);
         
@@ -78,28 +108,31 @@ class ViewManager {
         viewContainer.percentWidth = 100;
         viewContainer.percentHeight = 100;
         
-        /*
-        var textarea = new TextArea();
-        textarea.percentWidth = 100;
-        textarea.percentHeight = 100;
-        textarea.wrap = false;
-        textarea.text = Resource.getString(file);        
-        viewContainer.addComponent(textarea);
-        */
-        var editor = new CodeEditor();
-        editor.percentWidth = 100;
-        editor.percentHeight = 100;
-        editor.readOnly = true;
-        if (ext == "hx") {
-            ext = "haxe";
-        } else if (ext == "xml") {
-            ext = "html";
+        if (ext == "hx" || ext == "xml") {
+            var editor = new CodeEditor();
+            editor.percentWidth = 100;
+            editor.percentHeight = 100;
+            editor.readOnly = true;
+            if (ext == "hx") {
+                ext = "haxe";
+            } else if (ext == "xml") {
+                ext = "html";
+            }
+            editor.language = ext;
+            var text = Resource.getString(file);
+            editor.text = text;
+            viewContainer.addComponent(editor);
+        } else if (ext == "png") {
+            var viewer = new Box();
+            viewer.percentWidth = 100;
+            viewer.percentHeight = 100;
+            var image = new Image();
+            image.verticalAlign = "center";
+            image.horizontalAlign = "center";
+            image.resource = file;
+            viewer.addComponent(image);
+            viewContainer.addComponent(viewer);
         }
-        editor.language = ext;
-        var text = Resource.getString(file);
-        //text = StringTools.replace(text, "\\n", "\\n");
-        editor.text = text;
-        viewContainer.addComponent(editor);
         
         viewTabs.addComponent(viewContainer);
     }
@@ -109,6 +142,8 @@ class ViewManager {
         switch (ext) {
             case "xml":
                 icon = "icons/16/document_editing.png";
+            case "png":
+                icon = "icons/16/image.png";
         }
         return icon;
     }
