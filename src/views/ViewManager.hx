@@ -5,7 +5,6 @@ import haxe.ui.components.Image;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.ScrollView;
 import haxe.ui.containers.TabView;
-import haxe.ui.editors.code.CodeEditor;
 import util.Logger;
 
 typedef ViewInfo = {
@@ -109,7 +108,8 @@ class ViewManager {
         viewContainer.percentHeight = 100;
         
         if (ext == "hx" || ext == "xml") {
-            var editor = new CodeEditor();
+            #if js
+            var editor = new haxe.ui.editors.code.CodeEditor();
             editor.percentWidth = 100;
             editor.percentHeight = 100;
             editor.readOnly = true;
@@ -122,6 +122,7 @@ class ViewManager {
             var text = Resource.getString(file);
             editor.text = text;
             viewContainer.addComponent(editor);
+            #end
         } else if (ext == "png") {
             var viewer = new Box();
             viewer.percentWidth = 100;

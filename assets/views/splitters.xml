@@ -6,20 +6,27 @@
             border: 1px solid #e4e4e4;
         }
     </style>
+
+    <splitter width="700" height="500">
+            <box width="50%" height="100%" style="background-color: #EEFFEE;opacity:.5;__min-width:200px;" styleName="inner-shadow" />
+            <box width="50%" height="100%" style="background-color: #EEEEFF;opacity:.5;" styleName="inner-shadow" />
+    </splitter>    
     
+    <!--
     <splitter width="700" height="500">
         <splitter direction="vertical" width="200" height="100%">
-            <box width="100%" height="75%" style="background-color: #EEFFEE;" styleName="inner-shadow" />
-            <box width="100%" height="25%" style="background-color: #EEEEFF;" styleName="inner-shadow" />
+            <box width="100%" height="75%" style="background-color: #EEFFEE;opacity:.5;" styleName="inner-shadow" />
+            <box width="100%" height="25%" style="background-color: #EEEEFF;opacity:.5;" styleName="inner-shadow" />
         </splitter>
         
         <splitter direction="vertical" width="100%" height="100%">
-            <box width="100%" height="20%" style="background-color: #FFEEEE;" styleName="inner-shadow" />
-            <box width="100%" height="40%" style="background-color: #FFEEFF;" styleName="inner-shadow" />
+            <box width="100%" height="20%" style="background-color: #FFEEEE;opacity:.5;" styleName="inner-shadow" />
+            <box width="100%" height="40%" style="background-color: #FFEEFF;opacity:.5;" styleName="inner-shadow" />
             <splitter width="100%" height="40%">
-                <box width="50%" height="100%" style="background-color: #FFFFEE;" styleName="inner-shadow" />
-                <box width="50%" height="100%" style="background-color: #EEFFFF;" styleName="inner-shadow" />
+                <box width="50%" height="100%" style="background-color: #FFFFEE;opacity:.5;" styleName="inner-shadow" />
+                <box width="50%" height="100%" style="background-color: #EEFFFF;opacity:.5;" styleName="inner-shadow" />
             </splitter>    
         </splitter>    
     </splitter>
+    -->    
 </vbox>

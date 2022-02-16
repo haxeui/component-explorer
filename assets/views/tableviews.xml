@@ -190,7 +190,7 @@
         
         <vbox width="200">
             <section-header text="Options" />
-            <checkbox text="Disable" onchange="tv5.disabled = this.selected" />
+            <checkbox text="Disable" onchange="tv5.disabled = tv6.disabled = this.selected" />
         </vbox>
     </hbox>
     

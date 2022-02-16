@@ -113,4 +113,22 @@
     <section-header text="Custom Handler" />
     
     <dropdown text="Select Item(s)" type="myDropDownHandler" width="160" />
+    
+    
+    <hbox>
+        <dropdown width="150" dropdownWidth="200" searchable="true" searchPrompt="Find Language">
+            <data>
+                <item text="Haxe" icon="icons/logo-haxe.png" />
+                <item text="Java" icon="icons/logo-java.png" />
+                <item text="Javascript" icon="icons/logo-javascript.png" />
+                <item text="C++" icon="icons/logo-cpp.png" />
+                <item text="PHP" icon="icons/logo-php.png" />
+                <item text="C#" icon="icons/logo-cs.png" />
+                <item text="F#" icon="icons/logo-fs.png" />
+                <item text="OCaml" icon="icons/logo-ocaml.png" />
+                <item text="Assembler" icon="icons/logo-asm.png" />
+            </data>
+        </dropdown>
+    </hbox>
+    
 </vbox>

@@ -33,7 +33,6 @@ class DialogsView extends View {
 class MyCustomDialog extends Dialog {
     public function new() {
         super();
-        title = "Entry Form";
         buttons = DialogButton.CANCEL | "Custom Button" | DialogButton.APPLY;
     }
 }

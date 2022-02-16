@@ -2,10 +2,10 @@
 <vbox>
     <section-header text="Default Dialogs" />
     <hbox>
-        <button text="Info" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Info message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Info', 'info')" icon="haxeui-core/styles/default/dialogs/icons8-info-48.png" />
-        <button text="Question" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Question message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Question', 'question')" icon="haxeui-core/styles/default/dialogs/icons8-help-48.png" />
-        <button text="Warning" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Warning message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Warning', 'warning')" icon="haxeui-core/styles/default/dialogs/icons8-error-48.png" />
-        <button text="Error" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Error message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Error', 'error')" icon="haxeui-core/styles/default/dialogs/icons8-high-priority-48.png" />
+        <button text="Info" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Info message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Info', 'info')" icon="haxeui-core/styles/shared/info-large.png" />
+        <button text="Question" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Question message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Question', 'question')" icon="haxeui-core/styles/shared/help-large.png" />
+        <button text="Warning" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Warning message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Warning', 'warning')" icon="haxeui-core/styles/shared/warning-large.png" />
+        <button text="Error" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Error message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Error', 'error')" icon="haxeui-core/styles/shared/error-large.png" />
     </hbox>  
 
     <section-header text="Custom Dialogs" />

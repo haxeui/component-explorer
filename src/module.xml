@@ -5,6 +5,7 @@
         <resource path="assets/images" prefix="images" />
         <resource path="assets/views" prefix="views" />
         <resource path="assets/fonts" prefix="fonts" />
+        <resource path="assets/themes" prefix="themes" />
         <resource path="src/views" prefix="src/views" />
     </resources>
 
@@ -15,4 +16,13 @@
     <scriptlets>
         <import class="util.Logger" static="true" />
     </scriptlets>
+    
+    <themes>
+        <default>
+            <style resource="themes/default/main.css" />
+        </default>
+        <dark2>
+            <style resource="themes/dark/main.css" />
+        </dark2>
+    </themes>
 </module>

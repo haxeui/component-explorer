@@ -24,12 +24,12 @@
                         <image id="icon" verticalAlign="center" />
                         <label id="text" verticalAlign="center" width="100%" />
                         <progress id="progress" verticalAlign="center" />
-                        <image resource="haxeui-core/styles/default/tiny-close-button.png" verticalAlign="center" />
+                        <image resource="haxeui-core/styles/shared/close-button-blue.png" verticalAlign="center" />
                     </item-renderer>
                     <item-renderer id="expandable" layoutName="horizontal" width="100%">
-                        <image resource="haxeui-core/styles/default/folder.png" verticalAlign="center" />
+                        <image resource="haxeui-core/styles/shared/folder-light.png" verticalAlign="center" />
                         <label id="text" width="100%" verticalAlign="center" />
-                        <hbox style="background-color: #eeeeee;border-radius:3px;padding: 1px 3px;spacing:0;" verticalAlign="center">
+                        <hbox style="background-color: $solid-background-color-alt;border-radius:3px;padding: 1px 3px;spacing:0;" verticalAlign="center">
                             <label id="count" style="color:#888888;font-size: 11px;" />
                             <label text=" children" style="color:#888888;font-size: 11px;" />
                         </hbox>

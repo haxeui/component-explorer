@@ -8,7 +8,7 @@
         <label text="Height:" verticalAlign="center" />
         <slider pos="170" min="170" max="300" onchange="grid1.height = this.value" />
     </grid>
-    <grid id="grid1" columns="3" style="border: 1px solid #ababab;padding: 5px;">
+    <grid id="grid1" columns="3" style="border: 1px solid $normal-border-color;padding: 5px;">
         <box width="25" height="25" style="background-color: red;border:1px solid red;background-opacity: .3" />
         <box width="100%" height="25" style="background-color: red;border:1px solid red;background-opacity: .3" />
         <box width="25" height="25" style="background-color: red;border:1px solid red;background-opacity: .3" />

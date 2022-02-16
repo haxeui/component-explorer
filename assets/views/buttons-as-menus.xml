@@ -2,7 +2,7 @@
 <vbox width="100%">
     <section-header text="Left / Right Button Menus" />
     
-    <hbox style="border: 1px solid #d2d2d2;padding-left:1px;padding-right:1px;" width="100%">
+    <hbox style="border: 1px solid $normal-border-color;padding-left:1px;padding-right:1px;" width="100%">
         <button-bar styleName="left-menu" direction="vertical" selectedIndex="0" onchange="stack1.selectedIndex = this.selectedIndex">
             <button text="Item 1A" icon="haxeui-core/styles/default/haxeui_small.png" />
             <button text="Item 1B" icon="haxeui-core/styles/default/haxeui_small.png" />
@@ -31,7 +31,7 @@
     
     <section-header text="Top / Bottom Button Menus" />
     
-    <vbox style="border: 1px solid #d2d2d2;padding-top:1px;padding-bottom:1px;padding-right: 1px;" width="100%">
+    <vbox style="border: 1px solid $normal-border-color;padding-top:1px;padding-bottom:1px;padding-right: 1px;" width="100%">
         <button-bar width="100%" styleName="top-menu" selectedIndex="0" onchange="stack3.selectedIndex = this.selectedIndex">
             <button text="Item 3A" icon="haxeui-core/styles/default/haxeui_small.png" />
             <button text="Item 3B" icon="haxeui-core/styles/default/haxeui_small.png" />

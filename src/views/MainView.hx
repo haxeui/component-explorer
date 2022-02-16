@@ -18,11 +18,13 @@ import views.TreeViewsView;
 import views.ViewManager;
 import views.ViewManager.ViewInfo;
 
+using StringTools;
+
 @:build(haxe.ui.macros.ComponentMacros.build("assets/main.xml"))
 class MainView extends HBox {
     public function new() {
         super();
-        
+        trace("==================> " + Screen.instance.height);
         Logger.logData = logData;
         ViewManager.instance.viewTabs = mainTabs;
         
@@ -69,7 +71,22 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Drag", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DragManagerView, relevantFiles: ["views/drag-manager.xml"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Animation", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationView, relevantFiles: ["views/animation.xml"] });
         
+    }
+    
+    public override function onReady() {
+        super.onReady();
         populateMainTree();
+    }
+    
+    private override function onThemeChanged() {
+        super.onThemeChanged();
+        #if js
+        if (Toolkit.theme.startsWith("dark")) {
+            js.Browser.document.body.style.backgroundColor = "#2c2f30";
+        } else if (Toolkit.theme.startsWith("default")) {
+            js.Browser.document.body.style.backgroundColor = "#ffffff";
+        }
+        #end
     }
     
     private function populateMainTree() {

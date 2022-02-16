@@ -21,8 +21,4 @@
             </listview>
         </hbox>
     </frame>
-
-    <section-header text="Position Animations" />
-
-    <section-header text="Color Animations" />
 </vbox>

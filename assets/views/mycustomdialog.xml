@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="500">
+<dialog width="500" title="Entry Form">
     <tabview width="100%">
         <hbox width="100%" text="Main Details">
             <vbox width="100%">
@@ -21,53 +21,65 @@
                     
                     <label text="DoB:" verticalAlign="center" />
                     <dropdown text="Unspecified" type="date" width="100%" />
-                </grid>
                     
-                <hbox>
+                    <label text="DC #:" verticalAlign="center" />
+                    <hbox width="100%">
+                        <number-stepper />
+                        <option-stepper width="100%">
+                            <data>
+                                <item text="Option A" />
+                                <item text="Option B" />
+                                <item text="Option C" />
+                            </data>
+                        </option-stepper>
+                    </hbox>
+                </grid>
+                 
+                <grid columns="3">
                     <optionbox text="Option 1" />
                     <optionbox text="Option 2" selected="true" />
                     <optionbox text="Option 3" />
-                </hbox>
-                
-                <hbox>
+                    
                     <checkbox text="Check 1" selected="true" />
                     <checkbox text="Check 2" />
                     <checkbox text="Check 3" selected="true" />
-                </hbox>
+                </grid>
                 
-                <hbox>
+                <hbox width="100%">
                     <switch />
+                    <progress width="100%" indeterminate="true" verticalAlign="center" />
                 </hbox>
             </vbox>
             
-            <vbox>
-                <listview id="lv2" width="200" height="170" selectedIndex="1">
+            <vbox width="200" height="100%">
+                <listview width="100%" height="100%">
                     <item-renderer layoutName="horizontal" width="100%">
                         <checkbox id="complete" />
-                        <label width="100%" id="item" verticalAlign="center" />
                         <image id="image" />
+                        <label width="100%" id="name" verticalAlign="center" />
+                        <progress id="rating" verticalAlign="center" width="50" />
                     </item-renderer>
                     <data>
-                        <item complete="false" item="Item 1" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="true" item="Item 2" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="true" item="Item 3" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="false" item="Item 4" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="true" item="Item 5" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="true" item="Item 6" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="false" item="Item 7" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="true" item="Item 8" image="haxeui-core/styles/default/haxeui_tiny.png" />
-                        <item complete="false" item="Item 9" image="haxeui-core/styles/default/haxeui_tiny.png" />
+                        <item complete="true" name="Haxe" image="icons/logo-haxe.png" rating="100" />
+                        <item complete="true" name="Java" image="icons/logo-java.png" rating="33" />
+                        <item complete="false" name="Javascript" image="icons/logo-javascript.png" rating="75" />
+                        <item complete="true" name="C++" image="icons/logo-cpp.png" rating="63" />
+                        <item complete="false" name="PHP" image="icons/logo-php.png" rating="40" />
+                        <item complete="true" name="C#" image="icons/logo-cs.png" rating="80" />
+                        <item complete="false" name="F#" image="icons/logo-fs.png" rating="11" />
+                        <item complete="false" name="OCaml" image="icons/logo-ocaml.png" rating="39" />
+                        <item complete="true" name="Assembler" image="icons/logo-asm.png" rating="81" />
                     </data>
                 </listview>
 
-                <buttonbar selectedIndex="1">
-                    <button text="Item 1" />
-                    <button text="Item 2" />
-                    <button text="Item 3" />
+                <buttonbar width="100%" selectedIndex="1">
+                    <button text="Item 1" width="33%" />
+                    <button text="Item 2" width="34%" />
+                    <button text="Item 3" width="33%" />
                 </buttonbar>
             </vbox>    
         </hbox> 
         <box text="Additional Details" />
         <box text="Even More Details" />
     </tabview>
-</vbox>
+</dialog>
