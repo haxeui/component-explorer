@@ -110,25 +110,54 @@
 
     <dropdown text="Select Date" type="date" />
     
-    <section-header text="Custom Handler" />
-    
-    <dropdown text="Select Item(s)" type="myDropDownHandler" width="160" />
-    
+    <section-header text="Custom Item Renderers" />
     
     <hbox>
-        <dropdown width="150" dropdownWidth="200" searchable="true" searchPrompt="Find Language">
+        <dropdown width="250">
+            <item-renderer layoutName="horizontal" width="100%">
+                <image id="icon" />
+                <vbox width="100%">
+                    <label id="text" style="font-size: 20px;" />
+                    <hbox width="100%">
+                        <label id="subText" style="color: #888888;" width="100%" />
+                        <progress id="progress" width="50" verticalAlign="center" />
+                    </hbox>    
+                </vbox>
+            </item-renderer>
             <data>
-                <item text="Haxe" icon="icons/logo-haxe.png" />
-                <item text="Java" icon="icons/logo-java.png" />
-                <item text="Javascript" icon="icons/logo-javascript.png" />
-                <item text="C++" icon="icons/logo-cpp.png" />
-                <item text="PHP" icon="icons/logo-php.png" />
-                <item text="C#" icon="icons/logo-cs.png" />
-                <item text="F#" icon="icons/logo-fs.png" />
-                <item text="OCaml" icon="icons/logo-ocaml.png" />
-                <item text="Assembler" icon="icons/logo-asm.png" />
+                <item text="Deutschland" subText="Germany" icon="icons/flags/de.png" progress="33" />
+                <item text="España" subText="Spain" icon="icons/flags/es.png" progress="15" />
+                <item text="France" subText="France" icon="icons/flags/fr.png" progress="82" />
+                <item text="United Kingdom" subText="United Kingdom" icon="icons/flags/gb.png" progress="40" />
+                <item text="Italia" subText="Italy" icon="icons/flags/it.png" progress="64" />
+                <item text="United States" subText="United States" icon="icons/flags/us.png" progress="72" />
+            </data>
+        </dropdown>
+        
+        <dropdown width="250" searchable="true" searchPrompt="Find Country">
+            <item-renderer layoutName="horizontal" width="100%">
+                <image id="icon" />
+                <vbox width="100%">
+                    <label id="text" style="font-size: 20px;" />
+                    <hbox width="100%">
+                        <label id="subText" style="color: #888888;" width="100%" />
+                        <progress id="progress" width="50" verticalAlign="center" />
+                    </hbox>    
+                </vbox>
+            </item-renderer>
+            <data>
+                <item text="Deutschland" subText="Germany" icon="icons/flags/de.png" progress="33" />
+                <item text="España" subText="Spain" icon="icons/flags/es.png" progress="15" />
+                <item text="France" subText="France" icon="icons/flags/fr.png" progress="82" />
+                <item text="United Kingdom" subText="United Kingdom" icon="icons/flags/gb.png" progress="40" />
+                <item text="Italia" subText="Italy" icon="icons/flags/it.png" progress="64" />
+                <item text="United States" subText="United States" icon="icons/flags/us.png" progress="72" />
             </data>
         </dropdown>
     </hbox>
+    
+    <section-header text="Custom Handler" />
+    
+    <dropdown text="Select Item(s)" type="myDropDownHandler" width="160" />
     
 </vbox>

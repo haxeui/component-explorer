@@ -23,7 +23,8 @@
         }
         
         #mainTabs > .tabview-content {
-            border-top: none;
+            __border-top: none;
+            border-top-color: none;
         }
     </style>
     <box width="100%" height="100%">
@@ -42,7 +43,7 @@
         
         <vbox width="25%" height="100%" style="padding-top: 0px;">
             <hbox width="100%" height="100%">
-                <treeview id="mainTree" width="100%" height="100%" styleName="full-width" style="border: none;" />
+                <treeview id="mainTree" width="100%" height="100%" styleName="full-width" style="border: none;" allowFocus="false" />
             </hbox>    
         </vbox>    
     </box>   

@@ -17,7 +17,6 @@
         <button text="Disabled"  icon="haxeui-core/styles/default/haxeui_small.png" disabled="true" />
     </hbox>
     
-
     <section-header text="Button Bars" />
     <vbox>
         <hbox>
@@ -85,5 +84,5 @@
             <button text="Item 4" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" />
             <button text="Item 5" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" />
         </button-bar>
-    </vbox>    
+    </vbox>
 </vbox>    

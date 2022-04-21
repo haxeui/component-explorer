@@ -24,7 +24,7 @@ using StringTools;
 class MainView extends HBox {
     public function new() {
         super();
-        trace("==================> " + Screen.instance.height);
+        trace("Screen size: " + Screen.instance.width + "x" + Screen.instance.height);
         Logger.logData = logData;
         ViewManager.instance.viewTabs = mainTabs;
         

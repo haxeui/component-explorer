@@ -1,8 +1,6 @@
 package ;
 
 import haxe.ui.HaxeUIApp;
-import haxe.ui.Toolkit;
-import haxe.ui.containers.dialogs.MessageBox.MessageBoxType;
 import views.MainView;
 
 class Main {
