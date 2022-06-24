@@ -53,11 +53,12 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Containers", title: "List Views", smallIcon: "icons/16/list_box.png", largeIcon: "icons/32/list_box.png", viewClass: ListViewsView, relevantFiles: ["views/listviews.xml", "src/views/ListViewsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"List Views", title: "As Menus", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: ListViewsAsMenusView, relevantFiles: ["views/listviews-as-menus.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Table Views", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: TableViewsView, relevantFiles: ["views/tableviews.xml"] });
-        ViewManager.instance.registerView({ group: "Containers", title: "Tree Views", smallIcon: "icons/16/labels.png", largeIcon: "icons/32/labels.png", viewClass: TreeViewsView, relevantFiles: ["views/treeviews.xml"] });
+        ViewManager.instance.registerView({ group: "Containers", title: "Tree Views", smallIcon: "icons/16/labels.png", largeIcon: "icons/32/labels.png", viewClass: TreeViewsView, relevantFiles: ["views/treeviews.xml", "src/views/TreeViewsView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Side Bars", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: SidebarsView, relevantFiles: ["views/sidebars.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Property Grids", smallIcon: "icons/16/attributes_display.png", largeIcon: "icons/32/attributes_display.png", viewClass: PropertyGridsView, relevantFiles: ["views/propertygrids.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Accordions", smallIcon: "icons/16/accordion.png", largeIcon: "icons/32/accordion.png", viewClass: AccordionsView, relevantFiles: ["views/accordions.xml"] });
-        ViewManager.instance.registerView({ group: "Containers", title: "Dialogs", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DialogsView, relevantFiles: ["views/dialogs.xml", "src/views/DialogsView.hx", "views/mycustomdialog.xml"] });
+        ViewManager.instance.registerView({ group: "Containers", title: "Dialogs", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DialogsView, relevantFiles: ["views/dialogs.xml", "src/views/DialogsView.hx", "views/mycustomdialog.xml", "views/simple-login-dialog.xml"] });
+            ViewManager.instance.registerView({ group: "Containers", subGroup:"Dialogs", title: "File Dialogs", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: FileDialogsView, relevantFiles: ["views/file-dialogs.xml", "src/views/FileDialogsView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Cards", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: CardsView, relevantFiles: ["views/cards.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Splitters", smallIcon: "icons/16/layouts_6.png", largeIcon: "icons/32/layouts_6.png", viewClass: SplitterView, relevantFiles: ["views/splitters.xml"] });
         
@@ -68,9 +69,8 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Layouts", title: "Grid Layouts", smallIcon: "icons/16/layouts_6.png", largeIcon: "icons/32/layouts_6.png", viewClass: GridLayoutsView, relevantFiles: ["views/grid-layouts.xml"] });
 
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Tooltips", smallIcon: "icons/16/label.png", largeIcon: "icons/32/label.png", viewClass: TooltipsView, relevantFiles: ["views/tooltips.xml"] });
-        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Drag", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DragManagerView, relevantFiles: ["views/drag-manager.xml"] });
+        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Drag", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DragManagerView, relevantFiles: ["views/drag-manager.xml", "src/views/DragManagerView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Animation", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationView, relevantFiles: ["views/animation.xml"] });
-        
     }
     
     public override function onReady() {

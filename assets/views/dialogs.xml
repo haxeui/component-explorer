@@ -13,4 +13,9 @@
         <button id="customModalDialog" text="Custom Modal Dialog" />
         <button id="customNonModalDialog" text="Custom Non-Modal Dialog" />
     </hbox>    
+
+    <section-header text="Validating Dialogs" />
+    <hbox>
+        <button id="validatingDialog" text="Validating Dialog" />
+    </hbox>    
 </vbox>

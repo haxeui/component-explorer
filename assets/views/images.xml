@@ -15,5 +15,11 @@
             <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="100" scaleMode="fitheight" style="border:1px solid $normal-border-color" />
             <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="100" style="border:1px solid $normal-border-color" />
         </vbox>    
-    </hbox>    
+    </hbox>
+    
+    <section-header text="Scaled Images" />
+    <hbox>
+        <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" imageScale="3" />
+        <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color;image-rendering: pixelated;" imageScale="3" />
+    </hbox>
 </vbox>

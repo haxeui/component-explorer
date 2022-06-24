@@ -124,6 +124,26 @@
     
     <hbox width="100%">
         <vbox width="100%">
+            <section-header text="Full Width Buttons" />
+            <hbox>
+                <tabview id="tv7" width="400" height="100" styleName="full-width-buttons">
+                    <box text="Haxe" icon="icons/logo-haxe.png" />
+                    <box text="Java" icon="icons/logo-java.png" />
+                    <box text="Javascript" icon="icons/logo-javascript.png" />
+                </tabview>
+            </hbox>
+        </vbox>
+        
+        <vbox width="200">
+            <section-header text="Options" />
+            <checkbox text="Disable" onchange="tv7.disabled = this.selected" />
+        </vbox>
+    </hbox>     
+    
+    <spacer height="10" />
+    
+    <hbox width="100%">
+        <vbox width="100%">
             <section-header text="TabBar" />
             <grid>
                 <!-- top tabbar -->
