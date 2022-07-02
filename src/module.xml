@@ -21,8 +21,5 @@
         <default>
             <style resource="themes/default/main.css" />
         </default>
-        <dark2>
-            <style resource="themes/dark/main.css" />
-        </dark2>
     </themes>
 </module>

@@ -1,3 +1,5 @@
-<vbox>
-    <button id="closeSideBar" text="Close" />
-</vbox>
+<box>
+    <vbox>
+        <button id="closeSideBar" text="Close" />
+    </vbox>
+</box>

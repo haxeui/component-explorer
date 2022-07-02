@@ -75,6 +75,7 @@ class ViewManager {
         
         var scrollview = new ScrollView();
         scrollview.addClass("view-container-scrollview");
+        scrollview.addClass("borderless");
         scrollview.percentWidth = 100;
         scrollview.percentHeight = 100;
         scrollview.percentContentWidth = 100;

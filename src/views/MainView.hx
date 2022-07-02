@@ -1,14 +1,10 @@
 package views;
 
 import haxe.ui.Toolkit;
-import haxe.ui.containers.Box;
 import haxe.ui.containers.HBox;
 import haxe.ui.containers.TreeViewNode;
 import haxe.ui.core.Screen;
-import haxe.ui.data.ListDataSource;
-import haxe.ui.events.MouseEvent;
 import haxe.ui.events.UIEvent;
-import haxe.ui.util.Timer;
 import util.Logger;
 import views.CardsView;
 import views.FramesView;
@@ -16,7 +12,6 @@ import views.LinksView;
 import views.SplitterView;
 import views.TreeViewsView;
 import views.ViewManager;
-import views.ViewManager.ViewInfo;
 
 using StringTools;
 
@@ -83,8 +78,12 @@ class MainView extends HBox {
         #if js
         if (Toolkit.theme.startsWith("dark")) {
             js.Browser.document.body.style.backgroundColor = "#2c2f30";
+            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.backgroundColor = "#3d3f41";
+            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.borderColor = "#222426";
         } else if (Toolkit.theme.startsWith("default")) {
             js.Browser.document.body.style.backgroundColor = "#ffffff";
+            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.backgroundColor = "#ffffff";
+            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.borderColor = "#d9d9d9";
         }
         #end
     }
