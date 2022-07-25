@@ -32,6 +32,8 @@
     <library name="haxeui-html5" />
     <library name="monaco-editor" />
     <library name="haxeui-code-editor" />
+    <library name="haxeui-theme-nord" />
+    <library name="format" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>

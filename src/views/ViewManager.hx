@@ -5,6 +5,7 @@ import haxe.ui.components.Image;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.ScrollView;
 import haxe.ui.containers.TabView;
+import haxe.ui.core.Component;
 import util.Logger;
 
 typedef ViewInfo = {
@@ -75,7 +76,7 @@ class ViewManager {
         
         var scrollview = new ScrollView();
         scrollview.addClass("view-container-scrollview");
-        scrollview.addClass("borderless");
+        //scrollview.addClass("borderless");
         scrollview.percentWidth = 100;
         scrollview.percentHeight = 100;
         scrollview.percentContentWidth = 100;
@@ -85,6 +86,12 @@ class ViewManager {
         view.percentWidth = 100;
         if (view.percentHeight == 100) {
             scrollview.percentContentHeight = 100;
+        }
+        if (view.hasClass("default-background")) {
+            trace("DO it!");
+            scrollview.addClass("default-background");
+            viewContainer.addClass("default-background");
+            viewTabs.findComponent("tabview-content", Component).addClass("default-background");
         }
         //view.percentHeight = 100;
         scrollview.addComponent(view);

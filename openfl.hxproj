@@ -15,27 +15,64 @@
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="C:\Work\Github\lime\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\lib" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\lime\src" />
     <class path="C:\SDK\haxe\lib\actuate\1,8,9\src" />
-    <class path="C:\Work\HaxeUI\backends\haxeui-openfl" />
     <class path="C:\Work\HaxeUI\haxeui-core" />
-    <class path="C:\SDK\haxe\lib\hscript\2,3,0" />
-    <class path="C:\Work\Github\openfl\src" />
+    <class path="C:\Work\HaxeUI\backends\haxeui-openfl" />
     <class path="src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\application\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\assets\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\bitmapdata\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\displayobject\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\errors\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\eventdispatcher\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\externalinterface\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\filereference\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\filters\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\geom\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\graphics\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\input\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\loader\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\movieclip\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\printing\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\renderer-cairo\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\renderer-canvas\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\renderer-core\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\renderer-dom\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\renderer-flash\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\renderer-stage3d\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\security\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\sensors\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\shader\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\sharedobject\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\socket\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\sound\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\stage\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\stage3d\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\system\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\telemetry\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\textfield\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\tilemap\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\urlloader\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\urlrequest\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\urlstream\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\utils\src" />
+    <class path="C:\Work\Ionosoft\IonSuite\forks\openfl\packages\video\src" />
     <class path="build\openfl\windows\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="lime=7.5.0&#xA;actuate=1.8.9&#xA;haxeui-openfl=0.0.2&#xA;haxeui-core=0.0.3&#xA;hscript=2.3.0&#xA;openfl=8.9.1&#xA;lime-openal&#xA;ANDROID_SETUP=true&#xA;ANDROID_NDK_ROOT=C:\SDK\android-ndk-r19c&#xA;native&#xA;lime-curl&#xA;openfl-native&#xA;lime-harfbuzz&#xA;tools=7.5.0&#xA;lime-cairo&#xA;lime-opengl&#xA;no-compilation&#xA;lime-native&#xA;lime-vorbis&#xA;lime-cffi&#xA;fdb&#xA;windows&#xA;desktop" />
+    <option directives="openfl=9.0.2&#xA;lime=7.8.0&#xA;actuate=1.8.9&#xA;haxeui-core=1.3.0&#xA;haxeui-openfl=1.3.0&#xA;lime-openal&#xA;ANDROID_SETUP=true&#xA;ANDROID_NDK_ROOT=C:\SDK\android-ndk-r19c&#xA;native&#xA;lime-curl&#xA;openfl-native&#xA;lime-harfbuzz&#xA;tools=7.8.0&#xA;lime-cairo&#xA;lime-opengl&#xA;no-compilation&#xA;lime-native&#xA;lime-vorbis&#xA;lime-cffi&#xA;fdb&#xA;windows&#xA;desktop" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="False" />
-    <option additional="--macro lime._internal.macros.DefineMacro.run()&#xA;--macro openfl._internal.macros.ExtraParams.include()&#xA;--remap flash:openfl" />
+    <option additional="--macro openfl._internal.ExtraParams.include()&#xA;--macro lime._internal.macros.DefineMacro.run()&#xA;--remap flash:openfl" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
-    <library name="hscript" />
+    <!-- example: <library name="..." /> -->
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>

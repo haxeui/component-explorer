@@ -5,10 +5,14 @@ import haxe.ui.containers.HBox;
 import haxe.ui.containers.TreeViewNode;
 import haxe.ui.core.Screen;
 import haxe.ui.events.UIEvent;
+import haxe.ui.themes.ThemeManager;
 import util.Logger;
+import views.AnimationsView;
 import views.CardsView;
+import views.CustomComponentView;
 import views.FramesView;
 import views.LinksView;
+import views.SimplePaintView;
 import views.SplitterView;
 import views.TreeViewsView;
 import views.ViewManager;
@@ -19,6 +23,7 @@ using StringTools;
 class MainView extends HBox {
     public function new() {
         super();
+        loadThemeSetting();
         trace("Screen size: " + Screen.instance.width + "x" + Screen.instance.height);
         Logger.logData = logData;
         ViewManager.instance.viewTabs = mainTabs;
@@ -40,6 +45,8 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Basic", title: "Images", smallIcon: "icons/16/images_flickr.png", largeIcon: "icons/32/images_flickr.png", viewClass: ImagesView, relevantFiles: ["views/images.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Steppers", smallIcon: "icons/16/spin.png", largeIcon: "icons/32/spin.png", viewClass: SteppersView, relevantFiles: ["views/steppers.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Switches", smallIcon: "icons/16/button_toggle.png", largeIcon: "icons/32/button_toggle.png", viewClass: SwitchesView, relevantFiles: ["views/switches.xml"] });
+        ViewManager.instance.registerView({ group: "Basic", title: "Canvas", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: CanvasView, relevantFiles: ["views/canvas.xml", "src/custom/DemoGraph.hx", "src/custom/ColorTable.hx", "src/custom/Noise.hx"] });
+        ViewManager.instance.registerView({ group: "Basic", title: "Animations", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationsView, relevantFiles: ["views/animations.xml"] });
         
         ViewManager.instance.registerView({ group: "Containers", title: "Tabs", smallIcon: "icons/16/tab_content.png", largeIcon: "icons/32/tab_content.png", viewClass: TabsView, relevantFiles: ["views/tabs.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Menus", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: MenusView, relevantFiles: ["views/menus.xml"] });
@@ -66,6 +73,9 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Tooltips", smallIcon: "icons/16/label.png", largeIcon: "icons/32/label.png", viewClass: TooltipsView, relevantFiles: ["views/tooltips.xml"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Drag", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DragManagerView, relevantFiles: ["views/drag-manager.xml", "src/views/DragManagerView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Animation", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationView, relevantFiles: ["views/animation.xml"] });
+        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Custom Component", smallIcon: "icons/16/list.png", largeIcon: "icons/32/list.png", viewClass: CustomComponentView, relevantFiles: ["views/custom-component.xml", "src/views/CustomComponentView.hx", "src/custom/IFrame.hx"] });
+
+        ViewManager.instance.registerView({ group: "Examples", title: "Simple Paint", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: SimplePaintView, relevantFiles: ["views/simple-paint.xml", "src/views/SimplePaintView.hx"] });
     }
     
     public override function onReady() {
@@ -73,23 +83,92 @@ class MainView extends HBox {
         populateMainTree();
     }
     
-    private override function onThemeChanged() {
-        super.onThemeChanged();
+    private function changePage() {
         #if js
-        if (Toolkit.theme.startsWith("dark")) {
-            js.Browser.document.body.style.backgroundColor = "#2c2f30";
-            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.backgroundColor = "#3d3f41";
-            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.borderColor = "#222426";
-        } else if (Toolkit.theme.startsWith("default")) {
-            js.Browser.document.body.style.backgroundColor = "#ffffff";
-            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.backgroundColor = "#ffffff";
-            js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.borderColor = "#d9d9d9";
+        
+        var defaultColor = @:privateAccess ThemeManager.instance.currentThemeVars.get("default-background-color");
+        var secondaryColor = @:privateAccess ThemeManager.instance.currentThemeVars.get("secondary-background-color");
+        var borderColor = @:privateAccess ThemeManager.instance.currentThemeVars.get("normal-border-color");
+        var accentColor = @:privateAccess ThemeManager.instance.currentThemeVars.get("normal-text-color");
+        
+        js.Browser.document.body.style.backgroundColor = defaultColor;
+        js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.backgroundColor = secondaryColor;
+        js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.borderColor = borderColor;
+        js.Browser.document.getElementsByClassName("navigation-header-full").item(0).style.setProperty("box-shadow", "none");
+        
+        js.Browser.document.getElementsByClassName("selected").item(0).style.color = accentColor;
+        #end
+    }
+    
+    private function saveThemeSetting() {
+        #if js
+        var days = 365;
+        js.Cookie.set("haxeui-theme", _theme, days * 24 * 60 * 60 * 1000);
+        trace("saved theme cookie: " + _theme);
+        #end
+    }
+    
+    private function saveTreePath() {
+        #if js
+        var path = mainTree.selectedNode.nodePath();
+        var days = 365;
+        js.Cookie.set("haxeui-selected-path", path, days * 24 * 60 * 60 * 1000);
+        trace("saved path: " + path);
+        #end
+    }
+    
+    private var _theme:String = "default";
+    private function loadThemeSetting() {
+        #if js
+        var value = js.Cookie.get("haxeui-theme");
+        if (value == null) {
+            value = "default";
+        }
+        _theme = value;
+        trace("loaded theme cookie: " + value);
+        var indexToSelect = 0;
+        var ds = themeSelector.dataSource;
+        for (i in 0...ds.size) {
+            if (ds.get(i).themeId == value) {
+                indexToSelect = i;
+                break;
+            }
+        }
+        themeSelector.selectedIndex = indexToSelect;
+        if (_theme != Toolkit.theme) {
+            Toolkit.theme = _theme;
+            changePage();
+        }
+        #end
+    }
+    
+    private function loadTreePath():String {
+        #if js
+        return js.Cookie.get("haxeui-selected-path");
+        #else
+        return null;
+        #end
+    }
+    
+    @:bind(themeSelector, UIEvent.CHANGE)
+    private function onThemeSelectorChanged(_) {
+        if (_theme == themeSelector.selectedItem.themeId) {
+            return;
+        }
+        _theme = themeSelector.selectedItem.themeId;
+        saveThemeSetting();
+        #if js
+        if (_theme != Toolkit.theme) {
+            //Toolkit.theme = _theme;
+            js.Browser.location.reload();
         }
         #end
     }
     
     private function populateMainTree() {
-        var node:TreeViewNode = null;
+        var firstNode:TreeViewNode = null;
+        var pathToSelect:String = loadTreePath();
+        var nodeToSelect:TreeViewNode = null;
         for (groupName in ViewManager.instance.viewGroups.keys()) {
             var groupNode = mainTree.addNode({ text: groupName });
             groupNode.expanded = true;
@@ -97,20 +176,30 @@ class MainView extends HBox {
             var list = ViewManager.instance.viewGroups.get(groupName);
             for (item in list) {
                 var itemNode = groupNode.addNode({ text: item.title, icon: item.smallIcon, viewInfo: item });
-                if (node == null) {
-                    node = itemNode;
+                if (itemNode.nodePath() == pathToSelect) {
+                    nodeToSelect = itemNode;
+                }
+                if (firstNode == null) {
+                    firstNode = itemNode;
                 }
                 var subItems = ViewManager.instance.getItemsFromSubGroup(item.title);
                 if (subItems.length > 0) {
                     for (subItem in subItems ) {
-                        itemNode.addNode({ text: subItem.title, icon: subItem.smallIcon, viewInfo: subItem });
+                        var subNode = itemNode.addNode({ text: subItem.title, icon: subItem.smallIcon, viewInfo: subItem });
+                        if (subNode.nodePath() == pathToSelect) {
+                            nodeToSelect = subNode;
+                        }
                     }
                 }
             }
         }
         
+        if (nodeToSelect == null) {
+            nodeToSelect = firstNode;
+        }
+        
         Toolkit.callLater(function() {
-            mainTree.selectedNode = node;
+            mainTree.selectedNode = nodeToSelect;
         });
     }
     
@@ -119,6 +208,10 @@ class MainView extends HBox {
         if (mainTree.selectedNode == null) {
             return;
         }
+        
+        var path = mainTree.selectedNode.nodePath();
+        trace("tree selection changed: " + path);
+        saveTreePath();
         
         var viewInfo = mainTree.selectedNode.data.viewInfo;
         if (viewInfo == null) {

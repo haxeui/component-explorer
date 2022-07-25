@@ -1,0 +1,11 @@
+<vbox width="100%" height="100%">
+    <section-header text="Animated GIF" />
+    <vbox>
+        <animation id="gifAnimation" resource="images/test_animation1.gif" />
+        <hbox width="100%">
+            <label text="Frame Rate" verticalAlign="center" />
+            <slider id="gifSpeedSlider" min="10" max="100" width="100%" precision="0" onChange="gifAnimation.frameRate = this.value" />
+            <label text="${gifSpeedSlider.pos}" verticalAlign="center" width="25" />
+        </hbox>    
+    </vbox>    
+</vbox>

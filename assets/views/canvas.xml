@@ -1,0 +1,32 @@
+<vbox width="100%" height="100%">
+    <section-header text="Demo Graph" />
+    <demo-graph width="520" height="420" />  
+    
+    <section-header text="Animated Color Table" />
+    <color-table width="200" height="100" />
+    
+    <section-header text="Random Noise" />
+    <grid columns="10">
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+        <noise width="20" height="20" />
+    </grid>
+</vbox>

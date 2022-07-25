@@ -30,10 +30,13 @@
     <box width="100%" height="100%">
         <vbox width="75%" height="100%" horizontalAlign="right" style="spacing: 0px;">
             <box id="themeBox" width="100%" style="padding: 10px;padding-bottom:0;">
-                <dropdown width="170" selectedIndex="0" horizontalAlign="right" onchange="haxe.ui.Toolkit.theme = this.selectedItem.themeId">
+                <dropdown id="themeSelector" width="170" selectedIndex="0" horizontalAlign="right">
                     <data>
                         <item text="Default Theme" themeId="default" />
                         <item text="Dark Theme" themeId="dark" />
+                        <!--
+                        <item text="Polar Night" themeId="polar-night" />
+                        -->    
                     </data>
                 </dropdown>    
             </box>    
