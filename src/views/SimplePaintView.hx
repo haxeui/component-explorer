@@ -45,6 +45,10 @@ class SimplePaintView extends View {
     private function onCanvasMouseUp(event:MouseEvent) {
         _downPos = null;
     }
+    
+    private override function onHidden() {
+        _toolbox.hideDialog(DialogButton.CANCEL);
+    }
 }
 
 @:xml('

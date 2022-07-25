@@ -64,6 +64,7 @@ class ViewManager {
         return items;
     }
     
+    private var _currentView:View = null;
     public function showView(info:ViewInfo) {
         viewTabs.removeAllPages();
         
@@ -81,14 +82,13 @@ class ViewManager {
         scrollview.percentHeight = 100;
         scrollview.percentContentWidth = 100;
         viewContainer.addComponent(scrollview);
-        
+
         var view:View = Type.createInstance(info.viewClass, []);
         view.percentWidth = 100;
         if (view.percentHeight == 100) {
             scrollview.percentContentHeight = 100;
         }
         if (view.hasClass("default-background")) {
-            trace("DO it!");
             scrollview.addClass("default-background");
             viewContainer.addClass("default-background");
             viewTabs.findComponent("tabview-content", Component).addClass("default-background");
@@ -104,6 +104,12 @@ class ViewManager {
         }
         
         Logger.clear();
+        
+        if (_currentView != null) {
+            @:privateAccess _currentView.onHidden();
+        }
+        _currentView = view;
+        @:privateAccess _currentView.onShown();
     }
     
     private function createRelevantFileView(file:String) {
