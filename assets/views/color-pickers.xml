@@ -1,0 +1,16 @@
+<vbox width="100%">
+    <section-header text="Popup Color Picker" />
+    <hbox>
+        <vbox>
+            <hbox>
+                <color-picker-popup onchange="selectedColor.backgroundColor = this.selectedItem" />
+                <color-picker-popup liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
+            </hbox>
+            <color-picker-popup width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
+        </vbox>    
+        <box id="selectedColor" width="60" height="100%" style="background-color: red" />
+    </hbox>    
+    
+    <section-header text="Color Picker" />
+    <color-picker onchange="selectedColor.backgroundColor = this.currentColor" />
+</vbox>

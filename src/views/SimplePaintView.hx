@@ -75,7 +75,7 @@ class SimplePaintView extends View {
     <grid id="colorGrid" style="spacing:0px;">
     </grid>
     
-    <dropdown id="thicknessSelector" width="100%" dropdownSize="-1" selectedIndex="1">
+    <dropdown id="thicknessSelector" width="100%" dropdownSize="-1" selectedIndex="2">
         <data>
             <item text="1" />
             <item text="2" />
@@ -84,6 +84,8 @@ class SimplePaintView extends View {
             <item text="5" />
         </data>
     </dropdown>
+    
+    <color-picker-popup id="colorPicker" width="100%" selectedItem="black" />
 </dialog>
 ')
 private class ToolBox extends Dialog {
@@ -130,6 +132,7 @@ private class ToolBox extends Dialog {
         for (button in colorGrid.findComponents("color-button", Button)) {
             if (button == event.target) {
                 currentColor = button.findComponent(Box).backgroundColor;
+                colorPicker.selectedItem = currentColor;
                 button.selected = true;
             } else {
                 button.selected = false;
@@ -141,6 +144,12 @@ private class ToolBox extends Dialog {
     @:bind(thicknessSelector, UIEvent.CHANGE)
     private function onThicknessSelectorChanged(_) {
         currentThickness = Std.parseFloat(thicknessSelector.selectedItem.text);
+        dispatch(new UIEvent(UIEvent.CHANGE));
+    }
+    
+    @:bind(colorPicker, UIEvent.CHANGE)
+    private function onColorPickerChanged(_) {
+        currentColor = colorPicker.selectedItem;
         dispatch(new UIEvent(UIEvent.CHANGE));
     }
 }

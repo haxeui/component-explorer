@@ -18,6 +18,18 @@
             font-size: 13px;
         }
         
+        .text-tiny {
+            font-size: 10px;
+        }
+
+        .text-small {
+            font-size: 11px;
+        }
+
+        .text-normal {
+            font-size: 13px;
+        }
+        
         #mainTree .image {
             opacity: .8;
         }
