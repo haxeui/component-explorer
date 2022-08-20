@@ -95,6 +95,7 @@ class ViewManager {
         }
         //view.percentHeight = 100;
         scrollview.addComponent(view);
+        scrollview.addClass("borderless");
         
         viewTabs.addComponent(viewContainer);
         viewTabs.pageIndex = 0;
@@ -153,10 +154,12 @@ class ViewManager {
     }
     
     private function iconForExtension(ext:String):String {
-        var icon = "icons/16/document_empty.png";
+        var icon = "icons/16/document.png";
         switch (ext) {
             case "xml":
-                icon = "icons/16/document_editing.png";
+                icon = "icons/16/document-code.png";
+            case "hx" | "haxe":
+                icon = "icons/16/document-text.png";
             case "png":
                 icon = "icons/16/image.png";
         }

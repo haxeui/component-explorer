@@ -49,7 +49,7 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Basic", title: "Switches", smallIcon: "icons/16/button_toggle.png", largeIcon: "icons/32/button_toggle.png", viewClass: SwitchesView, relevantFiles: ["views/switches.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Canvas", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: CanvasView, relevantFiles: ["views/canvas.xml", "src/custom/DemoGraph.hx", "src/custom/ColorTable.hx", "src/custom/Noise.hx"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Animations", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationsView, relevantFiles: ["views/animations.xml"] });
-        ViewManager.instance.registerView({ group: "Basic", title: "Color Pickers", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: ColorPickersView, relevantFiles: ["views/color-pickers.xml"] });
+        ViewManager.instance.registerView({ group: "Basic", title: "Color Pickers", smallIcon: "icons/16/color-picker-default.png", largeIcon: "icons/32/color-picker-default.png", viewClass: ColorPickersView, relevantFiles: ["views/color-pickers.xml"] });
         
         ViewManager.instance.registerView({ group: "Containers", title: "Tabs", smallIcon: "icons/16/tab_content.png", largeIcon: "icons/32/tab_content.png", viewClass: TabsView, relevantFiles: ["views/tabs.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Menus", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: MenusView, relevantFiles: ["views/menus.xml"] });
