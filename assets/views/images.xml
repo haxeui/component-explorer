@@ -19,7 +19,13 @@
     
     <section-header text="Scaled Images" />
     <hbox>
-        <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" imageScale="3" />
-        <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color;image-rendering: pixelated;" imageScale="3" />
+        <vbox>
+            <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" imageScale="2" />
+            <label text="smooth" horizontalAlign="center" />
+        </vbox>    
+        <vbox>
+            <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color;image-rendering: pixelated;" imageScale="2" />
+            <label text="pixelated" horizontalAlign="center" />
+        </vbox>    
     </hbox>
 </vbox>

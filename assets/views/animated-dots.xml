@@ -1,0 +1,74 @@
+<vbox>
+    <style>
+        .dot-container {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+        }
+        
+        .dot {
+            width: 100%;
+            height: 100%;
+            background-color: $selection-background-color;
+            border: 2px solid $selection-background-color;
+            border-radius: 30px;
+        }
+        
+        .dot-container:grow {
+            animation: sizedotitem 0.2s ease 0s 1;
+        }
+        
+        .dot-container:shrink {
+            animation: sizedotitem 0.2s ease 0s 1 reverse backwards;
+        }
+        
+        .dot:grow {
+            animation: colordot 0.2s ease 0s 1;
+        }
+        
+        .dot:shrink {
+            animation: colordot 0.2s ease 0s 1 reverse backwards;
+        }
+    
+        @keyframes sizedotitem {
+            0% {
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+            }
+            100% {
+                padding-top: 0px;
+                padding-left: 0px;
+                padding-bottom: 0px;
+                padding-right: 0px;
+            }
+        }
+    
+        @keyframes colordot {
+            0% {
+                background-color: $selection-background-color;
+            }
+            100% {
+                background-color: $solid-background-color;
+            }
+        }
+    </style>
+    
+    <hbox>
+        <button id="buttonPrev" text="Prev" />
+        <hbox id="theDots">
+            <box styleName="dot-container :grow"><box styleName="dot :grow" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+            <box styleName="dot-container"><box styleName="dot" /></box>
+        </hbox>    
+        <button id="buttonNext" text="Next" />
+    </hbox>
+</vbox>

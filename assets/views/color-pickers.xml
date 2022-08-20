@@ -1,16 +1,34 @@
 <vbox width="100%">
-    <section-header text="Popup Color Picker" />
-    <hbox>
-        <vbox>
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Popup Color Picker" />
             <hbox>
-                <color-picker-popup onchange="selectedColor.backgroundColor = this.selectedItem" />
-                <color-picker-popup liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
-            </hbox>
-            <color-picker-popup width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                <vbox>
+                    <hbox>
+                        <color-picker-popup id="picker1" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                        <color-picker-popup id="picker2" liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                    </hbox>
+                    <color-picker-popup id="picker3" width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                </vbox>    
+                <box id="selectedColor" width="60" height="100%" style="background-color: red" />
+            </hbox>  
         </vbox>    
-        <box id="selectedColor" width="60" height="100%" style="background-color: red" />
+        
+        <vbox width="200">
+            <section-header text="Options" />
+            <checkbox text="Disable" onchange="picker1.disabled = picker2.disabled = picker3.disabled = this.selected" />
+        </vbox>
     </hbox>    
     
-    <section-header text="Color Picker" />
-    <color-picker onchange="selectedColor.backgroundColor = this.currentColor" />
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Color Picker" />
+            <color-picker id="picker4" onchange="selectedColor.backgroundColor = this.currentColor" />
+        </vbox>    
+        
+        <vbox width="200">
+            <section-header text="Options" />
+            <checkbox text="Disable" onchange="picker4.disabled = this.selected" />
+        </vbox>
+    </hbox>    
 </vbox>

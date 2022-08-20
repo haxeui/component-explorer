@@ -6,7 +6,9 @@ import haxe.ui.containers.TreeViewNode;
 import haxe.ui.core.Screen;
 import haxe.ui.events.UIEvent;
 import haxe.ui.themes.ThemeManager;
+import js.Browser;
 import util.Logger;
+import views.AnimatedHighlightView;
 import views.AnimationsView;
 import views.CardsView;
 import views.CustomComponentView;
@@ -55,7 +57,7 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Containers", title: "Scroll Views", smallIcon: "icons/16/scroll_pane_text_image.png", largeIcon: "icons/32/scroll_pane_text_image.png", viewClass: ScrollViewsView, relevantFiles: ["views/scrollviews.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "List Views", smallIcon: "icons/16/list_box.png", largeIcon: "icons/32/list_box.png", viewClass: ListViewsView, relevantFiles: ["views/listviews.xml", "src/views/ListViewsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"List Views", title: "As Menus", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: ListViewsAsMenusView, relevantFiles: ["views/listviews-as-menus.xml"] });
-        ViewManager.instance.registerView({ group: "Containers", title: "Table Views", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: TableViewsView, relevantFiles: ["views/tableviews.xml"] });
+        ViewManager.instance.registerView({ group: "Containers", title: "Table Views", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: TableViewsView, relevantFiles: ["views/tableviews.xml", "src/views/TableViewsView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Tree Views", smallIcon: "icons/16/labels.png", largeIcon: "icons/32/labels.png", viewClass: TreeViewsView, relevantFiles: ["views/treeviews.xml", "src/views/TreeViewsView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Side Bars", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: SidebarsView, relevantFiles: ["views/sidebars.xml", "src/views/SidebarsView.hx", "views/mysidebar.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Property Grids", smallIcon: "icons/16/attributes_display.png", largeIcon: "icons/32/attributes_display.png", viewClass: PropertyGridsView, relevantFiles: ["views/propertygrids.xml"] });
@@ -74,6 +76,8 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Tooltips", smallIcon: "icons/16/label.png", largeIcon: "icons/32/label.png", viewClass: TooltipsView, relevantFiles: ["views/tooltips.xml"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Drag", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DragManagerView, relevantFiles: ["views/drag-manager.xml", "src/views/DragManagerView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Animation", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationView, relevantFiles: ["views/animation.xml"] });
+            ViewManager.instance.registerView({ group: "Miscellaneous", subGroup:"Animation", title: "Animated Highlight", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimatedHighlightView, relevantFiles: ["views/animated-highlight.xml"] });
+            ViewManager.instance.registerView({ group: "Miscellaneous", subGroup:"Animation", title: "Animated Dots", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimatedDotsView, relevantFiles: ["views/animated-dots.xml", "src/views/AnimatedDotsView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Custom Component", smallIcon: "icons/16/list.png", largeIcon: "icons/32/list.png", viewClass: CustomComponentView, relevantFiles: ["views/custom-component.xml", "src/views/CustomComponentView.hx", "src/custom/IFrame.hx"] });
 
         ViewManager.instance.registerView({ group: "Examples", title: "Simple Paint", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: SimplePaintView, relevantFiles: ["views/simple-paint.xml", "src/views/SimplePaintView.hx"] });
@@ -168,8 +172,15 @@ class MainView extends HBox {
     
     private function populateMainTree() {
         var firstNode:TreeViewNode = null;
-        var pathToSelect:String = loadTreePath();
-        var nodeToSelect:TreeViewNode = null;
+        var pathToSelect1:String = loadTreePath();
+        
+        var pathToSelect2:String = null;
+        if (Browser.window.location.hash != null) {
+            pathToSelect2 = Browser.window.location.hash.substr(1).replace("_", " ");
+        }
+        
+        var nodeToSelect1:TreeViewNode = null;
+        var nodeToSelect2:TreeViewNode = null;
         for (groupName in ViewManager.instance.viewGroups.keys()) {
             var groupNode = mainTree.addNode({ text: groupName });
             groupNode.expanded = true;
@@ -177,8 +188,11 @@ class MainView extends HBox {
             var list = ViewManager.instance.viewGroups.get(groupName);
             for (item in list) {
                 var itemNode = groupNode.addNode({ text: item.title, icon: item.smallIcon, viewInfo: item });
-                if (itemNode.nodePath() == pathToSelect) {
-                    nodeToSelect = itemNode;
+                if (itemNode.nodePath() == pathToSelect1) {
+                    nodeToSelect1 = itemNode;
+                }
+                if (itemNode.nodePath().toLowerCase() == pathToSelect2) {
+                    nodeToSelect2 = itemNode;
                 }
                 if (firstNode == null) {
                     firstNode = itemNode;
@@ -187,20 +201,26 @@ class MainView extends HBox {
                 if (subItems.length > 0) {
                     for (subItem in subItems ) {
                         var subNode = itemNode.addNode({ text: subItem.title, icon: subItem.smallIcon, viewInfo: subItem });
-                        if (subNode.nodePath() == pathToSelect) {
-                            nodeToSelect = subNode;
+                        if (subNode.nodePath() == pathToSelect1) {
+                            nodeToSelect1 = subNode;
+                        }
+                        if (subNode.nodePath().toLowerCase() == pathToSelect2) {
+                            nodeToSelect2 = subNode;
                         }
                     }
                 }
             }
         }
         
-        if (nodeToSelect == null) {
-            nodeToSelect = firstNode;
+        if (nodeToSelect1 == null) {
+            nodeToSelect1 = firstNode;
+        }
+        if (nodeToSelect2 != null) {
+            nodeToSelect1 = nodeToSelect2;
         }
         
         Toolkit.callLater(function() {
-            mainTree.selectedNode = nodeToSelect;
+            mainTree.selectedNode = nodeToSelect1;
         });
     }
     
@@ -219,5 +239,7 @@ class MainView extends HBox {
             return;
         }
         ViewManager.instance.showView(viewInfo);
+        var safePath = path.toLowerCase().replace(" ", "_");
+        Browser.window.history.pushState("", "", "#" + safePath);
     }
 }

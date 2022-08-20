@@ -32,7 +32,7 @@ class ColorTable extends Canvas {
                pixels.set(p + 0, c.r);
                pixels.set(p + 1, c.g);
                pixels.set(p + 2, c.b);
-               pixels.set(p + 3, c.a);
+               pixels.set(p + 3, 0xFF);
            }
            y++;
         }
