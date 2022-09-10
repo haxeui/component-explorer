@@ -8,6 +8,8 @@ import haxe.ui.containers.TabView;
 import haxe.ui.core.Component;
 import util.Logger;
 
+using StringTools;
+
 typedef ViewInfo = {
     var title:String;
     var smallIcon:String;
@@ -117,12 +119,19 @@ class ViewManager {
         var ext = file.split(".").pop();
         
         var viewContainer = new Box();
-        viewContainer.text = file;
+        var label = file;
+        label = label.replace("src/views/", "");
+        label = label.replace("src/custom/", "");
+        label = label.replace("views/", "");
+        label = label.replace("css/", "");
+        label = label.replace("images/", "");
+        
+        viewContainer.text = label;
         viewContainer.icon = iconForExtension(ext);
         viewContainer.percentWidth = 100;
         viewContainer.percentHeight = 100;
         
-        if (ext == "hx" || ext == "xml") {
+        if (ext == "hx" || ext == "xml" || ext == "css") {
             #if js
             var editor = new haxe.ui.editors.code.CodeEditor();
             editor.percentWidth = 100;
@@ -160,6 +169,8 @@ class ViewManager {
                 icon = "icons/16/document-code.png";
             case "hx" | "haxe":
                 icon = "icons/16/document-text.png";
+            case "css":
+                icon = "icons/16/document-list.png";
             case "png":
                 icon = "icons/16/image.png";
         }

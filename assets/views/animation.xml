@@ -21,4 +21,27 @@
             </listview>
         </hbox>
     </frame>
+    
+    <section-header text="Animations Tools (static extension)" />
+    <hbox>
+        <vbox>
+            <hbox>
+                <button id="shakeHorizontally" text="Shake Horizontally" />
+                <button id="shakeVertically" text="Shake Vertically" />
+                <button id="shakeBoth" text="Shake Both" />
+            </hbox>
+            <hbox>
+                <button id="flashDefault" text="Flash" />
+                <button id="flashBlue" text="Flash Blue" />
+            </hbox>
+            <hbox>
+                <button id="chain" text="Chain" />
+            </hbox>
+        </vbox>   
+        <frame width="200" height="100%">
+            <box width="100%" height="100%">
+                <textfield id="animationTarget1" verticalAlign="center" horizontalAlign="center" text="Example Field" />
+            </box>
+        </frame>
+    </hbox>    
 </vbox>

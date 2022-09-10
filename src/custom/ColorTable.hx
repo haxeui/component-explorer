@@ -6,6 +6,8 @@ import haxe.ui.graphics.ComponentGraphics;
 import haxe.ui.util.Color;
 
 class ColorTable extends Canvas {
+    private var pixels:Bytes = null;
+    
     public function new() {
         super();
         componentGraphics.setProperty("html5.graphics.method", "canvas");
@@ -13,6 +15,7 @@ class ColorTable extends Canvas {
     
     private override function onReady() {
         super.onReady();
+        pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
         frame();
     }
     
@@ -24,7 +27,6 @@ class ColorTable extends Canvas {
     private var _dir:Int = 0;
     private function drawColorTable(graphics:ComponentGraphics, width:Int, height:Int, size:Float) {
         var y = 0;
-        var pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
         for (j in 0...height) {
            for (i in 0...width) {
                var p = j * (width * 4) + i * 4;

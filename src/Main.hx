@@ -2,6 +2,7 @@ package ;
 
 import haxe.ui.HaxeUIApp;
 import views.MainView;
+import custom.Preloader;
 
 class Main {
     public static function main() {

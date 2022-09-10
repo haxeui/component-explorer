@@ -47,7 +47,8 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Basic", title: "Images", smallIcon: "icons/16/images_flickr.png", largeIcon: "icons/32/images_flickr.png", viewClass: ImagesView, relevantFiles: ["views/images.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Steppers", smallIcon: "icons/16/spin.png", largeIcon: "icons/32/spin.png", viewClass: SteppersView, relevantFiles: ["views/steppers.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Switches", smallIcon: "icons/16/button_toggle.png", largeIcon: "icons/32/button_toggle.png", viewClass: SwitchesView, relevantFiles: ["views/switches.xml"] });
-        ViewManager.instance.registerView({ group: "Basic", title: "Canvas", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: CanvasView, relevantFiles: ["views/canvas.xml", "src/custom/DemoGraph.hx", "src/custom/ColorTable.hx", "src/custom/Noise.hx"] });
+        ViewManager.instance.registerView({ group: "Basic", title: "Canvas", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: CanvasView, relevantFiles: ["views/canvas.xml", "src/custom/DemoGraph.hx", "src/custom/ColorTable.hx", "src/custom/Noise.hx", "src/custom/MiniGraph.hx"] });
+            ViewManager.instance.registerView({ group: "Basic", subGroup: "Canvas", title: "As Icons", smallIcon: "icons/16/images_flickr.png", largeIcon: "icons/32/images_flickr.png", viewClass: CanvasAsIconsView, relevantFiles: ["views/canvas-as-icons.xml", "src/views/CanvasAsIconsView.hx", "src/custom/Noise.hx", "src/custom/MiniGraph.hx"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Animations", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationsView, relevantFiles: ["views/animations.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Color Pickers", smallIcon: "icons/16/color-picker-default.png", largeIcon: "icons/32/color-picker-default.png", viewClass: ColorPickersView, relevantFiles: ["views/color-pickers.xml"] });
         
@@ -73,14 +74,16 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Layouts", title: "Vertical Layouts", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: VerticalLayoutsView, relevantFiles: ["views/vertical-layouts.xml"] });
         ViewManager.instance.registerView({ group: "Layouts", title: "Grid Layouts", smallIcon: "icons/16/layouts_6.png", largeIcon: "icons/32/layouts_6.png", viewClass: GridLayoutsView, relevantFiles: ["views/grid-layouts.xml"] });
 
-        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Tooltips", smallIcon: "icons/16/label.png", largeIcon: "icons/32/label.png", viewClass: TooltipsView, relevantFiles: ["views/tooltips.xml"] });
+        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Tooltips", smallIcon: "icons/16/label.png", largeIcon: "icons/32/label.png", viewClass: TooltipsView, relevantFiles: ["views/tooltips.xml", "src/views/TooltipsView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Drag", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: DragManagerView, relevantFiles: ["views/drag-manager.xml", "src/views/DragManagerView.hx"] });
-        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Animation", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationView, relevantFiles: ["views/animation.xml"] });
+        ViewManager.instance.registerView({ group: "Miscellaneous", title: "Animation", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimationView, relevantFiles: ["views/animation.xml", "src/views/AnimationView.hx"] });
             ViewManager.instance.registerView({ group: "Miscellaneous", subGroup:"Animation", title: "Animated Highlight", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimatedHighlightView, relevantFiles: ["views/animated-highlight.xml"] });
             ViewManager.instance.registerView({ group: "Miscellaneous", subGroup:"Animation", title: "Animated Dots", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimatedDotsView, relevantFiles: ["views/animated-dots.xml", "src/views/AnimatedDotsView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Custom Component", smallIcon: "icons/16/list.png", largeIcon: "icons/32/list.png", viewClass: CustomComponentView, relevantFiles: ["views/custom-component.xml", "src/views/CustomComponentView.hx", "src/custom/IFrame.hx"] });
+        ViewManager.instance.registerView({ group: "Miscellaneous", title: "App Icon", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AppIconView, relevantFiles: ["views/app-icon.xml", "src/views/AppIconView.hx"] });
 
         ViewManager.instance.registerView({ group: "Examples", title: "Simple Paint", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: SimplePaintView, relevantFiles: ["views/simple-paint.xml", "src/views/SimplePaintView.hx"] });
+        ViewManager.instance.registerView({ group: "Examples", title: "Todos", smallIcon: "icons/16/radiobutton_group.png", largeIcon: "icons/32/radiobutton_group.png", viewClass: TodosView, relevantFiles: ["views/todos.xml", "src/views/TodosView.hx", "css/todos.css", "images/unchecked.png", "images/checked.png", "images/delete.png"] });
     }
     
     public override function onReady() {
@@ -199,6 +202,7 @@ class MainView extends HBox {
                 }
                 var subItems = ViewManager.instance.getItemsFromSubGroup(item.title);
                 if (subItems.length > 0) {
+                    //itemNode.expanded = true;
                     for (subItem in subItems ) {
                         var subNode = itemNode.addNode({ text: subItem.title, icon: subItem.smallIcon, viewInfo: subItem });
                         if (subNode.nodePath() == pathToSelect1) {

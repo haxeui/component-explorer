@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<module preload="all">
+<module preload="all" preloader="custom.Preloader">
     <resources>
+        <resource path="assets/css" prefix="css" />
         <resource path="assets/icons" prefix="icons" />
         <resource path="assets/images" prefix="images" />
         <resource path="assets/views" prefix="views" />

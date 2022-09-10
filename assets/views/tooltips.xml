@@ -1,4 +1,4 @@
-<vbox>
+<vbox width="100%" height="100%">
     <section-header text="Basic Tooltips" />
     <button text="Basic Tooltip" tooltip="This is a tooltip" />
     <slider tooltip="Click to set value" />
@@ -30,4 +30,19 @@
             <box text="Assembler" icon="icons/logo-asm.png" tooltip="Assembler Language" />
         </tabview>
     </hbox>    
+    
+    <section-header text="Custom Tooltips" />
+    <box width="100%" height="100%">
+        <button text="Custom Tooltip" id="customTooltip1" horizontalAlign="left" verticalAlign="top" />
+        <button text="Custom Tooltip" id="customTooltip2" horizontalAlign="center" verticalAlign="top" />
+        <button text="Custom Tooltip" id="customTooltip3" horizontalAlign="right" verticalAlign="top" />
+        
+        <button text="Custom Tooltip" id="customTooltip4" horizontalAlign="left" verticalAlign="center" />
+        <button text="Custom Tooltip" id="customTooltip5" horizontalAlign="center" verticalAlign="center" />
+        <button text="Custom Tooltip" id="customTooltip6" horizontalAlign="right" verticalAlign="center" />
+        
+        <button text="Custom Tooltip" id="customTooltip7" horizontalAlign="left" verticalAlign="bottom" />
+        <button text="Custom Tooltip" id="customTooltip8" horizontalAlign="center" verticalAlign="bottom" />
+        <button text="Custom Tooltip" id="customTooltip9" horizontalAlign="right" verticalAlign="bottom" />
+    </box>
 </vbox>

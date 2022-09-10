@@ -1,0 +1,63 @@
+<vbox>
+    <style>
+        #button2 {
+            icon: lookup("noise");
+        }
+        #button2:hover {
+            icon: lookup("red-noise");
+        }
+        #button2:down {
+            icon: lookup("green-noise");
+        }
+    </style>
+
+    <section-header text="Button Icons" />
+    <hbox>
+        <button id="button1" text="Canvas Icon" iconPosition="top" />
+        <button id="button2" text="Style Icon" iconPosition="top" />
+    </hbox> 
+
+    <section-header text="Custom Drawn Icons" />
+    <hbox>
+        <button id="olympicButton" text="Olympic Rings" iconPosition="top" />
+    </hbox> 
+    
+    <section-header text="Item Renderer Images" />
+    <hbox>
+        <listview id="listview1" width="150" height="150">
+        </listview>
+
+        <listview id="listview2" width="150" height="150">
+            <item-renderer width="100%" layoutName="horizontal">
+                <label id="name" width="100%" />
+                <image id="graph" />
+            </item-renderer>
+        </listview>
+        
+        <tableview id="tableview1" width="200" height="150">
+            <item-renderer width="100%">
+                <label id="name" width="100%" />
+            </item-renderer>
+            <item-renderer width="100%">
+                <image id="graph" />
+            </item-renderer>
+            <header width="100%">
+                <column text="Name" id="name" width="100%" />
+                <column text="Graph" id="graph" width="60" />
+            </header>
+        </tableview>
+        
+        <treeview id="treeview1" width="200" height="150" styleName="full-width">
+            <item-renderer layoutName="horizontal" width="100%">
+                <checkbox id="checked" verticalAlign="center" />
+                <label id="name" verticalAlign="center" width="100%" />
+                <image id="graph" verticalAlign="center" />
+            </item-renderer>
+            <item-renderer id="expandable" layoutName="horizontal" width="100%">
+                <image resource="haxeui-core/styles/shared/folder-light.png" verticalAlign="center" />
+                <label id="text" width="100%" verticalAlign="center" />
+                <switch verticalAlign="center" />
+            </item-renderer>
+        </treeview>
+    </hbox>    
+</vbox>

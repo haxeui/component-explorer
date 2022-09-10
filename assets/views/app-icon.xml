@@ -1,0 +1,25 @@
+<vbox width="100%">
+    <section-header text="App Icon" />
+    <hbox>
+        <dropdown id="iconList" width="150">
+            <data>
+                <item text="Haxe" icon="icons/logo-haxe.png" />
+                <item text="Java" icon="icons/logo-java.png" />
+                <item text="Javascript" icon="icons/logo-javascript.png" />
+                <item text="C++" icon="icons/logo-cpp.png" />
+                <item text="PHP" icon="icons/logo-php.png" />
+                <item text="C#" icon="icons/logo-cs.png" />
+                <item text="F#" icon="icons/logo-fs.png" />
+                <item text="OCaml" icon="icons/logo-ocaml.png" />
+                <item text="Assembler" icon="icons/logo-asm.png" />
+            </data>
+        </dropdown>
+        <button id="setIconButton" text="Set Icon" />
+        <button id="resetIconButton" text="Reset Icon" />
+    </hbox>    
+    
+    <section-header text="Animated App Icon" />
+    <hbox>
+        <button id="startStopButton" text="Start" />
+    </hbox>    
+</vbox>

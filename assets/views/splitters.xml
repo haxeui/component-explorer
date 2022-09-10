@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
-    <style>
-        .inner-shadow {
-            filter: drop-shadow(1, 45, #444444, 0.1, 1, 1, 1, 3, true);
-            border: 1px solid #e4e4e4;
-        }
-    </style>
-
-    <splitter width="700" height="500">
-            <box width="50%" height="100%" style="background-color: #EEFFEE;opacity:.5;__min-width:200px;" styleName="inner-shadow" />
-            <box width="50%" height="100%" style="background-color: #EEEEFF;opacity:.5;" styleName="inner-shadow" />
-    </splitter>    
-    
-    <!--
-    <splitter width="700" height="500">
-        <splitter direction="vertical" width="200" height="100%">
-            <box width="100%" height="75%" style="background-color: #EEFFEE;opacity:.5;" styleName="inner-shadow" />
-            <box width="100%" height="25%" style="background-color: #EEEEFF;opacity:.5;" styleName="inner-shadow" />
+    <splitter direction="vertical" width="700" height="500" verticalAlign="center" horizontalAlign="center">
+        <splitter direction="horizontal" width="100%" height="70%">
+            <box width="50%" height="100%" style="background-color: #FFAAAA;background-opacity:.3;clip:true;">
+                <label text="Content" verticalAlign="center" horizontalAlign="center" />
+            </box>
+            <splitter width="50%" height="100%">
+                <box width="50%" height="100%" style="background-color: #AAFFAA;background-opacity:.3;clip:true;">
+                    <label text="Content" verticalAlign="center" horizontalAlign="center" />
+                </box>
+                <box width="50%" height="100%" style="background-color: #AAAAFF;background-opacity:.3;clip:true;">
+                    <label text="Content" verticalAlign="center" horizontalAlign="center" />
+                </box>
+            </splitter>
         </splitter>
-        
-        <splitter direction="vertical" width="100%" height="100%">
-            <box width="100%" height="20%" style="background-color: #FFEEEE;opacity:.5;" styleName="inner-shadow" />
-            <box width="100%" height="40%" style="background-color: #FFEEFF;opacity:.5;" styleName="inner-shadow" />
-            <splitter width="100%" height="40%">
-                <box width="50%" height="100%" style="background-color: #FFFFEE;opacity:.5;" styleName="inner-shadow" />
-                <box width="50%" height="100%" style="background-color: #EEFFFF;opacity:.5;" styleName="inner-shadow" />
-            </splitter>    
-        </splitter>    
-    </splitter>
-    -->    
+        <splitter direction="horizontal" width="100%" height="30%">
+            <box width="50%" height="100%" style="background-color: #FFCCFF;background-opacity:.3;clip:true;">
+                <label text="Content" verticalAlign="center" horizontalAlign="center" />
+            </box>
+            <box width="50%" height="100%" style="background-color: #FFFFAA;background-opacity:.3;clip:true;">
+                <label text="Content" verticalAlign="center" horizontalAlign="center" />
+            </box>
+        </splitter>
+    </splitter>     
 </vbox>

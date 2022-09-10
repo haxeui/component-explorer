@@ -6,6 +6,8 @@ import haxe.ui.containers.dialogs.Dialogs;
 import haxe.ui.containers.dialogs.MessageBox.MessageBoxType;
 import haxe.ui.events.MouseEvent;
 
+using haxe.ui.animation.AnimationTools;
+
 @:build(haxe.ui.macros.ComponentMacros.build("assets/views/dialogs.xml"))
 class DialogsView extends View {
     public function new() {
@@ -56,18 +58,17 @@ class SimpleLoginDialog extends Dialog {
     }
     
     public override function validateDialog(button:DialogButton, fn:Bool->Void) {
+        var valid = true;
         if (button == "Login") {
             if (username.text == "" || username.text == null) {
-                Dialogs.messageBox("Username is required!", "Missing Username", MessageBoxType.TYPE_WARNING);
-                fn(false);
-            } else if (password.text == "" || password.text == null) {
-                Dialogs.messageBox("Password is required!", "Missing Password", MessageBoxType.TYPE_WARNING);
-                fn(false);
-            } else {
-                fn(true);
+                username.shake().flash();
+                valid = false;
+            } 
+            if (password.text == "" || password.text == null) {
+                password.shake().flash();
+                valid = false;
             }
-        } else {
-            fn(true);
         }
+        fn(valid);
     }
 }
