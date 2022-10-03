@@ -110,6 +110,18 @@
 
     <dropdown text="Select Date" type="date" />
     
+    <section-header text="Color Picker Dropdowns" />
+    <hbox>
+        <vbox>
+            <hbox>
+                <color-picker-popup id="picker1" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                <color-picker-popup id="picker2" liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
+            </hbox>
+            <color-picker-popup id="picker3" width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
+        </vbox>    
+        <box id="selectedColor" width="60" height="100%" style="background-color: red" />
+    </hbox>  
+    
     <section-header text="Custom Item Renderers" />
     
     <hbox>
