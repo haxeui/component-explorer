@@ -53,7 +53,7 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Basic", title: "Color Pickers", smallIcon: "icons/16/color-picker-default.png", largeIcon: "icons/32/color-picker-default.png", viewClass: ColorPickersView, relevantFiles: ["views/color-pickers.xml"] });
         
         ViewManager.instance.registerView({ group: "Containers", title: "Tabs", smallIcon: "icons/16/tab_content.png", largeIcon: "icons/32/tab_content.png", viewClass: TabsView, relevantFiles: ["views/tabs.xml"] });
-        ViewManager.instance.registerView({ group: "Containers", title: "Menus", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: MenusView, relevantFiles: ["views/menus.xml"] });
+        ViewManager.instance.registerView({ group: "Containers", title: "Menus", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: MenusView, relevantFiles: ["views/menus.xml", "src/views/MenusView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Frames", smallIcon: "icons/16/attributes_display.png", largeIcon: "icons/32/attributes_display.png", viewClass: FramesView, relevantFiles: ["views/frames.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Scroll Views", smallIcon: "icons/16/scroll_pane_text_image.png", largeIcon: "icons/32/scroll_pane_text_image.png", viewClass: ScrollViewsView, relevantFiles: ["views/scrollviews.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "List Views", smallIcon: "icons/16/list_box.png", largeIcon: "icons/32/list_box.png", viewClass: ListViewsView, relevantFiles: ["views/listviews.xml", "src/views/ListViewsView.hx"] });

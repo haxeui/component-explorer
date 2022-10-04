@@ -77,7 +77,7 @@
                 <tabview id="tv5" width="400" height="100" closable="true">
                     <box text="Haxe" icon="icons/logo-haxe.png" />
                     <box text="Java" icon="icons/logo-java.png" />
-                    <box text="Javascript" icon="icons/logo-javascript.png" />
+                    <box text="Javascript" icon="icons/logo-javascript.png" disabled="true" />
                     <box text="C++" icon="icons/logo-cpp.png" />
                     <box text="PHP" icon="icons/logo-php.png" />
                     <box text="C#" icon="icons/logo-cs.png" />
@@ -103,7 +103,7 @@
                 <tabview id="tv6" width="400" height="100" styleName="collapsible-labels">
                     <box text="Haxe" icon="icons/logo-haxe.png" />
                     <box text="Java" icon="icons/logo-java.png" />
-                    <box text="Javascript" icon="icons/logo-javascript.png" />
+                    <box text="Javascript" icon="icons/logo-javascript.png" disabled="true" />
                     <box text="C++" icon="icons/logo-cpp.png" />
                     <box text="PHP" icon="icons/logo-php.png" />
                     <box text="C#" icon="icons/logo-cs.png" />
@@ -129,7 +129,7 @@
                 <tabview id="tv7" width="400" height="100" styleName="full-width-buttons">
                     <box text="Haxe" icon="icons/logo-haxe.png" />
                     <box text="Java" icon="icons/logo-java.png" />
-                    <box text="Javascript" icon="icons/logo-javascript.png" />
+                    <box text="Javascript" icon="icons/logo-javascript.png" disabled="true" />
                 </tabview>
             </hbox>
         </vbox>
@@ -153,7 +153,7 @@
                 
                 <tabbar id="tb2" width="240">
                     <button text="Item 1" icon="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <button text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                    <button text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" disabled="true" />
                     <button text="Item 3" icon="haxeui-core/styles/default/haxeui_tiny.png" />
                     <button text="Item 4" icon="haxeui-core/styles/default/haxeui_tiny.png" />
                 </tabbar>
@@ -165,7 +165,7 @@
                 
                 <tabbar id="tb4" width="240" tabPosition="bottom">
                     <button text="Item 1" icon="haxeui-core/styles/default/haxeui_tiny.png" />
-                    <button text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" />
+                    <button text="Item 2" icon="haxeui-core/styles/default/haxeui_tiny.png" disabled="true" />
                     <button text="Item 3" icon="haxeui-core/styles/default/haxeui_tiny.png" />
                     <button text="Item 4" icon="haxeui-core/styles/default/haxeui_tiny.png" />
                 </tabbar>

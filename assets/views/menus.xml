@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" height="100%">
     <menubar width="100%">
         <menu text="Normal">
             <menuitem text="Item 1" shortcutText="Shortcut" />
@@ -136,4 +136,60 @@
             <menuitem text="Item 5" />
         </menu>
     </menubar>
+
+    <vbox width="100%" height="100%" style="padding-top:15px;spacing:15px;">
+        <hbox width="100%" style="spacing:15px;">
+            <listview id="lv1" width="33%" height="200" selectedIndex="0">
+                <data>
+                    <item text="Haxe" icon="icons/logo-haxe.png" />
+                    <item text="Java" icon="icons/logo-java.png" />
+                    <item text="Javascript" icon="icons/logo-javascript.png" />
+                    <item text="C++" icon="icons/logo-cpp.png" />
+                    <item text="PHP" icon="icons/logo-php.png" />
+                    <item text="C#" icon="icons/logo-cs.png" />
+                    <item text="F#" icon="icons/logo-fs.png" />
+                    <item text="OCaml" icon="icons/logo-ocaml.png" />
+                    <item text="Assembler" icon="icons/logo-asm.png" />
+                </data>
+            </listview>
+
+            <tableview id="tv1" width="34%" height="200">
+                <header width="100%">
+                    <column width="32" id="image" />
+                    <column width="100%" id="name" text="Language" sortable="true" />
+                    <column id="rating" width="80" text="Rating" sortable="true" />
+                </header>
+                <item-renderer>
+                    <image id="image" verticalAlign="center" horizontalAlign="center" />
+                </item-renderer>
+                <item-renderer verticalAlign="center">
+                    <label id="name" width="100%" verticalAlign="center" />
+                </item-renderer>
+                <item-renderer verticalAlign="center">
+                    <progress id="rating" width="100%" />
+                </item-renderer>
+                <data>
+                    <item name="Haxe" image="icons/logo-haxe.png" rating="100" />
+                    <item name="Java" image="icons/logo-java.png" rating="33" />
+                    <item name="Javascript" image="icons/logo-javascript.png" rating="75" />
+                    <item name="C++" image="icons/logo-cpp.png" rating="63" />
+                    <item name="PHP" image="icons/logo-php.png" rating="40" />
+                    <item name="C#" image="icons/logo-cs.png" rating="80" />
+                    <item name="F#" image="icons/logo-fs.png" rating="11" />
+                    <item name="OCaml" image="icons/logo-ocaml.png" rating="39" />
+                    <item name="Assembler" image="icons/logo-asm.png" rating="81" />
+                </data>
+            </tableview>
+
+            <tree-view id="tree1" width="33%" height="200" styleName="full-width" />
+        </hbox>
+        <hbox width="100%" height="100%" style="spacing:15px;">
+            <box id="menuTarget1" width="50%" height="100%" style="border:1px dashed $normal-border-color">
+                <label text="Right Click Here" style="font-size: 24px;color:$normal-border-color" verticalAlign="center" horizontalAlign="center" />
+            </box>
+            <box id="menuTarget2" width="50%" height="100%" style="border:1px dashed $normal-border-color">
+                <label text="Left Click Here" style="font-size: 24px;color:$normal-border-color" verticalAlign="center" horizontalAlign="center" />
+            </box>
+        </hbox>
+    </vbox>
 </vbox>
