@@ -1,0 +1,183 @@
+<vbox>
+    <hbox>
+        <!-- test card -->
+        <box style="border:1px solid $normal-border-color;padding:2px">
+            <canvas width="105" height="90">
+                <data>
+                    <fill-style color="#c0c0c0" />
+                    <rectangle x="0" y="0" width="15" height="60" />
+                    <fill-style color="#c0c000" />
+                    <rectangle x="15" y="0" width="15" height="60" />
+                    <fill-style color="#00c0c0" />
+                    <rectangle x="30" y="0" width="15" height="60" />
+                    <fill-style color="#00c000" />
+                    <rectangle x="45" y="0" width="15" height="60" />
+                    <fill-style color="#c000c0" />
+                    <rectangle x="60" y="0" width="15" height="60" />
+                    <fill-style color="#c00000" />
+                    <rectangle x="75" y="0" width="15" height="60" />
+                    <fill-style color="#0000c0" />
+                    <rectangle x="90" y="0" width="15" height="60" />
+
+                    <fill-style color="#0000c0" />
+                    <rectangle x="0" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="15" y="60" width="15" height="10" />
+                    <fill-style color="#c000c0" />
+                    <rectangle x="30" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="45" y="60" width="15" height="10" />
+                    <fill-style color="#00c000" />
+                    <rectangle x="60" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="75" y="60" width="15" height="10" />
+                    <fill-style color="#c0c0c0" />
+                    <rectangle x="90" y="60" width="15" height="10" />
+
+                    <fill-style color="#00214c" />
+                    <rectangle x="0" y="70" width="19" height="20" />
+                    <fill-style color="#ffffff" />
+                    <rectangle x="19" y="70" width="18" height="20" />
+                    <fill-style color="#32006a" />
+                    <rectangle x="37" y="70" width="19" height="20" />
+                    <fill-style color="#131313" />
+                    <rectangle x="56" y="70" width="19" height="20" />
+
+                    <fill-style color="#090909" />
+                    <rectangle x="75" y="70" width="5" height="20" />
+                    <fill-style color="#131313" />
+                    <rectangle x="80" y="70" width="5" height="20" />
+                    <fill-style color="#1d1d1d" />
+                    <rectangle x="85" y="70" width="5" height="20" />
+
+                    <fill-style color="#131313" />
+                    <rectangle x="90" y="70" width="15" height="20" />
+                </data>
+            </canvas>
+        </box>
+        <label text="Default namespace:\n\n<canvas>...</canvas>\n\nDoesnt need to be declared" />
+    </hbox>
+
+    <spacer height="20" />
+
+    <hbox>
+        <!-- test card -->
+        <box style="border:1px solid $normal-border-color;padding:2px">
+            <core:canvas width="105" height="90">
+                <data>
+                    <fill-style color="#c0c0c0" />
+                    <rectangle x="0" y="0" width="15" height="60" />
+                    <fill-style color="#c0c000" />
+                    <rectangle x="15" y="0" width="15" height="60" />
+                    <fill-style color="#00c0c0" />
+                    <rectangle x="30" y="0" width="15" height="60" />
+                    <fill-style color="#00c000" />
+                    <rectangle x="45" y="0" width="15" height="60" />
+                    <fill-style color="#c000c0" />
+                    <rectangle x="60" y="0" width="15" height="60" />
+                    <fill-style color="#c00000" />
+                    <rectangle x="75" y="0" width="15" height="60" />
+                    <fill-style color="#0000c0" />
+                    <rectangle x="90" y="0" width="15" height="60" />
+
+                    <fill-style color="#0000c0" />
+                    <rectangle x="0" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="15" y="60" width="15" height="10" />
+                    <fill-style color="#c000c0" />
+                    <rectangle x="30" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="45" y="60" width="15" height="10" />
+                    <fill-style color="#00c000" />
+                    <rectangle x="60" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="75" y="60" width="15" height="10" />
+                    <fill-style color="#c0c0c0" />
+                    <rectangle x="90" y="60" width="15" height="10" />
+
+                    <fill-style color="#00214c" />
+                    <rectangle x="0" y="70" width="19" height="20" />
+                    <fill-style color="#ffffff" />
+                    <rectangle x="19" y="70" width="18" height="20" />
+                    <fill-style color="#32006a" />
+                    <rectangle x="37" y="70" width="19" height="20" />
+                    <fill-style color="#131313" />
+                    <rectangle x="56" y="70" width="19" height="20" />
+
+                    <fill-style color="#090909" />
+                    <rectangle x="75" y="70" width="5" height="20" />
+                    <fill-style color="#131313" />
+                    <rectangle x="80" y="70" width="5" height="20" />
+                    <fill-style color="#1d1d1d" />
+                    <rectangle x="85" y="70" width="5" height="20" />
+
+                    <fill-style color="#131313" />
+                    <rectangle x="90" y="70" width="15" height="20" />
+                </data>
+            </core:canvas>
+        </box>
+        <label text="Core namespace:\n\n<core:canvas>...</core:canvas>\n\nDoesnt need to be declared" />
+    </hbox>
+
+    <spacer height="20" />
+
+    <hbox>
+        <!-- test card -->
+        <box style="border:1px solid $normal-border-color;padding:2px">
+            <some_ns:canvas width="105" height="90" xmlns:some_ns="urn::haxeui::org">
+                <data>
+                    <fill-style color="#c0c0c0" />
+                    <rectangle x="0" y="0" width="15" height="60" />
+                    <fill-style color="#c0c000" />
+                    <rectangle x="15" y="0" width="15" height="60" />
+                    <fill-style color="#00c0c0" />
+                    <rectangle x="30" y="0" width="15" height="60" />
+                    <fill-style color="#00c000" />
+                    <rectangle x="45" y="0" width="15" height="60" />
+                    <fill-style color="#c000c0" />
+                    <rectangle x="60" y="0" width="15" height="60" />
+                    <fill-style color="#c00000" />
+                    <rectangle x="75" y="0" width="15" height="60" />
+                    <fill-style color="#0000c0" />
+                    <rectangle x="90" y="0" width="15" height="60" />
+
+                    <fill-style color="#0000c0" />
+                    <rectangle x="0" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="15" y="60" width="15" height="10" />
+                    <fill-style color="#c000c0" />
+                    <rectangle x="30" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="45" y="60" width="15" height="10" />
+                    <fill-style color="#00c000" />
+                    <rectangle x="60" y="60" width="15" height="10" />
+                    <fill-style color="#131313" />
+                    <rectangle x="75" y="60" width="15" height="10" />
+                    <fill-style color="#c0c0c0" />
+                    <rectangle x="90" y="60" width="15" height="10" />
+
+                    <fill-style color="#00214c" />
+                    <rectangle x="0" y="70" width="19" height="20" />
+                    <fill-style color="#ffffff" />
+                    <rectangle x="19" y="70" width="18" height="20" />
+                    <fill-style color="#32006a" />
+                    <rectangle x="37" y="70" width="19" height="20" />
+                    <fill-style color="#131313" />
+                    <rectangle x="56" y="70" width="19" height="20" />
+
+                    <fill-style color="#090909" />
+                    <rectangle x="75" y="70" width="5" height="20" />
+                    <fill-style color="#131313" />
+                    <rectangle x="80" y="70" width="5" height="20" />
+                    <fill-style color="#1d1d1d" />
+                    <rectangle x="85" y="70" width="5" height="20" />
+
+                    <fill-style color="#131313" />
+                    <rectangle x="90" y="70" width="15" height="20" />
+                </data>
+            </some_ns:canvas>
+        </box>
+        <label text="Core namespace:\n\n<some_ns:canvas xmlns:some_ns='urn::haxeui::org'>...</some_ns:canvas>\n\nCan be declared with any prefix" />
+    </hbox>
+
+</vbox>

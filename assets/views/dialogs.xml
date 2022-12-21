@@ -14,6 +14,11 @@
         <button id="customNonModalDialog" text="Custom Non-Modal Dialog" />
     </hbox>    
 
+    <section-header text="Collapsible Dialogs" />
+    <hbox>
+        <button id="collapsibleDialog" text="Collapsible Dialog" />
+    </hbox>    
+
     <section-header text="Validating Dialogs" />
     <hbox>
         <button id="validatingDialog" text="Validating Dialog" />

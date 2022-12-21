@@ -4,10 +4,14 @@
         <resource path="assets/css" prefix="css" />
         <resource path="assets/icons" prefix="icons" />
         <resource path="assets/images" prefix="images" />
+        <resource path="assets/images/people" prefix="people" />
         <resource path="assets/views" prefix="views" />
         <resource path="assets/fonts" prefix="fonts" />
         <resource path="assets/themes" prefix="themes" />
+        <resource path="src/fakedata" prefix="src/fakedata" />
         <resource path="src/views" prefix="src/views" />
+        <resource path="src/views/fakeemployeeapp" prefix="src/views/fakeemployeeapp" />
+        <resource path="src/windows" prefix="src/windows" />
         <resource path="src/custom" prefix="src/custom" />
     </resources>
 
@@ -24,4 +28,10 @@
             <style resource="themes/default/main.css" />
         </default>
     </themes>
+
+    <!--
+    <namespaces>
+        <namespace prefix="explorer" uri="uri::haxeui::explorer" />
+    </namespaces>
+    -->
 </module>

@@ -120,8 +120,11 @@ class ViewManager {
         
         var viewContainer = new Box();
         var label = file;
+        label = label.replace("src/fakedata/", "");
         label = label.replace("src/views/", "");
+        label = label.replace("fakeemployeeapp/", "");
         label = label.replace("src/custom/", "");
+        label = label.replace("src/windows/", "");
         label = label.replace("views/", "");
         label = label.replace("css/", "");
         label = label.replace("images/", "");

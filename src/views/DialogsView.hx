@@ -1,5 +1,6 @@
 package views;
 
+import haxe.ui.containers.dialogs.CollapsibleDialog;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.dialogs.Dialog;
 import haxe.ui.containers.dialogs.Dialogs;
@@ -31,6 +32,15 @@ class DialogsView extends View {
         }
         dialog.showDialog(false);
     }
+
+    @:bind(collapsibleDialog, MouseEvent.CLICK)
+    private function onCollapsibleDialog(e) {
+        var dialog = new MyCustomCollapsibleDialog();
+        dialog.onDialogClosed = function(e:DialogEvent) {
+            trace(e.button);
+        }
+        dialog.showDialog(false);
+    }
     
     @:bind(validatingDialog, MouseEvent.CLICK)
     private function onValidatingDialog(e) {
@@ -50,6 +60,15 @@ class MyCustomDialog extends Dialog {
     }
 }
 
+@:build(haxe.ui.macros.ComponentMacros.build("assets/views/mycustomdialog.xml"))
+class MyCustomCollapsibleDialog extends CollapsibleDialog {
+    public function new() {
+        super();
+        //height = 400;
+        buttons = DialogButton.CANCEL | "Custom Button" | DialogButton.APPLY;
+    }
+}
+
 @:build(haxe.ui.macros.ComponentMacros.build("assets/views/simple-login-dialog.xml"))
 class SimpleLoginDialog extends Dialog {
     public function new() {
@@ -61,12 +80,16 @@ class SimpleLoginDialog extends Dialog {
         var valid = true;
         if (button == "Login") {
             if (username.text == "" || username.text == null) {
-                username.shake().flash();
+                username.flash();
                 valid = false;
             } 
             if (password.text == "" || password.text == null) {
-                password.shake().flash();
+                password.flash();
                 valid = false;
+            }
+
+            if (valid == false) {
+                this.shake();
             }
         }
         fn(valid);

@@ -22,7 +22,8 @@ class MiniGraph extends Canvas {
     
     private function populateDataPoints() {
         var cx = Std.int(this.width);
-        for (_ in 0...cx) {
+        var missing = cx - _dataPoints.length;
+        for (_ in 0...missing) {
             generateDataPoint();
         }
     }
@@ -65,6 +66,10 @@ class MiniGraph extends Canvas {
         
         var cx = Std.int(this.width);
         var cy = Std.int(this.height);
+        if (cx * cy * 4 != pixels.length) {
+            pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
+            populateDataPoints();
+        }
         generateDataPoint();
         
         for (x in 0...cx) {

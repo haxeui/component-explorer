@@ -1,4 +1,4 @@
-<dialog width="400" title="Login">
+<dialog width="300" title="Login">
     <grid width="100%">
         <label text="Username" verticalAlign="center" />
         <textfield id="username" width="100%" />

@@ -1,0 +1,66 @@
+<vbox id="employeeApp" style="padding: 0px;spacing:0;border:1px solid $normal-border-color;padding:1px;" width="100%" height="100%">
+    <style>
+        #employeeApp .accordion {
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            padding-left: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        #employeeApp .accordion-page {
+            padding: 0px;
+            padding-bottom:1px;
+        }
+
+        #employeeApp .badge {
+            background-color: $solid-background-color-alt;
+            border-radius:3px;
+            padding: 1px 3px;
+            spacing:0;
+        }
+    </style>
+    <menu-bar width="100%">
+        <menu text="Menu 1">
+            <menu-item text="Menu Item 1A" />
+            <menu-item text="Menu Item 1B" />
+            <menu-item text="Menu Item 1C" />
+        </menu>
+        <menu text="Menu 2">
+            <menu-item text="Menu Item 2A" />
+            <menu-item text="Menu Item 2B" />
+            <menu-item text="Menu Item 2C" />
+        </menu>
+        <spacer width="100%" />
+    </menu-bar>
+
+    <hbox width="100%" height="100%" style="spacing:0;">
+        <accordion width="250" height="100%" style="border-top: none;border-bottom:none;border-radius: none;">
+            <vbox text="People" width="100%">
+                <treeview id="peopleTree" width="100%" height="100%" styleName="full-width">
+                    <item-renderer layoutName="horizontal" width="100%">
+                        <image id="icon" verticalAlign="center" width="24" height="24" style="border-radius:4px;" />
+                        <label id="text" verticalAlign="center" width="100%" />
+                        <hbox styleName="badge" verticalAlign="center">
+                            <label id="jobRole" style="color:#888888;font-size: 11px;" />
+                        </hbox>
+                    </item-renderer>
+                    <item-renderer id="expandable" layoutName="horizontal" width="100%">
+                        <image resource="haxeui-core/styles/shared/folder-light.png" verticalAlign="center" />
+                        <label id="text" width="100%" verticalAlign="center" />
+                        <hbox styleName="badge" verticalAlign="center">
+                            <label id="count" style="color:#888888;font-size: 11px;" />
+                            <label text=" members" style="color:#888888;font-size: 11px;" />
+                        </hbox>
+                    </item-renderer>
+                </treeview>
+            </vbox>
+        </accordion>
+
+        <vbox width="100%" height="100%" style="spacing:0;">
+            <absolute id="mdiContainer" styleNames="window-manager-container" width="100%" height="100%" />
+            <window-list id="mdiWindowList" height="30" />
+        </vbox>
+    </hbox>
+</vbox>
