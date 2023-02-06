@@ -89,6 +89,40 @@
         </dropdown>
     </hbox>    
 
+    <section-header text="Validated Dropdowns" />
+    <hbox>
+        <dropdown width="200" text="Select Item" validator="required" style="b111ackground: #4d4400 #473f00;111border-color:#807100">
+            <data>
+                <item text="Item 1" />
+                <item text="Item 2" />
+                <item text="Item 3" />
+                <item text="Item 4" />
+                <item text="Item 5" />
+            </data>
+        </dropdown>
+
+        <dropdown width="200" text="Select Email" validator="required, email" style="b111ackground: #4d4400 #473f00;111border-color:#807100">
+            <data>
+                <item text="Item 1" />
+                <item text="Item 2" />
+                <item text="someone@there.com" />
+                <item text="Item 4" />
+                <item text="someoneelse@there.com" />
+            </data>
+        </dropdown>
+
+        <dropdown width="200" text="Select Item 1 or 2 or 3" style="b111ackground: #4d4400 #473f00;111border-color:#807100">
+            <validator type="pattern" pattern="Item 1|Item 2|Item 3" />
+            <data>
+                <item text="Item 1" />
+                <item text="Item 2" />
+                <item text="Item 3" />
+                <item text="Item 4" />
+                <item text="Item 5" />
+            </data>
+        </dropdown>
+    </hbox>
+
     <section-header text="Searchable Dropdowns" />
     <hbox>
         <dropdown width="150" dropdownWidth="200" searchable="true" searchPrompt="Find Language">
@@ -114,10 +148,10 @@
     <hbox>
         <vbox>
             <hbox>
-                <color-picker-popup id="picker1" onchange="selectedColor.backgroundColor = this.selectedItem" />
-                <color-picker-popup id="picker2" liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                <color-picker-popup selectedItem="#551111" id="picker1" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                <color-picker-popup selectedItem="#551111" id="picker2" liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
             </hbox>
-            <color-picker-popup id="picker3" width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
+            <color-picker-popup selectedItem="#551111" id="picker3" width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
         </vbox>    
         <box id="selectedColor" width="60" height="100%" style="background-color: red" />
     </hbox>  

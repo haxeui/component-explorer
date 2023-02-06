@@ -1,7 +1,6 @@
 <vbox width="100%">
     <section-header text="Default Text Inputs" />
-    
-    <vbox>
+    <hbox>
         <grid>
             <label text="Input field:" verticalAlign="center" />
             <textfield placeholder="Enter some text" />
@@ -18,9 +17,42 @@
             <label text="Disabled" verticalAlign="center" />
             <textfield text="Some text" icon="haxeui-core/styles/default/haxeui_tiny.png" disabled="true" />
         </grid>
-        <hbox width="100%">
-            <textarea width="100%" height="200" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." />
-            <textarea width="100%" height="200" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." disabled="true" />
+        <hbox height="100%">
+            <textarea width="150" height="100%" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." />
+            <textarea width="150" height="100%" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet felis sit amet vulputate gravida. Duis ac neque aliquam, aliquet justo eu, malesuada sapien. Vestibulum aliquam lorem eu diam vestibulum vulputate. Fusce erat arcu, rutrum at mattis quis, vestibulum hendrerit erat. Sed nec velit lacinia, posuere sem ut, interdum diam. Praesent faucibus dignissim libero non pulvinar. In finibus, tellus et consectetur scelerisque, neque lacus lobortis lorem, ac consectetur ipsum nulla placerat turpis. Proin blandit, odio ut fermentum malesuada, enim eros ultricies quam, ut cursus eros dolor eu eros. Nam interdum consequat mi, ut sodales turpis. Morbi euismod, libero sit amet ultrices venenatis, eros libero blandit arcu, eu pharetra neque leo eget ligula. Pellentesque quis mattis ante. Ut ac odio ullamcorper, bibendum nisi eu, placerat ante. Donec in quam non felis pulvinar vehicula non non dui. Aliquam erat volutpat. Phasellus a vehicula quam, at posuere nisl. Sed nulla nulla, placerat sed arcu non, tincidunt pretium erat." disabled="true" />
         </hbox>    
-    </vbox>        
+    </hbox>        
+
+    <section-header text="Validated Text Inputs" />
+    <grid columns="4">
+        <label text="Required field:" verticalAlign="center" />
+        <textfield validator="required" />
+
+        <label text="Email field 1:" verticalAlign="center" />
+        <textfield validators="required, email" />
+
+        <label text="Email field 2:" verticalAlign="center" />
+        <textfield validator="email" />
+
+        <label text="Custom Pattern" verticalAlign="center" />
+        <textfield>
+            <validator type="pattern" pattern="Item 1|Item 2|Item 3" />
+        </textfield>
+    </grid>
+    
+    <section-header text="Decorated Text Inputs" />
+    <grid>
+        <textfield>
+            <decorator icon="icons/at.png" />
+        </textfield>
+        <textfield>
+            <decorator icon="icons/find.png" />
+        </textfield>
+        <textfield>
+            <decorator icon="icons/globe.png" />
+        </textfield>
+        <textfield>
+            <decorator icon="icons/phone.png" />
+        </textfield>
+    </grid>
 </vbox>

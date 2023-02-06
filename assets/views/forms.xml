@@ -1,0 +1,121 @@
+<vbox>
+    <section-header text="Forms" />
+
+    <vbox style="spacing:20px;">
+        <hbox style="spacing:20px;">
+            <frame text="Login Form (2 columns)">
+                <vbox>
+                    <form id="form1" onSubmit="formResult1.text = 'Submitted!';" onInvalidData="formResult1.text = '';">
+                        <label text="Username" verticalAlign="center" />
+                        <textfield id="username" validator="required" />
+                
+                        <label text="Password" verticalAlign="center" />
+                        <textfield id="password" validator="required" />
+                
+                        <label text="System" verticalAlign="center" />
+                        <dropdown text="Select System" id="system" width="100%" validator="required">
+                            <validator type="pattern" pattern="System A|System C" invalidMessage="System A or System C" applyValid="false" />
+                            <data>
+                                <item text="System A" />
+                                <item text="System B" />
+                                <item text="System C" />
+                            </data>
+                        </dropdown>
+                    </form>
+                    <hbox horizontalAlign="right">
+                        <label id="formResult1" verticalAlign="center" />
+                        <button text="Login" onclick="form1.submit()" />
+                    </hbox>
+                </vbox>
+            </frame>
+
+            <frame text="Login Form (4 columns)">
+                <vbox>
+                    <form columns="4" id="form2" onSubmit="formResult2.text = 'Submitted!';" onInvalidData="formResult2.text = '';">
+                        <label text="Username" verticalAlign="center" />
+                        <textfield id="username" validator="required" />
+
+                        <label text="Password" verticalAlign="center" />
+                        <textfield id="password" validator="required" />
+
+                        <label text="System" verticalAlign="center" />
+                        <dropdown text="Select System" id="system" width="100%" validator="required">
+                            <validator type="pattern" pattern="System A|System C" invalidMessage="System A or System C" />
+                            <data>
+                                <item text="System A" />
+                                <item text="System B" />
+                                <item text="System C" />
+                            </data>
+                        </dropdown>
+                    </form>
+                    <hbox horizontalAlign="right">
+                        <label id="formResult2" verticalAlign="center" />
+                        <button text="Login" onclick="form2.submit()" />
+                    </hbox>
+                </vbox>
+            </frame>
+        </hbox>
+
+        <frame text="Login Form (horizontal)">
+            <vbox>
+                <form layoutName="horizontal" id="form3" onSubmit="formResult3.text = 'Submitted!';" onInvalidData="formResult3.text = '';">
+                    <label text="Username" verticalAlign="center" />
+                    <textfield id="username" validator="required" />
+
+                    <label text="Password" verticalAlign="center" />
+                    <textfield id="password" validator="required" />
+
+                    <label text="System" verticalAlign="center" />
+                    <dropdown text="Select System" id="system" width="150" validator="required">
+                        <validator type="pattern" pattern="System A|System C" invalidMessage="System A or System C" />
+                        <data>
+                            <item text="System A" />
+                            <item text="System B" />
+                            <item text="System C" />
+                        </data>
+                    </dropdown>
+                </form>
+                <hbox horizontalAlign="right">
+                    <label id="formResult3" verticalAlign="center" />
+                    <button text="Login" onclick="form3.submit()" />
+                </hbox>
+            </vbox>
+        </frame>
+    </vbox>
+
+    <section-header text="Custom Handling" />
+
+    <frame text="Login Form">
+        <vbox>
+            <form id="form4">
+                <label text="Username" style="margin-top: 6px;" />
+                <vbox>
+                    <textfield id="username4" validator="required" />
+                    <label id="username4error" hidden="true" horizontalAlign="right" style="color: $error-border-color;font-size: 11px;" />
+                </vbox>
+        
+                <label text="Password" style="margin-top: 6px;" />
+                <vbox>
+                    <textfield id="password4" validator="required" />
+                    <label id="password4error" hidden="true" horizontalAlign="right" style="color: $error-border-color;font-size: 11px;" />
+                </vbox>
+        
+                <label text="System" style="margin-top: 6px;" />
+                <vbox width="100%">
+                    <dropdown text="Select System" id="system4" width="100%" validator="required">
+                        <validator type="pattern" pattern="System A|System C" invalidMessage="System A or System C" applyValid="false" />
+                        <data>
+                            <item text="System A" />
+                            <item text="System B" />
+                            <item text="System C" />
+                        </data>
+                    </dropdown>
+                    <label id="system4error" hidden="true" horizontalAlign="right" style="color: $error-border-color;font-size: 11px;" />
+                </vbox>
+            </form>
+            <hbox horizontalAlign="right">
+                <button text="Login" onclick="form4.submit()" />
+            </hbox>
+        </vbox>
+    </frame>
+</vbox>

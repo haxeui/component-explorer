@@ -1,0 +1,43 @@
+<vbox width="100%">
+    <section-header text="Default Notifications" />
+    <button id="basicNotificationButton" text="Basic Notification" />
+    <button id="nonExpiringNotificationButton" text="Non-Expiring Notification" />
+    <button id="actionNotificationButton" text="Notification With Actions" />
+    <button id="largeNotificationButton" text="Notification With Large Body" />
+    <button id="hugeNotificationButton" text="Notification With Huge Body" />
+    <button id="customIconNotificationButton" text="Notification With Custom Icon" />
+
+    <section-header text="Styled Notifications" />
+    <hbox>
+        <button id="defaultNotificationButton" text="Default" />
+        <button id="infoNotificationButton" text="Info" />
+        <button id="errorNotificationButton" text="Error" />
+        <button id="warningNotificationButton" text="Warning" />
+        <button id="successNotificationButton" text="Success" />
+    </hbox>
+
+    <section-header text="Custom Notifications" />
+    <style>
+        .notification.custom-notification {
+            background-color: #fffbeb;
+            border: 5px solid blue;
+            border-radius: 20px;
+            background: red green;
+        }
+
+        .notification.custom-notification #title {
+            font-size: 18px;
+            color: #ffff00;
+        }
+
+        .notification.custom-notification #body {
+            color: white;
+            font-style: italic;
+        }
+
+        .notification.custom-notification #notificationIcon {
+            resource: haxeui-core/styles/default/haxeui_small.png;
+        }
+    </style>
+    <button id="customNotificationButton" text="Show Custom" />
+</vbox>

@@ -138,7 +138,7 @@ class FileDialogsView extends View {
             return;
         }
         
-        Dialogs.saveFile(function(button, result) {
+        Dialogs.saveFile(function(button, result, path) {
             if (result == true) {
                 Dialogs.messageBox("File saved!", "Save Result", MessageBoxType.TYPE_INFO);
             }
@@ -160,7 +160,7 @@ class FileDialogsView extends View {
             return;
         }
         
-        Dialogs.saveBinaryFile("Save Image File", FileDialogTypes.IMAGES, { name: "My Image File.png", bytes: _byteData }, function(result) {
+        Dialogs.saveBinaryFile("Save Image File", FileDialogTypes.IMAGES, { name: "My Image File.png", bytes: _byteData }, function(result, path) {
             if (result == true) {
                 Dialogs.messageBox("File saved!", "Save Result", MessageBoxType.TYPE_INFO);
             }
@@ -191,7 +191,7 @@ class FileDialogsView extends View {
     // "medium method" to save text files using Dialogs.saveFile
     @:bind(saveTextFile2, MouseEvent.CLICK)
     private function onSaveTextFile2(_) {
-        Dialogs.saveFile(function(button, result) {
+        Dialogs.saveFile(function(button, result, path) {
             if (result == true) {
                 Dialogs.messageBox("File saved!", "Save Result", MessageBoxType.TYPE_INFO);
             }
@@ -208,7 +208,7 @@ class FileDialogsView extends View {
     // "short method" to save text files using Dialogs.saveTextFile
     @:bind(saveTextFile3, MouseEvent.CLICK)
     private function onSaveTextFile3(_) {
-        Dialogs.saveTextFile("Save Text File", FileDialogTypes.TEXTS, { name: "My Text File.txt", text: textDataView.text }, function(result) {
+        Dialogs.saveTextFile("Save Text File", FileDialogTypes.TEXTS, { name: "My Text File.txt", text: textDataView.text }, function(result, path) {
             if (result == true) {
                 Dialogs.messageBox("File saved!", "Save Result", MessageBoxType.TYPE_INFO);
             }

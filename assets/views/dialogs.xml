@@ -23,4 +23,9 @@
     <hbox>
         <button id="validatingDialog" text="Validating Dialog" />
     </hbox>    
+
+    <section-header text="Dialog Variants" />
+    <hbox>
+        <button id="noTitleDialog" text="No Tile" />
+    </hbox>    
 </vbox>

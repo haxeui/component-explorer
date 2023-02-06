@@ -10,6 +10,6 @@
 
 -js build/html5/Main.js
 
--D rapid_text_metrics111
+-D rapid_text_metrics
 
 --cmd copy build\html5\Main.js C:\Servers\wampstack-8.1.9-0\apps\haxeui_new\htdocs\explorer\Main.js

@@ -1,5 +1,7 @@
 package views;
 
+import haxe.ui.notifications.NotificationType;
+import haxe.ui.notifications.NotificationManager;
 import haxe.ui.containers.dialogs.CollapsibleDialog;
 import haxe.ui.containers.Box;
 import haxe.ui.containers.dialogs.Dialog;
@@ -50,6 +52,16 @@ class DialogsView extends View {
         }
         dialog.showDialog();
     }
+    
+    @:bind(noTitleDialog, MouseEvent.CLICK)
+    private function onNoTitleDialog(e) {
+        var dialog = new SimpleLoginDialog();
+        dialog.addClass("no-title");
+        dialog.onDialogClosed = function(e:DialogEvent) {
+            trace(e.button);
+        }
+        dialog.showDialog();
+    }
 }
 
 @:build(haxe.ui.macros.ComponentMacros.build("assets/views/mycustomdialog.xml"))
@@ -74,6 +86,7 @@ class SimpleLoginDialog extends Dialog {
     public function new() {
         super();
         buttons = DialogButton.CANCEL | "Login";
+        defaultButton = "Login";
     }
     
     public override function validateDialog(button:DialogButton, fn:Bool->Void) {
@@ -89,7 +102,18 @@ class SimpleLoginDialog extends Dialog {
             }
 
             if (valid == false) {
+                NotificationManager.instance.addNotification({
+                    title: "Problem Logging In",
+                    body: "There was a problem attempting to login, please try again.",
+                    type: NotificationType.Error
+                });
                 this.shake();
+            } else {
+                NotificationManager.instance.addNotification({
+                    title: "Log In Successful",
+                    body: "Login successful! Welcome " + username.text + "!",
+                    type: NotificationType.Success
+                });
             }
         }
         fn(valid);
