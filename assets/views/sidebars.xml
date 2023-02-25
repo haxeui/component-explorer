@@ -19,7 +19,7 @@
             <checkbox id="sideBarModal" text="Modal" selected="true" />
         </grid>
         
-        <button id="showSideBar1" text="Show" horizontalAlign="right" />
+        <button id="showSideBar1" text="Show" horizontalAlign="right" tooltip="bob" />
     </vbox> 
     
     <hbox width="100%" style="padding:50px;spacing:50px;">

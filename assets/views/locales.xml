@@ -1,0 +1,69 @@
+<vbox width="100%">
+    <hbox width="100%">
+        <vbox width="100%">
+            <menubar width="100%">
+                <menu text="{{menu.file}}">
+                    <menu-item text="{{menu.new}}" />
+                    <menu-item text="{{menu.open}}" />
+                    <menu-item text="{{menu.save}}" />
+                    <menu-item text="{{menu.saveAs}}" />
+                </menu>
+                <spacer width="100%" />
+                <menu text="{{menu.help}}">
+                    <menu-item text="{{menu.about}}" />
+                </menu>
+            </menubar>
+            
+            <label text="{{basic}}" />
+            <label text="{{basic.params1, 'Joe Bloggs'}}" />
+            <rule />
+            <slider id="slider1" precision="2" />
+            <label text="{{basic.params2, slider1.value}}" />
+            <rule />
+            <grid>
+                <label text="{{colourCount}}" verticalAlign="center" />
+                <slider id="colourCount" precision="0" max="30" />
+
+                <label text="{{username}}" verticalAlign="center" />
+                <textfield id="username" text="Joe Blogs" />
+
+                <label text="{{gender}}" verticalAlign="center" />
+                <group id="gender">
+                    <optionbox userData="m" text="{{male}}" selected="true" />
+                    <optionbox userData="f" text="{{female}}" />
+                    <optionbox userData="o" text="{{other}}" />
+                </group>
+            </grid>
+            <label text="{{colours.count, colourCount.value, username.text, gender.selectedOption.userData}}" />
+            <rule />
+            <hbox>
+                <dropdown id="colourList" width="110">
+                    <data>
+                        <item text="{{red}}" />
+                        <item text="{{orange}}" />
+                        <item text="{{yellow}}" />
+                        <item text="{{green}}" />
+                        <item text="{{blue}}" />
+                        <item text="{{indigo}}" />
+                        <item text="{{violet}}" />
+                    </data>
+                </dropdown>
+                <label text="{{colour.fav, colourList.selectedItem}}" verticalAlign="center" />
+            </hbox>
+        </vbox>
+
+        <style>
+            #languageSelector .button {
+                padding: 6px;
+            }
+        </style>
+        <button-bar id="languageSelector" direction="vertical" selectedIndex="0" onchange="haxe.ui.locale.LocaleManager.instance.language = this.selectedButton.userData">
+            <button icon="icons/flags-small/uk.png" userData="en" tooltip="{{english}}" />
+            <button icon="icons/flags-small/us.png" userData="en_US" tooltip="{{english.us}}" />
+            <button icon="icons/flags-small/france.png" userData="fr" tooltip="{{french}}" />
+            <button icon="icons/flags-small/wales.png" userData="cy" tooltip="{{welsh}}" />
+            <button icon="icons/flags-small/poland.png" userData="pl" tooltip="{{poland}}" />
+            <button icon="icons/flags-small/russian.png" userData="ru" tooltip="{{russian}}" />
+        </button-bar>
+    </hbox>
+</vbox>

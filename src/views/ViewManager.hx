@@ -128,13 +128,14 @@ class ViewManager {
         label = label.replace("views/", "");
         label = label.replace("css/", "");
         label = label.replace("images/", "");
+        label = label.replace("locales/", "");
         
         viewContainer.text = label;
         viewContainer.icon = iconForExtension(ext);
         viewContainer.percentWidth = 100;
         viewContainer.percentHeight = 100;
         
-        if (ext == "hx" || ext == "xml" || ext == "css") {
+        if (ext == "hx" || ext == "xml" || ext == "css" || ext == "properties") {
             #if js
             var editor = new haxe.ui.editors.code.CodeEditor();
             editor.percentWidth = 100;

@@ -8,6 +8,7 @@
         <resource path="assets/views" prefix="views" />
         <resource path="assets/fonts" prefix="fonts" />
         <resource path="assets/themes" prefix="themes" />
+        <resource path="assets/locales" prefix="locales" />
         <resource path="src/fakedata" prefix="src/fakedata" />
         <resource path="src/views" prefix="src/views" />
         <resource path="src/views/fakeemployeeapp" prefix="src/views/fakeemployeeapp" />
@@ -28,6 +29,27 @@
             <style resource="themes/default/main.css" />
         </default>
     </themes>
+
+    <locales>
+        <locale id="en">
+            <resource path="locales/en.properties" />
+        </locale>
+        <locale id="en_US">
+            <resource path="locales/en_US.properties" />
+        </locale>
+        <locale id="ru">
+            <resource path="locales/ru.properties" />
+        </locale>
+        <locale id="fr">
+            <resource path="locales/fr.properties" />
+        </locale>
+        <locale id="pl">
+            <resource path="locales/pl.properties" />
+        </locale>
+        <locale id="cy">
+            <resource path="locales/cy.properties" />
+        </locale>
+    </locales>
 
     <!--
     <namespaces>
