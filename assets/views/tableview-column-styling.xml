@@ -1,0 +1,83 @@
+<vbox width="100%">
+    <style>
+        /* Column B */
+        #tv1 .even .column-colB {
+            background-color: #eeeeff;
+        }
+        #tv1 .odd .column-colB {
+            background-color: #e0e0ff;
+        }
+
+        #tv1 .even:hover .column-colB {
+            background-color: #ccccff;
+        }
+        #tv1 .odd:hover .column-colB {
+            background-color: #c0c0ff;
+        }
+        #tv1 .column-colB:selected {
+            background-color: #bbbbff;
+        }
+
+        /* Column C */
+        #tv1 .even .column-colC {
+            background-color: #ffeeee;
+        }
+        #tv1 .odd .column-colC {
+            background-color: #ffe0e0;
+        }
+
+        #tv1 .even .column-colC:hover {
+            background-color: #ffcccc;
+        }
+        #tv1 .odd .column-colC:hover {
+            background-color: #ffc0c0;
+        }
+        #tv1 .column-colC:selected {
+            background-color: #ffbbbb;
+        }
+    </style>
+
+    <section-header text="Tableview Column Styling" />
+    <tableview id="tv1" width="100%" height="200" contentWidth="100%">
+        <header width="100%">
+            <column id="colA" text="Column A" width="150" />
+            <column id="colB" text="Column B" width="150" style="text-align:center;font-style:italic;color:blue" />
+            <column id="colC" text="Column C" width="150" style="text-align:right;font-weight:bold;color:red" />
+            <column id="colD" text="Column D" width="100%" />
+        </header>
+        
+        <data>
+            <item colA="A1" colB="B1" colC="C1" colD="D1" />
+            <item colA="A2" colB="B2" colC="C2" colD="D2" />
+            <item colA="A3" colB="B3" colC="C3" colD="D3" />
+            <item colA="A4" colB="B4" colC="C4" colD="D4" />
+            <item colA="A5" colB="B5" colC="C5" colD="D5" />
+            <item colA="A6" colB="B6" colC="C6" colD="D6" />
+            <item colA="A7" colB="B7" colC="C7" colD="D7" />
+            <item colA="A8" colB="B8" colC="C8" colD="D8" />
+            <item colA="A9" colB="B9" colC="C9" colD="D9" />
+        </data>
+    </tableview>
+
+    <section-header text="Tableview Without Header" />
+    <tableview id="tv1" width="100%" height="200" contentWidth="100%">
+        <header hidden="true" width="100%">
+            <column id="colA" text="Column A" width="150" />
+            <column id="colB" text="Column B" width="150" style="text-align:center;font-style:italic;color:blue" />
+            <column id="colC" text="Column C" width="150" style="text-align:right;font-weight:bold;color:red" />
+            <column id="colD" text="Column D" width="100%" />
+        </header>
+        
+        <data>
+            <item colA="A1" colB="B1" colC="C1" colD="D1" />
+            <item colA="A2" colB="B2" colC="C2" colD="D2" />
+            <item colA="A3" colB="B3" colC="C3" colD="D3" />
+            <item colA="A4" colB="B4" colC="C4" colD="D4" />
+            <item colA="A5" colB="B5" colC="C5" colD="D5" />
+            <item colA="A6" colB="B6" colC="C6" colD="D6" />
+            <item colA="A7" colB="B7" colC="C7" colD="D7" />
+            <item colA="A8" colB="B8" colC="C8" colD="D8" />
+            <item colA="A9" colB="B9" colC="C9" colD="D9" />
+        </data>
+    </tableview>
+</vbox>

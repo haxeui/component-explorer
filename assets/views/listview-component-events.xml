@@ -1,0 +1,28 @@
+<vbox width="100%">
+    <section-header text="Listview Component Events" />
+
+    <hbox width="100%">
+        <listview id="lv1" width="350" height="150" selectedIndex="0">
+            <item-renderer layoutName="horizontal" width="100%">
+                <checkbox id="selected" verticalAlign="center" />
+                <image id="icon" verticalAlign="center" />
+                <label width="100%" id="text" verticalAlign="center" />
+                <slider width="80" id="rating" precision="0" verticalAlign="center" />
+                <button id="action" text="Action" />
+            </item-renderer>
+            <data>
+                <item text="Haxe" icon="icons/logo-haxe.png" selected="true" />
+                <item text="Java" icon="icons/logo-java.png" />
+                <item text="Javascript" icon="icons/logo-javascript.png" selected="true" />
+                <item text="C++" icon="icons/logo-cpp.png" />
+                <item text="PHP" icon="icons/logo-php.png" selected="true" />
+                <item text="C#" icon="icons/logo-cs.png" selected="true" />
+                <item text="F#" icon="icons/logo-fs.png" />
+                <item text="OCaml" icon="icons/logo-ocaml.png" selected="true" />
+                <item text="Assembler" icon="icons/logo-asm.png" />
+            </data>
+        </listview>
+
+        <textarea id="log" width="100%" height="150" text="" autoScrollToBottom="true" />
+    </hbox>
+</vbox>
