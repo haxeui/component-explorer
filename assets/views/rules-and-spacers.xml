@@ -1,0 +1,16 @@
+<vbox width="100%" height="100%">
+    <section-header text="Rules & Spacers" />
+    <spacer height="50" />
+
+    <rule />
+    <spacer height="50" />
+    <hbox width="100%">
+        <spacer width="100" />
+        <rule direction="vertical" height="100" />
+        <rule verticalAlign="center" />
+        <rule direction="vertical" height="100" />
+        <spacer width="100" />
+    </hbox>
+    <spacer height="50" />
+    <rule />
+</vbox>

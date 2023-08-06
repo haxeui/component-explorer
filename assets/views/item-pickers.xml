@@ -1,0 +1,72 @@
+<vbox width="100%">
+    <section-header text="List Item Pickers" />
+    <hbox>
+        <list-item-picker width="100">
+            <data>
+                <item text="Item 1" />
+                <item text="Item 2" />
+                <item text="Item 3" />
+                <item text="Item 4" />
+                <item text="Item 5" />
+                <item text="Item 6" />
+                <item text="Item 7" />
+                <item text="Item 8" />
+                <item text="Item 9" />
+            </data>
+        </list-item-picker>
+
+        <list-item-picker width="100" panelWidth="200">
+            <data>
+                <item text="Item 1" />
+                <item text="Item 2" />
+                <item text="Item 3" />
+                <item text="Item 4" />
+                <item text="Item 5" />
+                <item text="Item 6" />
+                <item text="Item 7" />
+                <item text="Item 8" />
+                <item text="Item 9" />
+            </data>
+        </list-item-picker>
+    </hbox>
+
+    <section-header text="Menu Item Picker" />
+    <hbox>
+        <menu-item-picker width="100">
+            <data>
+                <item text="Item 1" />
+                <item text="Item 2" />
+                <item text="Item 3" />
+                <item type="separator" />
+                <item text="Item 4" />
+                <item text="Item 5" />
+                <item text="Item 6" />
+                <item type="separator" />
+                <item text="Item 7" />
+                <item text="Item 8" />
+                <item text="Item 9" />
+            </data>
+        </menu-item-picker>
+
+        <menu-item-picker width="100" panelWidth="200">
+            <menu-item text="Item 1" />
+            <menu-item text="Item 2" />
+            <menu-item text="Item 3" />
+            <menu-separator />
+            <menu text="Sub Menu">
+                <menu-item text="Sub Item 1" />
+                <menu-item text="Sub Item 2" />
+                <menu-item text="Sub Item 3" />
+            </menu>
+            <menu-separator />
+            <menu-item text="Item 4" />
+            <menu-item text="Item 5" />
+            <menu-item text="Item 6" />
+        </menu-item-picker>
+    </hbox>
+
+    <section-header text="Month Picker" />
+    <hbox>
+        <month-picker width="180" />
+    </hbox>
+</vbox>

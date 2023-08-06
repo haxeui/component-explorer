@@ -10,7 +10,7 @@
         <number-stepper pos="30" step=".1" min="10" max="50" precision="2" disabled="true" />
     </hbox>    
     
-    <section-header text="Option Steppers:" />
+    <section-header text="Option Steppers" />
     <hbox>
         <option-stepper width="100">
             <data>
@@ -38,5 +38,10 @@
                 <item text="Assembler" />
             </data>
         </option-stepper>
-    </hbox>    
+    </hbox>
+    
+    <section-header text="Month Steppers" />
+    <hbox>
+        <month-stepper width="180" />
+    </hbox>
 </vbox>
