@@ -10,12 +10,15 @@
             background: none;
             filter: none;
         }
+        .editable-table .item-renderer .textfield:active {
+            border: 1px solid $accent-color;
+        }
     </style>
 	<tableview width="100%" height="200" styleName="editable-table">
 		<header width="100%">
-			<column id="colA" text="Column A" width="33%" />
-			<column id="colB" text="Column B" width="34%" />
-			<column id="colC" text="Column C" width="33%" />
+			<column id="colA" text="Column A" width="100%" />
+			<column id="colB" text="Column B" width="100%" />
+			<column id="colC" text="Column C" width="100%" />
 		</header>
 
 		<item-renderer>
