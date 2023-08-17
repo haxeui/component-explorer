@@ -6,15 +6,17 @@ import haxe.ui.containers.TreeViewNode;
 import haxe.ui.core.Screen;
 import haxe.ui.events.UIEvent;
 import haxe.ui.themes.ThemeManager;
-import js.Browser;
 import util.Logger;
+#if js
+import js.Browser;
+import views.CustomComponentView;
+#end
 import views.AnimatedHighlightView;
 import views.AnimationsView;
 import views.CardsView;
-import views.CustomComponentView;
 import views.FramesView;
 import views.LinksView;
-import views.SimplePaintView;
+#if !hxWidgets import views.SimplePaintView; #end
 import views.SplitterView;
 import views.TreeViewsView;
 import views.ViewManager;
