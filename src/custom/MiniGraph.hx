@@ -1,5 +1,6 @@
 package custom;
 
+import haxe.ui.util.Timer;
 import haxe.io.Bytes;
 import haxe.ui.Toolkit;
 import haxe.ui.components.Canvas;
@@ -95,6 +96,11 @@ class MiniGraph extends Canvas {
         componentGraphics.clear();
         componentGraphics.setPixels(pixels);
         
+        #if haxeui_hxwidgets 
+        window.refresh();
+        Timer.delay(frame, 10);
+        #else
         Toolkit.callLater(frame);
+        #end
     }
 }

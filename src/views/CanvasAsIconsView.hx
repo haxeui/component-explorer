@@ -80,6 +80,7 @@ class CanvasAsIconsView extends View {
         listview2.dataSource.add({name: "CPU 7", graph: wideGraph});
         listview2.dataSource.add({name: "CPU 8", graph: wideGraph});
         
+        #if !hxWidgets
         tableview1.dataSource.add({name: "CPU 1", graph: wideGraph});
         tableview1.dataSource.add({name: "CPU 2", graph: wideGraph});
         tableview1.dataSource.add({name: "CPU 3", graph: wideGraph});
@@ -88,6 +89,7 @@ class CanvasAsIconsView extends View {
         tableview1.dataSource.add({name: "CPU 6", graph: wideGraph});
         tableview1.dataSource.add({name: "CPU 7", graph: wideGraph});
         tableview1.dataSource.add({name: "CPU 8", graph: wideGraph});
+        #end
         
         var groupA = treeview1.addNode({text: "Group A"});
             groupA.expanded = true;

@@ -69,7 +69,7 @@
                         </listview>
                     </vbox>   
                     <vbox text="Page 5" width="100%" style="padding: 0;padding-bottom: 1px;">
-                        <tableview width="100%" height="100%">
+                        <tableview width="100%" height="100%" unless="hxWidgets">
                             <header>
                                 <column id="colA" text="Col A" width="70" />
                                 <column id="colB" text="Col B" width="70" />

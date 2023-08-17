@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox>
     <section-header text="Default Scrollbars" />
-    <hbox>
+    <hbox unless="hxwidgets">
         <vbox>
             <scroll pos="0" pageSize="50" />
             <scroll pos="25" pageSize="50" />
@@ -20,7 +20,7 @@
     </hbox>    
     
     <section-header text="Classic Scrollbars" />
-    <hbox>
+    <hbox unless="hxwidgets">
         <vbox>
             <scroll pos="0" pageSize="50" styleName="classic-scrolls" />
             <scroll pos="25" pageSize="50" styleName="classic-scrolls" />
@@ -35,7 +35,7 @@
         <scroll pos="75" direction="vertical" pageSize="50" styleName="classic-scrolls" />
         <scroll pos="100" direction="vertical" pageSize="50" styleName="classic-scrolls" />
         
-        <listview width="200" height="150" selectedIndex="0" styleName="classic-scrolls">
+        <listview width="200" height="150" selectedIndex="0" styleName="classic-scrolls" unless="hxwidgets">
             <data>
                 <item text="Haxe" icon="icons/logo-haxe.png" />
                 <item text="Java" icon="icons/logo-java.png" />

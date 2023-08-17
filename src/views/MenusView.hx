@@ -39,8 +39,10 @@ class MenusView extends View {
         Screen.instance.addComponent(menu);
     }
 
-    @:bind(lv1, MouseEvent.RIGHT_MOUSE_DOWN)
+    #if !hxWidgets
     @:bind(tv1, MouseEvent.RIGHT_MOUSE_DOWN)
+    #end
+    @:bind(lv1, MouseEvent.RIGHT_MOUSE_DOWN)
     @:bind(tree1, MouseEvent.RIGHT_MOUSE_DOWN)
     private function onComponentRightDown(e:MouseEvent) {
         var menu = new CutCopyPasteMenu();

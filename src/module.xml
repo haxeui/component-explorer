@@ -11,9 +11,9 @@
         <resource path="assets/locales" prefix="locales" />
         <resource path="src/fakedata" prefix="src/fakedata" />
         <resource path="src/views" prefix="src/views" />
-        <resource path="src/views/fakeemployeeapp" prefix="src/views/fakeemployeeapp" />
-        <resource path="src/windows" prefix="src/windows" />
-        <resource path="src/custom" prefix="src/custom" />
+        <resource path="src/views/fakeemployeeapp" prefix="src/views/fakeemployeeapp" unless="hxwidgets"/>
+        <resource path="src/windows" prefix="src/windows" unless="hxwidgets"/>
+        <resource path="src/custom" prefix="src/custom" unless="hxwidgets" />
     </resources>
 
     <components>

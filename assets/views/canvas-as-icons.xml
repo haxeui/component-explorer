@@ -34,7 +34,7 @@
             </item-renderer>
         </listview>
         
-        <tableview id="tableview1" width="200" height="150">
+        <tableview id="tableview1" width="200" height="150" unless="hxWidgets">
             <item-renderer width="100%">
                 <label id="name" width="100%" />
             </item-renderer>

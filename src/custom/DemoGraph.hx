@@ -114,7 +114,12 @@ class DemoGraph extends Canvas {
             _pointCDirection = 1;
         }
         
+        #if haxeui_hxwidgets 
+        if (window != null) window.refresh();
+        haxe.ui.util.Timer.delay(frame, 10);
+        #else
         Toolkit.callLater(frame);
+        #end
     }
     
     private function createCubicBezier(graphics:ComponentGraphics, startX:Float, startY:Float, x1:Float, y1:Float, x2:Float, y2:Float, x:Float, y:Float) {

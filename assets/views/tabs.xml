@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%" styleName="default-background">
-    <hbox width="100%">
+    <hbox width="100%" >
         <vbox width="100%">
             <section-header text="TabView" />
             <grid>
@@ -70,7 +70,7 @@
 
     <spacer height="10" />
     
-    <hbox width="100%">
+    <hbox width="100%" >
         <vbox width="100%">
             <section-header text="Closable Tabs" />
             <hbox>
@@ -142,7 +142,7 @@
     
     <spacer height="10" />
     
-    <hbox width="100%">
+    <hbox width="100%" unless="hxWidgets">
         <vbox width="100%">
             <section-header text="TabBar" />
             <grid>

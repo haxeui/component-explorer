@@ -11,7 +11,7 @@
     </hbox>    
     
     <section-header text="Option Steppers" />
-    <hbox>
+    <hbox unless="hxwidgets">
         <option-stepper width="100">
             <data>
                 <item text="Haxe" />

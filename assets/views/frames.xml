@@ -30,7 +30,7 @@
         </vbox>    
     </hbox> 
     
-    <hbox>
+    <hbox if="js">
         <frame text="Some form">
             <vbox>
                 <grid>

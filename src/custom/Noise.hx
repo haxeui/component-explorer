@@ -59,6 +59,13 @@ class Noise extends Canvas {
         componentGraphics.clear();
         componentGraphics.setPixels(pixels);
         
+        //Toolkit.callLater(frame);
+        #if haxeui_hxwidgets 
+        if (window != null) window.refresh();
+        haxe.ui.util.Timer.delay(frame, 100);
+        
+        #else
         Toolkit.callLater(frame);
+        #end
     }
 }
