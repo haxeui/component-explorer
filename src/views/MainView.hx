@@ -61,9 +61,11 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Containers", title: "List Views", smallIcon: "icons/16/list_box.png", largeIcon: "icons/32/list_box.png", viewClass: ListViewsView, relevantFiles: ["views/listviews.xml", "src/views/ListViewsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"List Views", title: "Component Events", smallIcon: "icons/16/buttons.png", largeIcon: "icons/32/buttons.png", viewClass: ListViewComponentEventsView, relevantFiles: ["views/listview-component-events.xml", "src/views/ListViewComponentEventsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"List Views", title: "As Menus", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: ListViewsAsMenusView, relevantFiles: ["views/listviews-as-menus.xml"] });
+        #if !hxWidgets 
         ViewManager.instance.registerView({ group: "Containers", title: "Table Views", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: TableViewsView, relevantFiles: ["views/tableviews.xml", "src/views/TableViewsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"Table Views", title: "Column Styling", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: TableViewColumnStylingView, relevantFiles: ["views/tableview-column-styling.xml"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"Table Views", title: "Editable Tables", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: EditableTableView, relevantFiles: ["views/editable-table-view.xml"] });
+        #end
         ViewManager.instance.registerView({ group: "Containers", title: "Tree Views", smallIcon: "icons/16/labels.png", largeIcon: "icons/32/labels.png", viewClass: TreeViewsView, relevantFiles: ["views/treeviews.xml", "src/views/TreeViewsView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Side Bars", smallIcon: "icons/16/layouts.png", largeIcon: "icons/32/layouts.png", viewClass: SidebarsView, relevantFiles: ["views/sidebars.xml", "src/views/SidebarsView.hx", "views/mysidebar.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Property Grids", smallIcon: "icons/16/attributes_display.png", largeIcon: "icons/32/attributes_display.png", viewClass: PropertyGridsView, relevantFiles: ["views/propertygrids.xml"] });
@@ -89,15 +91,18 @@ class MainView extends HBox {
             ViewManager.instance.registerView({ group: "Miscellaneous", subGroup:"Animation", title: "Animated Highlight", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimatedHighlightView, relevantFiles: ["views/animated-highlight.xml"] });
             ViewManager.instance.registerView({ group: "Miscellaneous", subGroup:"Animation", title: "Animated Dots", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AnimatedDotsView, relevantFiles: ["views/animated-dots.xml", "src/views/AnimatedDotsView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Validators", smallIcon: "icons/16/textfield.png", largeIcon: "icons/32/textfield.png", viewClass: ValidatorsView, relevantFiles: ["views/validators.xml", "src/views/ValidatorsView.hx"] });
+        #if js
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Custom Component", smallIcon: "icons/16/list.png", largeIcon: "icons/32/list.png", viewClass: CustomComponentView, relevantFiles: ["views/custom-component.xml", "src/views/CustomComponentView.hx", "src/custom/IFrame.hx"] });
+        #end
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "App Icon", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: AppIconView, relevantFiles: ["views/app-icon.xml", "src/views/AppIconView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Notifications", smallIcon: "icons/16/button.png", largeIcon: "icons/32/button.png", viewClass: NotificationsView, relevantFiles: ["views/notifications.xml", "src/views/NotificationsView.hx"] });
         //ViewManager.instance.registerView({ group: "Miscellaneous", title: "Namespaces", smallIcon: "icons/16/document-code.png", largeIcon: "icons/32/document-code.png", viewClass: NamespacesView, relevantFiles: ["views/namespaces.xml", "src/views/NamespacesView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Rules & Spacers", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: RulesAndSpacersView, relevantFiles: ["views/rules-and-spacers.xml"] });
-
+        #if !hxWidgets
         ViewManager.instance.registerView({ group: "Examples", title: "Simple Paint", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: SimplePaintView, relevantFiles: ["views/simple-paint.xml", "src/views/SimplePaintView.hx"] });
         ViewManager.instance.registerView({ group: "Examples", title: "Todos", smallIcon: "icons/16/radiobutton_group.png", largeIcon: "icons/32/radiobutton_group.png", viewClass: TodosView, relevantFiles: ["views/todos.xml", "src/views/TodosView.hx", "css/todos.css", "images/unchecked.png", "images/checked.png", "images/delete.png"] });
         ViewManager.instance.registerView({ group: "Examples", title: "Employee App", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: views.fakeemployeeapp.MainView, relevantFiles: ["src/views/fakeemployeeapp/MainView.hx", "src/views/fakeemployeeapp/main-view.xml", "src/views/fakeemployeeapp/FakePersonDetailsWindow.hx", "src/views/fakeemployeeapp/FakeDepartmentDetailsWindow.hx", "src/views/fakeemployeeapp/FakeEmailWindow.hx", "src/views/fakeemployeeapp/FakePersonManager.hx", "src/fakedata/FakePerson.hx", "src/fakedata/FakePeopleDB.hx"] });
+        #end
     }
     
     public override function onReady() {
@@ -192,9 +197,11 @@ class MainView extends HBox {
         var pathToSelect1:String = loadTreePath();
         
         var pathToSelect2:String = null;
+        #if js
         if (Browser.window.location.hash != null) {
             pathToSelect2 = Browser.window.location.hash.substr(1).replace("_", " ");
         }
+        #end
         
         var nodeToSelect1:TreeViewNode = null;
         var nodeToSelect2:TreeViewNode = null;
@@ -258,6 +265,6 @@ class MainView extends HBox {
         }
         ViewManager.instance.showView(viewInfo);
         var safePath = path.toLowerCase().replace(" ", "_");
-        Browser.window.history.pushState("", "", "#" + safePath);
+        #if js Browser.window.history.pushState("", "", "#" + safePath); #end
     }
 }

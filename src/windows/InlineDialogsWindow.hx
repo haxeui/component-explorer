@@ -22,7 +22,7 @@ class InlineDialogsWindow extends Window {
     @:bind(validatingDialog, MouseEvent.CLICK)
     private function onValidatingDialog(_) {
         var dialog = new SimpleLoginDialog();
-        dialog.dialogParent = findComponent("windowContent", VBox);
+        #if !hxWidgets dialog.dialogParent = findComponent("windowContent", VBox); #end
         dialog.showDialog();
     }
 }
