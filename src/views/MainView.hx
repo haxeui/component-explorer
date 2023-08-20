@@ -55,7 +55,9 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Basic", title: "Color Pickers", smallIcon: "icons/16/color-picker-default.png", largeIcon: "icons/32/color-picker-default.png", viewClass: ColorPickersView, relevantFiles: ["views/color-pickers.xml"] });
         ViewManager.instance.registerView({ group: "Basic", title: "Item Pickers", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: ItemPickersView, relevantFiles: ["views/item-pickers.xml"] });
         
+        #if !haxeui_hxwidgets
         ViewManager.instance.registerView({ group: "Containers", title: "Tabs", smallIcon: "icons/16/tab_content.png", largeIcon: "icons/32/tab_content.png", viewClass: TabsView, relevantFiles: ["views/tabs.xml"] });
+        #end
         ViewManager.instance.registerView({ group: "Containers", title: "Menus", smallIcon: "icons/16/menu.png", largeIcon: "icons/32/menu.png", viewClass: MenusView, relevantFiles: ["views/menus.xml", "src/views/MenusView.hx"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Frames", smallIcon: "icons/16/attributes_display.png", largeIcon: "icons/32/attributes_display.png", viewClass: FramesView, relevantFiles: ["views/frames.xml"] });
         ViewManager.instance.registerView({ group: "Containers", title: "Forms", smallIcon: "icons/16/labels.png", largeIcon: "icons/32/labels.png", viewClass: FormsView, relevantFiles: ["views/forms.xml", "src/views/FormsView.hx"] });
