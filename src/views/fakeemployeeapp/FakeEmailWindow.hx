@@ -55,7 +55,7 @@ class FakeEmailWindow extends Window {
         cancelButton.disabled = true;
         sendButton.disabled = true;
         var waiting = new FakeSendDialog();
-        #if !hxWidgets
+        #if !haxeui_hxwidgets 
         waiting.dialogParent = findComponent("windowContent", VBox);
         #end
         waiting.show();
@@ -77,7 +77,7 @@ class FakeEmailWindow extends Window {
 private class FakeSendDialog extends Dialog {
     public function new() {
         super();
-        #if !hxWidgets
+        #if !haxeui_hxwidgets 
         dialogTitle.hide();
         #end
     }

@@ -39,7 +39,7 @@ class MenusView extends View {
         Screen.instance.addComponent(menu);
     }
 
-    #if !hxWidgets
+    #if !haxeui_hxwidgets 
     @:bind(tv1, MouseEvent.RIGHT_MOUSE_DOWN)
     #end
     @:bind(lv1, MouseEvent.RIGHT_MOUSE_DOWN)

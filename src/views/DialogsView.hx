@@ -86,7 +86,7 @@ class SimpleLoginDialog extends Dialog {
     public function new() {
         super();
         buttons = DialogButton.CANCEL | "Login";
-        #if !hxWidgets defaultButton = "Login"; #end
+        #if !haxeui_hxwidgets  defaultButton = "Login"; #end
     }
     
     public override function validateDialog(button:DialogButton, fn:Bool->Void) {

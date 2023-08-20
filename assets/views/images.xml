@@ -5,7 +5,7 @@
     <hbox style="spacing: 0;">
         <vbox style="spacing: 0;">
             <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" />
-            <image resource="http://haxeui.org/img/logo_small.png" style="border:1px solid $normal-border-color" width="100%" unless="hxwidgets"/>
+            <image resource="http://haxeui.org/img/logo_small.png" style="border:1px solid $normal-border-color" width="100%" unless="hxWidgets"/>
             <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" disabled="true" />
         </vbox>    
         <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="200" style="border:1px solid $normal-border-color" />
@@ -18,7 +18,7 @@
     </hbox>
     
     <section-header text="Scaled Images" />
-    <hbox unless="hxwidgets">
+    <hbox unless="hxWidgets">
         <vbox>
             <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" imageScale="2" />
             <label text="smooth" horizontalAlign="center" />

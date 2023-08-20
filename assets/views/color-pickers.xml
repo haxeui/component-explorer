@@ -22,7 +22,7 @@
     
     <spacer height="5" />
     
-    <hbox width="100%" unless="hxwidgets">
+    <hbox width="100%" unless="hxWidgets">
         <vbox width="100%">
             <section-header text="Color Picker" />
             <color-picker id="picker4" onchange="selectedColor.backgroundColor = this.currentColor" />
@@ -36,7 +36,7 @@
 
     <spacer height="5" />
     
-    <hbox width="100%" unless="hxwidgets">
+    <hbox width="100%" unless="hxWidgets">
         <vbox width="100%">
             <section-header text="Variants" />
             

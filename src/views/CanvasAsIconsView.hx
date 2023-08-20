@@ -80,7 +80,7 @@ class CanvasAsIconsView extends View {
         listview2.dataSource.add({name: "CPU 7", graph: wideGraph});
         listview2.dataSource.add({name: "CPU 8", graph: wideGraph});
         
-        #if !hxWidgets
+        #if !haxeui_hxwidgets 
         tableview1.dataSource.add({name: "CPU 1", graph: wideGraph});
         tableview1.dataSource.add({name: "CPU 2", graph: wideGraph});
         tableview1.dataSource.add({name: "CPU 3", graph: wideGraph});

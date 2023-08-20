@@ -16,7 +16,7 @@ import views.AnimationsView;
 import views.CardsView;
 import views.FramesView;
 import views.LinksView;
-#if !hxWidgets import views.SimplePaintView; #end
+#if !haxeui_hxwidgets  import views.SimplePaintView; #end
 import views.SplitterView;
 import views.TreeViewsView;
 import views.ViewManager;
@@ -63,7 +63,7 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Containers", title: "List Views", smallIcon: "icons/16/list_box.png", largeIcon: "icons/32/list_box.png", viewClass: ListViewsView, relevantFiles: ["views/listviews.xml", "src/views/ListViewsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"List Views", title: "Component Events", smallIcon: "icons/16/buttons.png", largeIcon: "icons/32/buttons.png", viewClass: ListViewComponentEventsView, relevantFiles: ["views/listview-component-events.xml", "src/views/ListViewComponentEventsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"List Views", title: "As Menus", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: ListViewsAsMenusView, relevantFiles: ["views/listviews-as-menus.xml"] });
-        #if !hxWidgets 
+        #if !haxeui_hxwidgets  
         ViewManager.instance.registerView({ group: "Containers", title: "Table Views", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: TableViewsView, relevantFiles: ["views/tableviews.xml", "src/views/TableViewsView.hx"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"Table Views", title: "Column Styling", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: TableViewColumnStylingView, relevantFiles: ["views/tableview-column-styling.xml"] });
             ViewManager.instance.registerView({ group: "Containers", subGroup:"Table Views", title: "Editable Tables", smallIcon: "icons/16/table.png", largeIcon: "icons/32/table.png", viewClass: EditableTableView, relevantFiles: ["views/editable-table-view.xml"] });
@@ -100,7 +100,7 @@ class MainView extends HBox {
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Notifications", smallIcon: "icons/16/button.png", largeIcon: "icons/32/button.png", viewClass: NotificationsView, relevantFiles: ["views/notifications.xml", "src/views/NotificationsView.hx"] });
         //ViewManager.instance.registerView({ group: "Miscellaneous", title: "Namespaces", smallIcon: "icons/16/document-code.png", largeIcon: "icons/32/document-code.png", viewClass: NamespacesView, relevantFiles: ["views/namespaces.xml", "src/views/NamespacesView.hx"] });
         ViewManager.instance.registerView({ group: "Miscellaneous", title: "Rules & Spacers", smallIcon: "icons/16/layouts_4.png", largeIcon: "icons/32/layouts_4.png", viewClass: RulesAndSpacersView, relevantFiles: ["views/rules-and-spacers.xml"] });
-        #if !hxWidgets
+        #if !haxeui_hxwidgets 
         ViewManager.instance.registerView({ group: "Examples", title: "Simple Paint", smallIcon: "icons/16/images.png", largeIcon: "icons/32/images.png", viewClass: SimplePaintView, relevantFiles: ["views/simple-paint.xml", "src/views/SimplePaintView.hx"] });
         ViewManager.instance.registerView({ group: "Examples", title: "Todos", smallIcon: "icons/16/radiobutton_group.png", largeIcon: "icons/32/radiobutton_group.png", viewClass: TodosView, relevantFiles: ["views/todos.xml", "src/views/TodosView.hx", "css/todos.css", "images/unchecked.png", "images/checked.png", "images/delete.png"] });
         ViewManager.instance.registerView({ group: "Examples", title: "Employee App", smallIcon: "icons/16/dialog.png", largeIcon: "icons/32/dialog.png", viewClass: views.fakeemployeeapp.MainView, relevantFiles: ["src/views/fakeemployeeapp/MainView.hx", "src/views/fakeemployeeapp/main-view.xml", "src/views/fakeemployeeapp/FakePersonDetailsWindow.hx", "src/views/fakeemployeeapp/FakeDepartmentDetailsWindow.hx", "src/views/fakeemployeeapp/FakeEmailWindow.hx", "src/views/fakeemployeeapp/FakePersonManager.hx", "src/fakedata/FakePerson.hx", "src/fakedata/FakePeopleDB.hx"] });
