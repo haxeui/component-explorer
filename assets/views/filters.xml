@@ -1,0 +1,155 @@
+<vbox width="100%">
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Blur" />
+            <hbox>
+                <image id="blurTarget1" resource="haxeui-core/styles/default/haxeui.png" />
+                <spacer width="20" />
+                <box id="blurTarget2" width="128" height="128" style="background: yellow #E0B0FF;border:5px solid red;border-radius:64px;" />
+            </hbox>
+            <spacer height="5" />
+            <label id="blurText" text="" selectable="true" width="100%" />
+        </vbox>
+        <vbox width="300">
+            <section-header text="Blur Parameters" />
+            <grid columns="3" width="100%">
+                <label width="100%" text="Amount" verticalAlign="center" />
+                <slider id="blurAmountSlider" min="0" max="10" pos="5" precision="0" />
+                <label text="px" verticalAlign="center" />
+            </grid>
+        </vbox>
+    </hbox>
+
+    <spacer height="10" />
+
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Box Shadow" />
+            <hbox>
+                <image id="boxShadowTarget1" resource="haxeui-core/styles/default/haxeui.png" />
+                <spacer width="20" />
+                <box id="boxShadowTarget2" width="128" height="128" style="background: yellow #E0B0FF;border:5px solid red;border-radius:64px;" />
+            </hbox>
+            <spacer height="5" />
+            <label id="boxShadowText" text="" selectable="true" width="100%" />
+        </vbox>
+        <vbox width="300">
+            <section-header text="Box Shadow Parameters" />
+            <grid columns="3" width="100%">
+                <label width="100%" text="Offset X" verticalAlign="center" />
+                <slider id="boxShadowOffsetX" min="0" max="10" pos="5" precision="0" />
+                <label text="px" verticalAlign="center" />
+
+                <label width="100%" text="Offset Y" verticalAlign="center" />
+                <slider id="boxShadowOffsetY" min="0" max="10" pos="5" precision="0" />
+                <label text="px" verticalAlign="center" />
+
+                <label width="100%" text="Color" verticalAlign="center" />
+                <color-picker-popup id="boxShadowColor" selectedItem="#000000" />
+                <spacer />
+
+                <label width="100%" text="Alpha" verticalAlign="center" />
+                <slider id="boxShadowAlpha" min="0" max="1" pos=".5" precision="2" />
+                <spacer />
+
+                <label width="100%" text="Blur Radius" verticalAlign="center" />
+                <slider id="boxShadowBlurRadius" min="0" max="10" pos="10" precision="0" />
+                <label text="px" verticalAlign="center" />
+
+                <label width="100%" text="Spread Radius" verticalAlign="center" />
+                <slider id="boxShadowSpreadRadius" min="0" max="10" pos="1" precision="0" />
+                <label text="px" verticalAlign="center" />
+
+                <label width="100%" text="Inset" verticalAlign="center" />
+                <checkbox id="boxShadowInset" horizontalAlign="right" />
+                <spacer />
+            </grid>
+        </vbox>
+    </hbox>
+
+    <spacer height="10" />
+
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Grayscale" />
+            <hbox>
+                <image id="grayscaleTarget1" resource="haxeui-core/styles/default/haxeui.png" />
+                <spacer width="20" />
+                <box id="grayscaleTarget2" width="128" height="128" style="background: yellow #E0B0FF;border:5px solid red;border-radius:64px;" />
+            </hbox>
+            <spacer height="5" />
+            <label id="grayscaleText" text="" selectable="true" width="100%" />
+        </vbox>
+        <vbox width="300">
+            <section-header text="Grayscale Parameters" />
+            <grid columns="3" width="100%">
+                <label width="100%" text="Amount" verticalAlign="center" />
+                <slider id="grayscaleAmountSlider" min="0" max="100" pos="100" precision="0" />
+                <label text="%" verticalAlign="center" />
+            </grid>
+        </vbox>
+    </hbox>
+
+    <spacer height="10" />
+
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Tint" />
+            <hbox>
+                <image id="tintTarget1" resource="haxeui-core/styles/default/haxeui.png" />
+                <spacer width="20" />
+                <box id="tintTarget2" width="128" height="128" style="background: yellow #E0B0FF;border:5px solid red;border-radius:64px;" />
+            </hbox>
+            <spacer height="5" />
+            <label id="tintText" text="" selectable="true" width="100%" />
+        </vbox>
+        <vbox width="300">
+            <section-header text="Tint Parameters" />
+            <grid columns="3" width="100%">
+                <label width="100%" text="Amount" verticalAlign="center" />
+                <slider id="tintAmountSlider" min="0" max="1" pos="1" precision="2" />
+                <spacer />
+
+                <label width="100%" text="Color" verticalAlign="center" />
+                <color-picker-popup id="tintColor" selectedItem="#ff0000" />
+                <spacer />
+            </grid>
+        </vbox>
+    </hbox>
+
+    <spacer height="10" />
+
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Compound" />
+            <hbox>
+                <image id="compoundTarget1" resource="haxeui-core/styles/default/haxeui.png" />
+                <spacer width="20" />
+                <box id="compoundTarget2" width="128" height="128" style="background: yellow #E0B0FF;border:5px solid red;border-radius:64px;" />
+            </hbox>
+        </vbox>
+        <vbox width="300">
+            <section-header text="Compound Parameters" />
+            <grid columns="3" width="100%">
+                <label width="100%" text="Apply Blur" verticalAlign="center" />
+                <checkbox id="compoundApplyBlurCheckbox" selected="true" />
+                <spacer />
+
+                <label width="100%" text="Apply Box Shadow" verticalAlign="center" />
+                <checkbox id="compoundApplyBoxShadowCheckbox" selected="true" />
+                <spacer />
+
+                <label width="100%" text="Apply Grayscale" verticalAlign="center" />
+                <checkbox id="compoundApplyGrayscaleCheckbox" selected="true" />
+                <spacer />
+
+                <label width="100%" text="Apply Tint" verticalAlign="center" />
+                <checkbox id="compoundApplyTintCheckbox" selected="true" />
+                <spacer />
+            </grid>
+        </vbox>
+    </hbox>
+    <spacer height="10" />
+    <label id="compoundText" selectable="true" width="100%" />
+
+</vbox>

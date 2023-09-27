@@ -1,0 +1,145 @@
+<vbox width="100%" height="100%" style="background-color: #212121;padding: 5px;">
+    <style>
+        .button.power {
+            background-color: #636363;
+            border: 2px solid #7e7e7e;
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            filter: box-shadow(0, 0, #020202, .3, 1.5px, 1.5px, true);
+        }
+
+        .button.power .powersign {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            border: 4px solid #303030;
+            horizontal-align: center;
+            vertical-align: center;
+        }
+
+        .button.power .powersign .outer {
+            width: 8px;
+            height: 10px;
+            background-color: #636363;
+            margin-top: -2px;
+        }
+
+        .button.power .powersign .inner {
+            width: 4px;
+            height: 10px;
+            background-color: #303030;
+        }
+
+
+        .button.power:down {
+            background-color: #92b4b8;
+            border: 2px solid #ffffff;
+            filter: box-shadow(0px, 0px, #97f3ff, .3, 1px, 1px, true), box-shadow(0px, 0px, #97f3ff, .3, 1px, 1px, true), box-shadow(0px, 0px, #97f3ff, .3, 5px, 5px, true), box-shadow(0px, 0px, #97f3ff, .2, 20px, 20px), box-shadow(0px, 0px, #97f3ff, .2, 50px, 50px), box-shadow(0px, 0px, #97f3ff, .2, 5px, 5px);
+        }
+
+        .button.power:down .powersign {
+            border: 4px solid #ffffff;
+            filter: box-shadow(0, 0, #97f3ff, .3, 5px, 5px), box-shadow(0, 0, #97f3ff, .3, 2.5px, 2.5px, true);
+        }
+
+        .button.power:down .powersign .outer {
+            width: 8px;
+            height: 10px;
+            background-color: #92b4b8;
+            margin-top: -2px;
+        }
+
+        .button.power:down .powersign .inner {
+            width: 4px;
+            height: 10px;
+            background-color: #ffffff;
+            filter: box-shadow(0, 0, #97f3ff, .3, 2.5px, 2.5px);
+        }
+
+        .button.neon {
+            border: 4px solid #d9b0ff;
+            padding: 16px 58px;
+            color: #d9b0ff;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #643d88;
+            border-radius: 16px;
+            filter: box-shadow(0, 0, #d9b0ff, 1, 16px, 4px), box-shadow(0, 0, #bf7bff, 0.781, 64px, 16px), box-shadow(0, 0, #d9b0ff, 1, 12px, 4px, true);
+        }
+
+        .button.neon:hover {
+            color: #643d88;
+            background-color: #d9b0ff;
+            filter: box-shadow(0, 0, #d9b0ff, 1, 16px, 4px), box-shadow(0, 0, #bf7bff, 0.781, 64px, 32px), box-shadow(0, 0, #d9b0ff, 1, 12px, 4px, true);
+        }
+
+        .button.neon:down {
+            color: #d9b0ff;
+            background-color: #643d88;
+            filter: box-shadow(0, 0, #d9b0ff, 1, 16px, 4px), box-shadow(0, 0, #bf7bff, 0.781, 64px, 16px), box-shadow(0, 0, #d9b0ff, 1, 12px, 4px, true);
+        }
+    </style>
+
+
+
+    <box width="100%" height="100%">
+        <vbox horizontalAlign="center" verticalAlign="center" style="spacing: 50px;">
+            <hbox style="spacing: 50px;" horizontalAlign="center">
+                <button toggle="true" styleName="power" selected="true">
+                    <box styleName="powersign">
+                        <box styleName="outer" horizontalAlign="center">
+                            <box styleName="inner" horizontalAlign="center" />
+                        </box>
+                    </box>
+                </button>
+
+                <button toggle="true" styleName="power">
+                    <box styleName="powersign">
+                        <box styleName="outer" horizontalAlign="center">
+                            <box styleName="inner" horizontalAlign="center" />
+                        </box>
+                    </box>
+                </button>
+
+                <button toggle="true" styleName="power" selected="true">
+                    <box styleName="powersign">
+                        <box styleName="outer" horizontalAlign="center">
+                            <box styleName="inner" horizontalAlign="center" />
+                        </box>
+                    </box>
+                </button>
+            </hbox>
+
+            <hbox style="spacing: 50px;">
+                <button text="Neon 1" styleName="neon" />
+                <button text="Neon 2" styleName="neon" />
+                <button text="Neon 3" styleName="neon" />
+            </hbox>
+
+            <hbox style="spacing: 50px;" horizontalAlign="center">
+                <button toggle="true" styleName="power" group="group-a">
+                    <box styleName="powersign">
+                        <box styleName="outer" horizontalAlign="center">
+                            <box styleName="inner" horizontalAlign="center" />
+                        </box>
+                    </box>
+                </button>
+                <button toggle="true" styleName="power" group="group-a" selected="true">
+                    <box styleName="powersign">
+                        <box styleName="outer" horizontalAlign="center">
+                            <box styleName="inner" horizontalAlign="center" />
+                        </box>
+                    </box>
+                </button>
+                <button toggle="true" styleName="power" group="group-a">
+                    <box styleName="powersign">
+                        <box styleName="outer" horizontalAlign="center">
+                            <box styleName="inner" horizontalAlign="center" />
+                        </box>
+                    </box>
+                </button>
+            </hbox>
+        </vbox>
+    </box>
+</vbox>
