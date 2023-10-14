@@ -39,14 +39,14 @@
         <accordion width="250" height="100%" style="border-top: none;border-bottom:none;border-radius: none;">
             <vbox text="People" width="100%">
                 <treeview id="peopleTree" width="100%" height="100%" styleName="full-width">
-                    <item-renderer layoutName="horizontal" width="100%">
+                    <item-renderer layout="horizontal" width="100%">
                         <image id="icon" verticalAlign="center" width="24" height="24" style="border-radius:4px;" />
                         <label id="text" verticalAlign="center" width="100%" />
                         <hbox styleName="badge" verticalAlign="center">
                             <label id="jobRole" style="color:#888888;font-size: 11px;" />
                         </hbox>
                     </item-renderer>
-                    <item-renderer id="expandable" layoutName="horizontal" width="100%">
+                    <item-renderer id="expandable" layout="horizontal" width="100%">
                         <image resource="haxeui-core/styles/shared/folder-light.png" verticalAlign="center" />
                         <label id="text" width="100%" verticalAlign="center" />
                         <hbox styleName="badge" verticalAlign="center">

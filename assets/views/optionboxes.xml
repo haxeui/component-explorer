@@ -16,7 +16,7 @@
         <optionbox text="Option 2D" disabled="true" />
     </hbox>    
     
-    <group layoutName="horizontal" onchange="util.Logger.log('group changed - ' + event.target.text)">
+    <group layout="horizontal" onchange="util.Logger.log('group changed - ' + event.target.text)">
         <optionbox text="Option 3A" />
         <optionbox text="Option 3B" />
         <optionbox text="Option 3C" selected="true" />

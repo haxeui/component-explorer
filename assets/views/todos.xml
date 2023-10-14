@@ -9,7 +9,7 @@
                     <textfield id="todoItem" width="100%" placeholder="What needs to be done?" style="font-size: 24px;font-style:italic;" />
                 </hbox>    
                 <listview id="todoList" width="100%" hidden="true">
-                    <item-renderer layoutName="horizontal" width="100%" style="padding: 10px;spacing:10px;">
+                    <item-renderer layout="horizontal" width="100%" style="padding: 10px;spacing:10px;">
                         <checkbox id="completed" verticalAlign="center" />
                         <textfield id="label" width="100%" verticalAlign="center" style="font-size: 24px" />
                         <button id="delete" icon="images/delete.png" tooltip="Remove" verticalAlign="center" />

@@ -8,7 +8,7 @@
         <checkbox text="Checkbox 1D" disabled="true" />
     </hbox>    
     
-    <group layoutName="horizontal" onchange="util.Logger.log('group changed - ' + event.target.text)">
+    <group layout="horizontal" onchange="util.Logger.log('group changed - ' + event.target.text)">
         <checkbox text="Checkbox 2A" />
         <checkbox text="Checkbox 2B" />
         <checkbox text="Checkbox 2C" selected="true" />

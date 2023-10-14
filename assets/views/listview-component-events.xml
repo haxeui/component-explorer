@@ -3,7 +3,7 @@
 
     <hbox width="100%">
         <listview id="lv1" width="350" height="150" selectedIndex="0">
-            <item-renderer layoutName="horizontal" width="100%">
+            <item-renderer layout="horizontal" width="100%">
                 <checkbox id="selected" verticalAlign="center" />
                 <image id="icon" verticalAlign="center" />
                 <label width="100%" id="text" verticalAlign="center" />

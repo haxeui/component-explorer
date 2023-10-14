@@ -53,7 +53,7 @@
             
             <vbox width="200" height="100%">
                 <listview width="100%" height="100%">
-                    <item-renderer layoutName="horizontal" width="100%">
+                    <item-renderer layout="horizontal" width="100%">
                         <checkbox id="complete" />
                         <image id="image" />
                         <label width="100%" id="name" verticalAlign="center" />

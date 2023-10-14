@@ -23,7 +23,7 @@
 
                 <vbox>
                     <listview id="lv2" width="200" height="150" selectedIndex="1">
-                        <item-renderer layoutName="horizontal" width="100%">
+                        <item-renderer layout="horizontal" width="100%">
                             <checkbox id="complete" />
                             <label width="100%" id="item" verticalAlign="center" />
                             <image id="image" />
@@ -49,7 +49,7 @@
             <section-header text="Options" />
             <hbox>
                 <label text="Scroll mode:" verticalAlign="center" />
-                <group layoutName="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData;">
+                <group layout="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData;">
                     <optionbox text="Drag" userData="drag" selected="true" />
                     <optionbox text="Inertial" userData="inertial" />
                 </group>
@@ -66,7 +66,7 @@
             <hbox>
                 <vbox>
                     <listview id="virtualList1" width="200" height="150" selectedIndex="2" virtual="true">
-                        <item-renderer layoutName="horizontal" width="100%">
+                        <item-renderer layout="horizontal" width="100%">
                             <checkbox id="complete" />
                             <label width="100%" id="item" verticalAlign="center" />
                             <image id="image" />
@@ -92,7 +92,7 @@
             <section-header text="Options" />
             <hbox>
                 <label text="Scroll mode:" verticalAlign="center" />
-                <group layoutName="horizontal" onchange="virtualList1.scrollMode = event.target.userData;">
+                <group layout="horizontal" onchange="virtualList1.scrollMode = event.target.userData;">
                     <optionbox text="Drag" userData="drag" selected="true" />
                     <optionbox text="Inertial" userData="inertial" />
                 </group>

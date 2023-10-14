@@ -28,7 +28,7 @@
         </listview>
 
         <listview id="listview2" width="150" height="150">
-            <item-renderer width="100%" layoutName="horizontal">
+            <item-renderer width="100%" layout="horizontal">
                 <label id="name" width="100%" />
                 <image id="graph" />
             </item-renderer>
@@ -48,12 +48,12 @@
         </tableview>
         
         <treeview id="treeview1" width="200" height="150" styleName="full-width">
-            <item-renderer layoutName="horizontal" width="100%">
+            <item-renderer layout="horizontal" width="100%">
                 <checkbox id="checked" verticalAlign="center" />
                 <label id="name" verticalAlign="center" width="100%" />
                 <image id="graph" verticalAlign="center" />
             </item-renderer>
-            <item-renderer id="expandable" layoutName="horizontal" width="100%">
+            <item-renderer id="expandable" layout="horizontal" width="100%">
                 <image resource="haxeui-core/styles/shared/folder-light.png" verticalAlign="center" />
                 <label id="text" width="100%" verticalAlign="center" />
                 <switch verticalAlign="center" />

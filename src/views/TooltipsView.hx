@@ -23,7 +23,7 @@ class TooltipsView extends View {
 }
 
 @:xml('
-<item-renderer layoutName="horizontal" width="350">
+<item-renderer layout="horizontal" width="350">
     <image id="image" />
     <vbox width="100%">
         <label id="title" style="font-size: 20;text-decoration:underline" />

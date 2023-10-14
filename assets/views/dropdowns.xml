@@ -160,7 +160,7 @@
     
     <hbox>
         <dropdown width="250">
-            <item-renderer layoutName="horizontal" width="100%">
+            <item-renderer layout="horizontal" width="100%">
                 <image id="icon" />
                 <vbox width="100%">
                     <label id="text" style="font-size: 20px;" />
@@ -181,7 +181,7 @@
         </dropdown>
         
         <dropdown width="250" searchable="true" searchPrompt="Find Country">
-            <item-renderer layoutName="horizontal" width="100%">
+            <item-renderer layout="horizontal" width="100%">
                 <image id="icon" />
                 <vbox width="100%">
                     <label id="text" style="font-size: 20px;" />

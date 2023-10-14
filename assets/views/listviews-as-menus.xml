@@ -33,7 +33,7 @@
     
     <hbox style="border: 1px solid $normal-border-color;padding-top:1px;padding-bottom:1px;padding-left:1px;" width="100%" height="200">
         <listview width="200" height="100%" styleName="left-menu" selectedIndex="0" onchange="stack2.selectedIndex = this.selectedIndex">
-            <item-renderer width="100%" layoutName="horizontal">
+            <item-renderer width="100%" layout="horizontal">
                 <checkbox id="checked" />
                 <label width="100%" id="text" verticalAlign="center" />
                 <label id="count" verticalAlign="center" style="background-color: $solid-background-color-alt;border-radius:3px;padding: 1px 3px;spacing:0;color:#888888;font-size: 11px;" />

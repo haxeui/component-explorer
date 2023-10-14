@@ -37,7 +37,7 @@
         <menu text="Any Content #1">
             <vbox width="100%">
                 <listview id="lv2" width="100%" height="150" selectedIndex="1" style="border:none;">
-                    <item-renderer layoutName="horizontal" width="100%">
+                    <item-renderer layout="horizontal" width="100%">
                         <checkbox id="complete" />
                         <label width="100%" id="item" />
                         <image id="image" />

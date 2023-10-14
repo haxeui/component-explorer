@@ -58,7 +58,7 @@
 
         <frame text="Login Form (horizontal)">
             <vbox>
-                <form layoutName="horizontal" id="form3" onSubmit="formResult3.text = 'Submitted!';" onInvalidData="formResult3.text = '';">
+                <form layout="horizontal" id="form3" onSubmit="formResult3.text = 'Submitted!';" onInvalidData="formResult3.text = '';">
                     <label text="Username" verticalAlign="center" />
                     <textfield id="username" validator="required" />
 
