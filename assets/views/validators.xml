@@ -1,18 +1,46 @@
 <vbox width="100%">
     <section-header text="Validated Text Inputs" />
-    <grid columns="4">
-        <label text="Required field:" verticalAlign="center" />
+    <grid columns="4" style="horizontal-spacing: 20px;">
+        <label width="100" text="Required field:" verticalAlign="center" />
         <textfield validator="required" />
 
-        <label text="Email field 1:" verticalAlign="center" />
+        <label width="100" text="Email field 1:" verticalAlign="center" />
         <textfield validators="required, email" />
 
-        <label text="Email field 2:" verticalAlign="center" />
+        <label width="100" text="Email field 2:" verticalAlign="center" />
         <textfield validator="email" />
 
-        <label text="Custom Pattern" verticalAlign="center" />
+        <label width="100" text="Custom Pattern" verticalAlign="center" />
         <textfield>
             <validator type="pattern" pattern="Item 1|Item 2|Item 3" />
+        </textfield>
+    </grid>
+
+    <section-header text="Validated Text Inputs (With Decorators)" />
+    <grid columns="4" style="horizontal-spacing: 20px;">
+        <style>
+            .decorator-validation .decorator {
+                background: none;
+                border: none;
+            }
+
+            .decorator-validation.invalid-value .decorator {
+                icon: "haxeui-core/styles/shared/error-small.png";
+            }
+    
+            .decorator-validation.valid-value .decorator {
+                icon: "haxeui-core/styles/shared/tick-small.png";
+            }
+        </style>
+        <label width="100" text="Email field:" verticalAlign="center" />
+        <textfield styleName="decorator-validation" validators="email">
+            <decorator />
+        </textfield>
+
+        <label width="100" text="Custom Pattern" verticalAlign="center" />
+        <textfield styleName="decorator-validation">
+            <validator type="pattern" pattern="Item 1|Item 2|Item 3" />
+            <decorator />
         </textfield>
     </grid>
 
