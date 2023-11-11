@@ -1,4 +1,8 @@
 <vbox width="100%" height="100%">
+    <!--
+        Note: in order to use "draggable" on any component, the haxeui flag "-D haxeui-allow-drag-any-component" must be set. 
+              setting this flag with add an "implements Draggable" the core haxeui Component class
+    -->
     <section-header text="Basic Drag" />
     
     <box id="box1" width="50" height="50" style="background-color: red;border:1px solid red;background-opacity: .3" draggable="true" />

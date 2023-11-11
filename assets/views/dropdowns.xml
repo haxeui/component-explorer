@@ -123,38 +123,48 @@
         </dropdown>
     </hbox>
 
-    <section-header text="Searchable Dropdowns" />
-    <hbox>
-        <dropdown width="150" dropdownWidth="200" searchable="true" searchPrompt="Find Language">
-            <data>
-                <item text="Haxe" icon="icons/logo-haxe.png" />
-                <item text="Java" icon="icons/logo-java.png" />
-                <item text="Javascript" icon="icons/logo-javascript.png" />
-                <item text="C++" icon="icons/logo-cpp.png" />
-                <item text="PHP" icon="icons/logo-php.png" />
-                <item text="C#" icon="icons/logo-cs.png" />
-                <item text="F#" icon="icons/logo-fs.png" />
-                <item text="OCaml" icon="icons/logo-ocaml.png" />
-                <item text="Assembler" icon="icons/logo-asm.png" />
-            </data>
-        </dropdown>
-    </hbox>
-    
-    <section-header text="Calendar Dropdowns" />
+    <spacer height="10" />
 
-    <dropdown text="Select Date" type="date" />
-    
-    <section-header text="Color Picker Dropdowns" />
-    <hbox>
-        <vbox>
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Searchable Dropdowns" />
             <hbox>
-                <color-picker-popup selectedItem="#551111" id="picker1" onchange="selectedColor.backgroundColor = this.selectedItem" />
-                <color-picker-popup selectedItem="#551111" id="picker2" liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                <dropdown width="150" dropdownWidth="200" searchable="true" searchPrompt="Find Language">
+                    <data>
+                        <item text="Haxe" icon="icons/logo-haxe.png" />
+                        <item text="Java" icon="icons/logo-java.png" />
+                        <item text="Javascript" icon="icons/logo-javascript.png" />
+                        <item text="C++" icon="icons/logo-cpp.png" />
+                        <item text="PHP" icon="icons/logo-php.png" />
+                        <item text="C#" icon="icons/logo-cs.png" />
+                        <item text="F#" icon="icons/logo-fs.png" />
+                        <item text="OCaml" icon="icons/logo-ocaml.png" />
+                        <item text="Assembler" icon="icons/logo-asm.png" />
+                    </data>
+                </dropdown>
             </hbox>
-            <color-picker-popup selectedItem="#551111" id="picker3" width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
-        </vbox>    
-        <box id="selectedColor" width="60" height="100%" style="background-color: red" />
-    </hbox>  
+        </vbox>
+
+        <vbox width="100%">
+            <section-header text="Calendar Dropdowns" />
+
+            <dropdown text="Select Date" type="date" />
+        </vbox>
+
+        <vbox width="100%">
+            <section-header text="Color Picker Dropdowns" />
+            <hbox>
+                <vbox>
+                    <hbox>
+                        <color-picker-popup selectedItem="#551111" id="picker1" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                        <color-picker-popup selectedItem="#551111" id="picker2" liveTracking="false" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                    </hbox>
+                    <color-picker-popup selectedItem="#551111" id="picker3" width="100%" onchange="selectedColor.backgroundColor = this.selectedItem" />
+                </vbox>    
+                <box id="selectedColor" width="60" height="100%" style="background-color: red" />
+            </hbox>  
+        </vbox>
+    </hbox>
     
     <section-header text="Custom Item Renderers" />
     
@@ -188,6 +198,33 @@
                     <hbox width="100%">
                         <label id="subText" style="color: #888888;" width="100%" />
                         <progress id="progress" width="50" verticalAlign="center" />
+                    </hbox>    
+                </vbox>
+            </item-renderer>
+            <data>
+                <item text="Deutschland" subText="Germany" icon="icons/flags/de.png" progress="33" />
+                <item text="España" subText="Spain" icon="icons/flags/es.png" progress="15" />
+                <item text="France" subText="France" icon="icons/flags/fr.png" progress="82" />
+                <item text="United Kingdom" subText="United Kingdom" icon="icons/flags/gb.png" progress="40" />
+                <item text="Italia" subText="Italy" icon="icons/flags/it.png" progress="64" />
+                <item text="United States" subText="United States" icon="icons/flags/us.png" progress="72" />
+            </data>
+        </dropdown>
+
+        <dropdown width="205" dropdownWidth="250">
+            <item-renderer layout="horizontal" width="100%">
+                <image id="icon" width="16" height="12" verticalAlign="center" />
+                <hbox width="100%" verticalAlign="center">
+                    <label id="text" />
+                </hbox>
+            </item-renderer>
+            <item-renderer layout="horizontal" width="100%" id="dropdown-renderer">
+                <image id="icon" />
+                <vbox width="100%">
+                    <label id="text" style="font-size: 20px;" />
+                    <hbox width="100%">
+                        <label id="subText" style="color: #888888;" width="100%" />
+                        <progress id="progress" width="40" verticalAlign="center" />
                     </hbox>    
                 </vbox>
             </item-renderer>
