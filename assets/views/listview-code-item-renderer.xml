@@ -1,0 +1,14 @@
+<vbox width="100%">
+    <section-header text="Code Based Item Renderer" />
+    <listview id="lv1" width="450" height="200">
+        <my-list-view-item-renderer />
+        <data>
+            <item username="ianharrigan" firstName="Ian" lastName="Harrigan" active="true" />
+            <item username="bbarker" firstName="Bob" lastName="Barker" active="false" />
+            <item username="timmyt" firstName="Tim" lastName="Tiny" active="true" />
+            <item username="blue_b" firstName="Bobby" lastName="Blues" active="false" />
+            <item username="jjonas" firstName="Jimmy" lastName="Jonas" active="false" />
+            <item username="foo_bar" firstName="Fooby" lastName="Barby" active="true" />
+        </data>
+    </listview>
+</vbox>
