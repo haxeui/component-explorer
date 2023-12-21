@@ -28,7 +28,7 @@ class NotificationsView extends View {
         NotificationManager.instance.addNotification({
             title: "Notification With Actions",
             body: "This notification has some actions attached to it, its also implied that it will not expire",
-            actions: ["Foo", "Bar"]
+            actions: [{text: "Foo"}, {text: "Bar"}]
         });
     }
 
