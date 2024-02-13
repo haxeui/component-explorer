@@ -11,6 +11,7 @@ class DemoGraph extends Canvas {
 
     @:bind(this, UIEvent.SHOWN)
     private function onShown(_) {
+        if (_showNextFrame) return;
         _showNextFrame = true;
         frame();
     }

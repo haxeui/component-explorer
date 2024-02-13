@@ -18,6 +18,7 @@ class MiniGraph extends Canvas {
 
     @:bind(this, UIEvent.SHOWN)
     private function onShown(_) {
+        if (_showNextFrame) return;
         _showNextFrame = true;
         if (pixels == null) {
             pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
