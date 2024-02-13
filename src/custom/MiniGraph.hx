@@ -1,5 +1,6 @@
 package custom;
 
+import haxe.ui.events.UIEvent;
 import haxe.io.Bytes;
 import haxe.ui.Toolkit;
 import haxe.ui.components.Canvas;
@@ -12,12 +13,23 @@ class MiniGraph extends Canvas {
         super();
         componentGraphics.setProperty("html5.graphics.method", "canvas");
     }
-    
-    private override function onReady() {
-        super.onReady();
-        pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
-        populateDataPoints();
+
+    private var _showNextFrame = false;
+
+    @:bind(this, UIEvent.SHOWN)
+    private function onShown(_) {
+        if (_showNextFrame) return;
+        _showNextFrame = true;
+        if (pixels == null) {
+            pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
+            populateDataPoints();
+        }
         frame();
+    }
+
+    @:bind(this, UIEvent.HIDDEN)
+    private function onHidden(_) {
+        _showNextFrame = false;
     }
     
     private function populateDataPoints() {
@@ -56,6 +68,7 @@ class MiniGraph extends Canvas {
     
     var skipFrame:Bool = false; // lets just slow it down in a hacky way bu skipping every other "frame"
     private function frame() {
+        if (!_showNextFrame) return;
         if (skipFrame == true) {
             skipFrame = false;
             Toolkit.callLater(frame);
