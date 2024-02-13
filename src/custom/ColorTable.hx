@@ -28,12 +28,6 @@ class ColorTable extends Canvas {
         _showNextFrame = false;
     }
     
-    private override function onReady() {
-        super.onReady();
-        pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
-        frame();
-    }
-    
     private function frame() {
         if (!_showNextFrame) return;
         drawColorTable(componentGraphics, Std.int(this.width), Std.int(this.height), 1);

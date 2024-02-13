@@ -7,10 +7,6 @@ import haxe.ui.geom.Point;
 import haxe.ui.graphics.ComponentGraphics;
 
 class DemoGraph extends Canvas {
-    public function new() {
-        super();
-    }
-
     private var _showNextFrame = false;
 
     @:bind(this, UIEvent.SHOWN)

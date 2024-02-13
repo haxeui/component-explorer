@@ -33,11 +33,6 @@ class Noise extends Canvas {
         _showNextFrame = false;
     }
     
-    private override function onReady() {
-        super.onReady();
-        
-    }
-    
     var skipFrame:Bool = false; // lets just slow it down in a hacky way bu skipping every other "frame"
     private function frame() {
         if (!_showNextFrame) return;

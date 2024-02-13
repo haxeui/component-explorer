@@ -31,10 +31,6 @@ class MiniGraph extends Canvas {
         _showNextFrame = false;
     }
     
-    private override function onReady() {
-        super.onReady();
-    }
-    
     private function populateDataPoints() {
         var cx = Std.int(this.width);
         var missing = cx - _dataPoints.length;
