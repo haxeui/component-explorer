@@ -1,0 +1,85 @@
+<vbox width="100%" style="padding:10px;">
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Horizontal Box + Item Renderer + Data Source" />
+            <hbox id="theHBox" width="100%" continuous="true">
+                <item-renderer width="130" height="60" style="background-color: #B41C2B;border:1px solid #B41C2B;background-opacity: .1;">
+                    <label id="otherField" horizontalAlign="right" style="color:#B41C2B;font-size:10px;padding-right: 2px;" />
+                    <vbox verticalAlign="center" horizontalAlign="center">
+                        <label id="title" style="color: #B41C2B;font-size:20px;" horizontalAlign="center" />
+                        <label id="subTitle" style="color: #B41C2B;" horizontalAlign="center" />
+                    </vbox>
+                </item-renderer>
+
+                <data>
+                    <item title="Foo" subTitle="Foo item description" otherField="zzz" />
+                    <item title="Bar" subTitle="Bar item description" otherField="aaa" />
+                    <item title="Baz" subTitle="Baz item description" otherField="ggg" />
+                </data>
+            </hbox>
+
+            <section-header text="Vertical Box + Item Renderer + Data Source" />
+            <vbox id="theVBox" width="100%">
+                <item-renderer width="130" height="60" style="background-color: #009F42;border:1px solid #009F42;background-opacity: .1;">
+                    <label id="otherField" horizontalAlign="right" style="color:#009F42;font-size:10px;padding-right: 2px;" />
+                    <vbox verticalAlign="center" horizontalAlign="center">
+                        <label id="title" style="color: #009F42;font-size:20px;" horizontalAlign="center" />
+                        <label id="subTitle" style="color: #009F42;" horizontalAlign="center" />
+                    </vbox>
+                </item-renderer>
+
+                <data>
+                    <item title="Foo" subTitle="Foo item description" otherField="zzz" />
+                    <item title="Bar" subTitle="Bar item description" otherField="aaa" />
+                    <item title="Baz" subTitle="Baz item description" otherField="ggg" />
+                </data>
+            </vbox>
+
+            <section-header text="Grid Box + Item Renderer + Data Source" />
+            <grid id="theGrid" width="100%" columns="2">
+                <item-renderer width="130" height="60" style="background-color: #2D70E7;border:1px solid #2D70E7;background-opacity: .1;">
+                    <label id="otherField" horizontalAlign="right" style="color:#2D70E7;font-size:10px;padding-right: 2px;" />
+                    <vbox verticalAlign="center" horizontalAlign="center">
+                        <label id="title" style="color: #2D70E7;font-size:20px;" horizontalAlign="center" />
+                        <label id="subTitle" style="color: #2D70E7;" horizontalAlign="center" />
+                    </vbox>
+                </item-renderer>
+
+                <data>
+                    <item title="Foo" subTitle="Foo item description" otherField="zzz" />
+                    <item title="Bar" subTitle="Bar item description" otherField="aaa" />
+                    <item title="Baz" subTitle="Baz item description" otherField="ggg" />
+                </data>
+            </grid>
+        </vbox>
+        
+        <vbox width="200">
+            <section-header text="Options" />
+            <vbox width="100%">
+                <checkbox id="applyToHBox" text="Horizontal Box" selected="true" />
+                <checkbox id="applyToVBox" text="Vertical Box" selected="true" />
+                <checkbox id="applyToGrid" text="Grid Box" selected="true" />
+                <hbox width="100%">
+                    <button id="addButton" text="Add" width="100%" />
+                    <button id="removeButton" text="Remove" width="100%" />
+                </hbox>
+                <button id="editButton" text="Edit Random Item" width="100%" />
+                <textfield id="filterField" width="100%" placeholder="Filter by..." />
+                <hbox width="100%">
+                    <label text="Sort By" verticalAlign="center" />
+                    <dropdown id="sortBySelector" width="100%" dropdownWidth="150">
+                        <data>
+                            <item text="none" />
+                            <item text="title" />
+                            <item text="otherField" />
+                        </data>
+                    </dropdown>
+                    <button-bar id="sortDirectionSelector" selectedIndex="0">
+                        <button icon="icons/svg/sort-asc.svg" userData="asc" styleName="icon-button" />
+                        <button icon="icons/svg/sort-desc.svg" userData="desc" styleName="icon-button" />
+                    </button-bar>
+                </hbox>    
+            </vbox>
+        </vbox>
+    </hbox>    
+</vbox>

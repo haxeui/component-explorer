@@ -9,7 +9,7 @@
         }
 
         .view-container-scrollview > .scrollview-contents {
-            padding: 10px;
+            padding: 0px;
             padding-top: 0;
         }
         
@@ -29,36 +29,29 @@
         .text-normal {
             font-size: 13px;
         }
-        
-        #mainTree .image {
-            opacity: .8;
-        }
-        
-        #mainTabs > .tabview-content {
-            __border-top: none;
-            border-top-color: none;
-        }
     </style>
     <box width="100%" height="100%">
-        <vbox width="75%" height="100%" horizontalAlign="right" style="spacing: 0px;">
-            <box id="themeBox" width="100%" style="padding: 10px;padding-bottom:0;">
-                <dropdown id="themeSelector" width="170" selectedIndex="0" horizontalAlign="right">
-                    <data>
-                        <item text="Default Theme" themeId="default" />
-                        <item text="Dark Theme" themeId="dark" />
-                        <!--
-                        <item text="Polar Night" themeId="polar-night" />
-                        -->    
-                    </data>
-                </dropdown>    
-            </box>    
-            <tabview id="mainTabs" width="100%" height="100%" tabPosition="bottom" horizontalAlign="right">
+        <box width="75%" height="100%" horizontalAlign="right" style="spacing: 0px;padding-top: 20px;">
+            <tabview id="mainTabs" width="100%" height="100%" horizontalAlign="right" styleName="rounded-tabs">
             </tabview>
-        </vbox>    
+            <hbox horizontalAlign="right" style="padding-top: 6px;">
+                <image resource="icons/svg/light-mode.svg" style="filter:tint(#666666)" verticalAlign="center" width="16" height="16" />
+                <switch id="themeSwitch" verticalAlign="center"/>
+                <image resource="icons/svg/dark-mode.svg" style="filter:tint(#666666)" verticalAlign="center" width="16" height="16" />
+            </hbox>
+            <!--
+            <dropdown id="themeSelector" width="170" selectedIndex="0" horizontalAlign="right" hidden="true">
+                <data>
+                    <item text="Default Theme" themeId="default" />
+                    <item text="Dark Theme" themeId="dark" />
+                </data>
+            </dropdown>    
+        -->
+        </box>    
         
         <vbox width="25%" height="100%" style="padding-top: 0px;">
-            <hbox width="100%" height="100%">
-                <treeview id="mainTree" width="100%" height="100%" styleName="full-width borderless" style="border: none;" allowFocus="false" />
+            <hbox width="100%" height="100%" style="padding-top: 20px">
+                <treeview id="mainTree" width="100%" height="100%" styleName="full-width borderless" style="border: none;mode:mobile;" allowFocus="false" />
             </hbox>    
         </vbox>    
     </box>   
@@ -72,7 +65,7 @@
     
     <box width="200" height="100%" style="padding-top: 10px;" hidden="true">
         <tabview id="logTabs" width="100%" height="100%">
-            <box text="Log" icon="icons/16/document_editing.png" width="100%" height="100%">
+            <box text="Log" width="100%" height="100%">
                 <textarea text="" id="logData" width="100%" height="100%" style="padding-left: 5px;padding-top: 5px;" />
             </box>    
         </tabview>

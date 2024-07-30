@@ -1,0 +1,27 @@
+#mainTabs > .tabbar .tabbar-button .image {
+    filter: tint(#222222);
+}
+
+#mainTree .item-renderer .image {
+    filter: tint(#222222);
+}
+
+#mainTree .item-renderer:node-selected .image {
+    filter: tint(#ffffff);
+}
+
+.treeview.tinted-icons .item-renderer .image {
+    filter: tint(#222222);
+    width: 16px;
+    height: 16px;
+}
+
+.treeview.tinted-icons .item-renderer:node-selected .image {
+    filter: tint(#ffffff);
+}
+
+.button.icon-button .image {
+    width: 16px;
+    height: 16px;
+    filter: tint(#888888);
+}

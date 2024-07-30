@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <hbox width="100%">
         <vbox width="100%">
             <section-header text="Popup Color Picker" />

@@ -28,6 +28,9 @@
         <default>
             <style resource="themes/default/main.css" />
         </default>
+        <dark>
+            <style resource="themes/dark/main.css" />
+        </dark>
     </themes>
 
     <locales>

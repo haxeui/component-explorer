@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="List Item Pickers" />
     <hbox>
         <list-item-picker width="100">

@@ -1,0 +1,4 @@
+<vbox style="padding:10px" width="100%"> 
+    <section-header text="Lazy Loading Nodes" />
+    <tree-view id="tv1" width="360" height="200" styleName="tinted-icons" />
+</vbox>

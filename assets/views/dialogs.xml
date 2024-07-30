@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox>
+<vbox style="padding:10px;">
     <section-header text="Default Dialogs" />
     <hbox>
         <button text="Info" onclick="haxe.ui.containers.dialogs.Dialogs.messageBox('Info message content\n\nLine1\nLine2\nLine3\n\nSomething else', 'Info', 'info')" icon="haxeui-core/styles/shared/info-large.png" />

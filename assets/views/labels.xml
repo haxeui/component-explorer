@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%" style="clip:true;">
+<vbox width="100%" style="clip:true;padding:10px;">
     <box width="100%">
         <label text="Plain label" />
-        <label horizontalAlign="right" htmlText="HTML label, <font color='red'>red</font>, <font color='green'>green</font>, <font color='blue'>blue</font>" />
+        <label horizontalAlign="right" htmlText="HTML label, <font color='#B41C2B'>red</font>, <font color='#009F42'>green</font>, <font color='#2D70E7'>blue</font>" />
     </box>
     
     <box width="100%">
-        <label text="Custom font" style="font-name:'fonts/custom1.ttf';font-size:20px;color:red;" />
-        <label horizontalAlign="right" htmlText="HTML label and custom font, <font color='red'>red</font>, <font color='green'>green</font>, <font color='blue'>blue</font>" style="font-name:'fonts/custom1.ttf';font-size:20px" />
+        <label text="Custom font" style="font-name:'fonts/custom1.ttf';font-size:20px;color:#B41C2B;" />
+        <label horizontalAlign="right" htmlText="HTML label and custom font, <font color='#B41C2B'>red</font>, <font color='#009F42'>green</font>, <font color='#2D70E7'>blue</font>" style="font-name:'fonts/custom1.ttf';font-size:20px" />
     </box>        
     
     <label text="Center aligned label" textAlign="center" width="100%"/>
@@ -15,17 +15,17 @@
     
     <box width="100%">
         <label text="32px italic style" style="font-size: 32px;font-italic: true;"/>
-        <label horizontalAlign="right" text="32px style" style="font-size: 32px;background-color: blue;color:white;"/>
+        <label horizontalAlign="right" text="32px style" style="font-size: 32px;background-color: #2D70E7;color:white;"/>
     </box>
     
     <box width="100%">
         <label text="32px underlined style" style="font-size: 32px;font-underline: true;"/>
-        <label horizontalAlign="right" text="32px red style" style="font-size: 32px;color:red;background-color:yellow;"/>
+        <label horizontalAlign="right" text="32px red style" style="font-size: 32px;color:#B41C2B;background-color:yellow;background-opacity:.7;"/>
     </box>
     
     <box width="100%">
         <label text="32px bold style" style="font-size: 32px;font-bold: true;"/>
-        <label horizontalAlign="right" text="32px bordered style" style="font-size: 32px;color:green;background-color:yellow;border:1px solid green"/>
+        <label horizontalAlign="right" text="32px bordered style" style="font-size: 32px;color:#009F42;background-color:yellow;border:1px solid green;background-opacity:.7;"/>
     </box>
     
     <hbox width="100%" style="spacing: 30px;">

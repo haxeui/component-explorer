@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Default Cards" />
 
     <vbox style="spacing:20px;padding:20px;" styleName="default-background-solid">

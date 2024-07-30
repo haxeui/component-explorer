@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <hbox width="100%">
         <vbox width="100%">
             <section-header text="Normal Listviews" />
@@ -48,9 +48,10 @@
         <vbox width="200">
             <section-header text="Options" />
             <hbox>
-                <label text="Scroll mode:" verticalAlign="center" />
-                <group layout="horizontal" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData;">
-                    <optionbox text="Drag" userData="drag" selected="true" />
+                <label text="Scroll mode:" verticalAlign="top" />
+                <group layout="vertical" onchange="lv1.scrollMode = event.target.userData; lv2.scrollMode = event.target.userData;">
+                    <optionbox text="Default" userData="default" selected="true" />
+                    <optionbox text="Drag" userData="drag" />
                     <optionbox text="Inertial" userData="inertial" />
                 </group>
             </hbox>
@@ -91,9 +92,10 @@
         <vbox width="200">
             <section-header text="Options" />
             <hbox>
-                <label text="Scroll mode:" verticalAlign="center" />
-                <group layout="horizontal" onchange="virtualList1.scrollMode = event.target.userData;">
-                    <optionbox text="Drag" userData="drag" selected="true" />
+                <label text="Scroll mode:" verticalAlign="top" />
+                <group layout="vertical" onchange="virtualList1.scrollMode = event.target.userData;">
+                    <optionbox text="Default" userData="default" selected="true" />
+                    <optionbox text="Drag" userData="drag" />
                     <optionbox text="Inertial" userData="inertial" />
                 </group>
             </hbox>    

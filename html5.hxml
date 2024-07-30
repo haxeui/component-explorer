@@ -3,7 +3,6 @@
 
 -lib haxeui-core
 -lib haxeui-html5
--lib hscript
 -lib monaco-editor
 -lib haxeui-code-editor
 -lib format

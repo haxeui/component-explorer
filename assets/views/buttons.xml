@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Default Buttons" />
     <hbox>
         <hbox>
@@ -85,4 +85,24 @@
             <button text="Item 5" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" />
         </button-bar>
     </vbox>
+
+    <section-header text="Buttons + Item Renderers" />
+    <button>
+        <item-renderer layout="vertical">
+            <label text="This is a custom item renderer" horizontalAlign="center" />
+            <grid columns="3" horizontalAlign="center">
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" horizontalAlign="center" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" verticalAlign="center" />
+                <image resource="haxeui-core/styles/default/haxeui_small.png" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" verticalAlign="center" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" horizontalAlign="center" />
+                <image resource="haxeui-core/styles/default/haxeui_tiny.png" />
+            </grid>
+            <label text="Anything can go in here!" horizontalAlign="center" />
+        </item-renderer>
+    </button>
+
 </vbox>    

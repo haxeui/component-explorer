@@ -1,0 +1,8 @@
+<vbox width="100%" style="padding:10px">
+    <hbox horizontalAlign="right">
+        <button id="createDynamicTableButton" text="Create Dynamic Table" />
+        <button id="reuseDynamicTableButton" text="Reuse Dynamic Table" />
+    </hbox>
+
+    <hbox id="tableContainer" width="100%" continuous="true" />
+</vbox>

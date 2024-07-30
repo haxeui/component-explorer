@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox>
+<vbox style="padding:10px;">
     <section-header text="Default Images" />
     
     <hbox style="spacing: 0;">
@@ -9,7 +9,7 @@
             <image resource="haxeui-core/styles/default/haxeui.png" style="border:1px solid $normal-border-color" disabled="true" />
         </vbox>    
         <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="200" style="border:1px solid $normal-border-color" />
-        <image resource="haxeui-core/styles/default/haxeui.png" width="100" height="200" style="border:1px solid $normal-border-color" />
+        <image resource="haxeui-core/styles/default/haxeui.png" width="80" height="200" style="border:1px solid $normal-border-color" />
         <image resource="haxeui-core/styles/default/haxeui.png" width="100" height="200" scaleMode="fitwidth" style="border:1px solid $normal-border-color" />
         <vbox style="spacing: 0">
             <image resource="haxeui-core/styles/default/haxeui.png" width="200" height="100" scaleMode="fitheight" style="border:1px solid $normal-border-color" />

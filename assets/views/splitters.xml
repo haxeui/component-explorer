@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox>
+<vbox style="padding:10px;">
     <splitter direction="vertical" width="700" height="500" verticalAlign="center" horizontalAlign="center">
         <splitter direction="horizontal" width="100%" height="70%">
             <box width="50%" height="100%" style="background-color: #FFAAAA;background-opacity:.3;clip:true;">

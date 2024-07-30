@@ -167,16 +167,16 @@ class ViewManager {
     }
     
     private function iconForExtension(ext:String):String {
-        var icon = "icons/16/document.png";
+        var icon = "icons/svg/file-unknown.svg";
         switch (ext) {
             case "xml":
-                icon = "icons/16/document-code.png";
+                icon = "icons/svg/file-xml.svg";
             case "hx" | "haxe":
-                icon = "icons/16/document-text.png";
+                icon = "icons/svg/file-text.svg";
             case "css":
-                icon = "icons/16/document-list.png";
+                icon = "icons/svg/file-text.svg";
             case "png":
-                icon = "icons/16/image.png";
+                icon = "icons/svg/file-image.svg";
         }
         return icon;
     }

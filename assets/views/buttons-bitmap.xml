@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Bitmap Buttons" style="color: #464646;" />
     <hbox style="background-color: #272727;padding: 10px;">
         <style>

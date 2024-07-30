@@ -1,4 +1,4 @@
-<vbox id="employeeApp" style="padding: 0px;spacing:0;border:1px solid $normal-border-color;padding:1px;" width="100%" height="100%">
+<vbox id="employeeApp" style="padding: 0px;spacing:0;" width="100%" height="100%">
     <style>
         #employeeApp .accordion {
             border-top: none;

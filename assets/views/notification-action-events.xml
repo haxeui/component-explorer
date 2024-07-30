@@ -1,0 +1,15 @@
+<vbox width="100%" style="padding: 10px">
+    <section-header text="Notification Actions (Events)" />
+    <hbox>
+        <button id="actionNotificationEventButton" text="Show Actionable Notification" />
+        <label id="actionNotificationEventLabel" verticalAlign="center" />
+    </hbox>
+
+    <spacer height="10" />
+
+    <section-header text="Notification Actions (Callbacks)" />
+    <hbox>
+        <button id="actionNotificationCallbackButton" text="Show Actionable Notification" />
+        <label id="actionNotificationCallbackLabel" verticalAlign="center" />
+    </hbox>
+</vbox>

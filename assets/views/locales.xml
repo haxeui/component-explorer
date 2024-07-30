@@ -1,19 +1,25 @@
 <vbox width="100%">
-    <hbox width="100%">
+    <style>
+        #languageSelector .button {
+            padding: 6px;
+        }
+    </style>
+
+    <menubar width="100%">
+        <menu text="{{menu.file}}">
+            <menu-item text="{{menu.new}}" />
+            <menu-item text="{{menu.open}}" />
+            <menu-item text="{{menu.save}}" />
+            <menu-item text="{{menu.saveAs}}" />
+        </menu>
+        <spacer width="100%" />
+        <menu text="{{menu.help}}">
+            <menu-item text="{{menu.about}}" />
+        </menu>
+    </menubar>
+        
+    <hbox width="100%" style="padding:10px;spacing:10px;">
         <vbox width="100%">
-            <menubar width="100%">
-                <menu text="{{menu.file}}">
-                    <menu-item text="{{menu.new}}" />
-                    <menu-item text="{{menu.open}}" />
-                    <menu-item text="{{menu.save}}" />
-                    <menu-item text="{{menu.saveAs}}" />
-                </menu>
-                <spacer width="100%" />
-                <menu text="{{menu.help}}">
-                    <menu-item text="{{menu.about}}" />
-                </menu>
-            </menubar>
-            
             <label text="{{basic}}" />
             <label text="{{basic.params1, 'Joe Bloggs'}}" />
             <rule />
@@ -50,13 +56,8 @@
                 </dropdown>
                 <label text="{{colour.fav, colourList.selectedItem}}" verticalAlign="center" />
             </hbox>
-        </vbox>
+        </vbox>    
 
-        <style>
-            #languageSelector .button {
-                padding: 6px;
-            }
-        </style>
         <button-bar id="languageSelector" direction="vertical" selectedIndex="0" onchange="haxe.ui.locale.LocaleManager.instance.language = this.selectedButton.userData">
             <button icon="icons/flags-small/uk.png" userData="en" tooltip="{{english}}" />
             <button icon="icons/flags-small/us.png" userData="en_US" tooltip="{{english.us}}" />
@@ -65,5 +66,5 @@
             <button icon="icons/flags-small/poland.png" userData="pl" tooltip="{{poland}}" />
             <button icon="icons/flags-small/russian.png" userData="ru" tooltip="{{russian}}" />
         </button-bar>
-    </hbox>
+    </hbox>    
 </vbox>

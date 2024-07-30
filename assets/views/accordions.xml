@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox>
+<vbox style="padding:10px;">
     <hbox width="100%">
         <vbox width="100%">
             <section-header text="Default Accordions" />

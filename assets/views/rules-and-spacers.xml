@@ -1,7 +1,5 @@
-<vbox width="100%" height="100%">
-    <section-header text="Rules & Spacers" />
+<vbox width="100%" height="100%" style="padding:10px;">
     <spacer height="50" />
-
     <rule />
     <spacer height="50" />
     <hbox width="100%">

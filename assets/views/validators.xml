@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Validated Text Inputs" />
     <grid columns="4" style="horizontal-spacing: 20px;">
         <label width="100" text="Required field:" verticalAlign="center" />

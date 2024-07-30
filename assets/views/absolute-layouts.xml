@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
-    <section-header text="Standard" />
-    
-    <grid>
-        <label text="Width:" verticalAlign="center" />
-        <slider pos="200" min="200" max="600" onchange="box1.width = this.value" />
-        
-        <label text="Height:" verticalAlign="center" />
-        <slider pos="200" min="200" max="600" onchange="box1.height = this.value" />
-    </grid>
-    <absolute id="box1" width="200" height="200" style="border: 1px solid $normal-border-color">
-        <box left="25" top="25" width="50%" height="50%" style="background-color: red;border:1px solid red;background-opacity: .3" />
-        <box left="50" top="50" width="50%" height="50%" style="background-color: green;border:1px solid green;background-opacity: .3" />
-        <box left="75" top="75" width="50%" height="50%" style="background-color: blue;border:1px solid blue;background-opacity: .3" />
-    </absolute>
+<vbox width="100%" style="padding:10px;">
+    <hbox width="100%">
+        <vbox width="100%" style="padding-top:20px;">
+            <absolute id="box1" width="200" height="200" styleName="outline" style="clip:false;">
+                <box left="25" top="25" width="50%" height="50%" style="background-color: #B41C2B;border:1px solid #B41C2B;background-opacity: .1" />
+                <box left="50" top="50" width="50%" height="50%" style="background-color: #009F42;border:1px solid #009F42;background-opacity: .1" />
+                <box left="75" top="75" width="50%" height="50%" style="background-color: #2D70E7;border:1px solid #2D70E7;background-opacity: .1" />
+            </absolute>
+        </vbox>
+
+        <vbox width="200">
+            <section-header text="Options" />
+            <grid>
+                <label text="Width:" verticalAlign="center" />
+                <slider pos="200" min="200" max="500" onchange="box1.width = this.value" />
+                
+                <label text="Height:" verticalAlign="center" />
+                <slider pos="200" min="200" max="500" onchange="box1.height = this.value" />
+            </grid>
+        </vbox>
+    </hbox>
 </vbox>

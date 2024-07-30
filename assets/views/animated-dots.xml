@@ -1,4 +1,4 @@
-<vbox>
+<vbox style="padding:10px;">
     <style>
         .dot-container {
             width: 30px;

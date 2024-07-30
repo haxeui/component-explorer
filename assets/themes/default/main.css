@@ -10,6 +10,76 @@
     background-color: $secondary-background-color;
 }
 
-#mainTabs .tabview-contents {
-    __background-color: $default-background-color;
+#mainTabs > .tabview-content {
+    border-top: 1px solid $normal-border-color;
+    padding: 1px;
+}
+
+#mainTabs > .tabbar {
+    margin-right: 90px;
+}
+
+#mainTabs > .tabbar .tabbar-button .image {
+    width: 16px;
+    height: 16px;
+    filter: tint(#888888);
+}
+
+#mainTree {
+    background-color: none;
+    padding-right: 5px;
+}
+
+#mainTree .vertical-scroll {
+    background-color: none;
+    width: 4px;
+    padding: 0;
+}
+
+#mainTree .vertical-scroll .thumb {
+    width: 4px;
+    border-radius: 4px;
+}
+
+#mainTree .scrollview-contents {
+    background-color: none;
+}
+
+#mainTree .item-renderer .image {
+    width: 16px;
+    height: 16px;
+    filter: tint(#888888);
+}
+
+#mainTree .item-renderer:node-selected .image {
+    filter: tint(#ffffff);
+}
+
+.treeview.tinted-icons .item-renderer .image {
+    width: 16px;
+    height: 16px;
+    filter: tint(#888888);
+}
+
+.treeview.tinted-icons .item-renderer:node-selected .image {
+    filter: tint(#ffffff);
+}
+
+.button.icon-button {
+    padding: 7px;
+    padding-bottom: 6px;
+}
+
+.button.icon-button .image {
+    width: 16px;
+    height: 16px;
+    filter: tint(#111111);
+}
+
+.box.outline {
+    border: 1px solid $normal-border-color;
+}
+
+.normal-border-color {
+    border-color: $normal-border-color;
 }

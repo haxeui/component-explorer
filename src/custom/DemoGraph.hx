@@ -51,7 +51,7 @@ class DemoGraph extends Canvas {
             offset1Direction = 1;
         }
         
-        componentGraphics.strokeStyle("red", 2);
+        componentGraphics.strokeStyle("#B41C2B", 2);
         componentGraphics.moveTo(_pointA.x + _pointAOffset, _pointA.y);
         componentGraphics.lineTo(_pointB.x, _pointB.y + _pointBOffset);
 
@@ -61,20 +61,20 @@ class DemoGraph extends Canvas {
         componentGraphics.moveTo(_pointC.x - _pointCOffset, _pointC.y);
         componentGraphics.lineTo(_pointA.x + _pointAOffset, _pointA.y);
         
-        componentGraphics.strokeStyle("red", 2);
-        componentGraphics.fillStyle("red");
+        componentGraphics.strokeStyle("#B41C2B", 2);
+        componentGraphics.fillStyle("#B41C2B");
         componentGraphics.circle(_pointA.x + _pointAOffset, _pointA.y, 3);
         
-        componentGraphics.strokeStyle("red", 2);
-        componentGraphics.fillStyle("red");
+        componentGraphics.strokeStyle("#B41C2B", 2);
+        componentGraphics.fillStyle("#B41C2B");
         componentGraphics.circle(_pointB.x, _pointB.y + _pointBOffset, 3);
         
-        componentGraphics.strokeStyle("red", 2);
-        componentGraphics.fillStyle("red");
+        componentGraphics.strokeStyle("#B41C2B", 2);
+        componentGraphics.fillStyle("#B41C2B");
         componentGraphics.circle(_pointC.x - _pointCOffset, _pointC.y, 3);
         
-        componentGraphics.strokeStyle("blue", 2);
-        componentGraphics.fillStyle(null);
+        componentGraphics.fillStyle("#2D70E7", .1);
+        componentGraphics.strokeStyle("#2D70E7", 2);
         componentGraphics.moveTo(_pointA.x + _pointAOffset, _pointA.y);
         componentGraphics.curveTo(_pointB.x, _pointB.y + _pointBOffset, _pointC.x - _pointCOffset, _pointC.y);
         
@@ -118,15 +118,16 @@ class DemoGraph extends Canvas {
     }
     
     private function createCubicBezier(graphics:ComponentGraphics, startX:Float, startY:Float, x1:Float, y1:Float, x2:Float, y2:Float, x:Float, y:Float) {
-        graphics.strokeStyle("blue");
+        graphics.fillStyle("#2D70E7", .1);
+        graphics.strokeStyle("#2D70E7");
         graphics.moveTo(startX, startY);
         graphics.cubicCurveTo(x1, y1, x2, y2, x, y);
         
-        graphics.strokeStyle("red");
+        graphics.strokeStyle("#B41C2B");
         graphics.moveTo(startX, startY);
         graphics.lineTo(x1, y1);
 
-        graphics.strokeStyle("red");
+        graphics.strokeStyle("#B41C2B");
         graphics.moveTo(x2, y2);
         graphics.lineTo(x, y);
         
@@ -137,15 +138,24 @@ class DemoGraph extends Canvas {
         #if haxeui_heaps 
         size = 1;
         #end
-        graphics.strokeStyle(0xCCCCCC, size);
+        if (Toolkit.theme == "dark") {
+            graphics.strokeStyle(0x222426, size);
+        } else {
+            graphics.strokeStyle(0xd2d2d2, size);
+        }
         for (x in 0...Std.int((cx / gridSize)) + 1) {
-            graphics.moveTo(x * gridSize, 0);
-            graphics.lineTo(x * gridSize, cy);
+            graphics.moveTo(x * gridSize + size, 0);
+            graphics.lineTo(x * gridSize + size, cy);
         }
-        
+        graphics.moveTo(cx - size, 0);
+        graphics.lineTo(cx - size, cy);
+    
         for (y in 0...Std.int((cy / gridSize)) + 1) {
-            graphics.moveTo(0, y * gridSize);
-            graphics.lineTo(cx, y * gridSize);
+            graphics.moveTo(0, y * gridSize + size);
+            graphics.lineTo(cx, y * gridSize + size);
         }
+        graphics.moveTo(0, cy - size);
+        graphics.lineTo(cx, cy - size);
+
     }
 }

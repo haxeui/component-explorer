@@ -1,4 +1,4 @@
-<vbox width="100%" height="100%">
+<vbox width="100%" height="100%" style="padding:10px;">
     <section-header text="Animated GIF" />
     <vbox>
         <animation id="gifAnimation" resource="images/test_animation1.gif" />

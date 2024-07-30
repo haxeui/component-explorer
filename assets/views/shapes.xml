@@ -1,0 +1,209 @@
+<vbox width="100%" style="padding:10px">
+    <section-header text="Squares" />
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;" />
+    </hbox>
+
+    <section-header text="Squares - Rounded Borders (All)" />
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-radius: 10px;" />
+    </hbox>
+
+    <section-header text="Circles" />
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-radius:25px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-radius:25px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-radius:25px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-radius: 25px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-radius: 25px;" />
+    </hbox>
+
+    <section-header text="Squares - Rounded Borders (Single)" />
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-top-left-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-top-right-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-right-radius: 10px;" />
+    </hbox>
+
+    <section-header text="Squares - Rounded Borders (Double)" />
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-right-radius: 10px;border-top-right-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-top-left-radius: 10px;" />
+    </hbox>
+
+    <section-header text="Squares - Rounded Borders (Triple)" />
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-right-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-right-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;border-top-left-radius: 10px;" />
+    </hbox>
+    <hbox style="spacing:10px;">
+        <box width="50" height="50" style="background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:1px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background-color:#2D70E7;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;background:#2D70E7 #B41C2B horizontal;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-top:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-top:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#2D70E7 #B41C2B;background-opacity:.2;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #2D70E7;border-top:3px solid #2D70E7;border-right:3px solid #B41C2B;border-bottom:3px solid #B41C2B;background:#2D70E7 #B41C2B;background-opacity:.2;border-bottom-left-radius: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+        <box width="50" height="50" style="border-left:3px solid #B41C2B;border-top:3px solid #B41C2B;border-right:3px solid #2D70E7;border-bottom:3px solid #2D70E7;background:#B41C2B #2D70E7;background-opacity:.2;border-bottom-left-radius: 10px;border-top-left-radius: 10px;border-top-right-radius: 10px;" />
+    </hbox>
+
+</vbox>

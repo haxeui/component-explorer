@@ -1,4 +1,4 @@
-<vbox>
+<vbox style="padding:10px;">
     <section-header text="Open / Save File Dialogs" />
     <hbox>
         <vbox>

@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Panels" />
     <hbox width="100%" style="spacing:20px;">
         <panel text="Panel Title" width="100%" height="200">

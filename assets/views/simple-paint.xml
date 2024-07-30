@@ -1,8 +1,10 @@
-<vbox style="padding: 0px;" width="100%" height="100%">
+<vbox style="padding: 0px;spacing:0;" width="100%" height="100%">
     <menubar width="100%">
         <menu text="Clear" onclick="canvas.componentGraphics.clear()" />
     </menubar>
-    <scrollview id="canvasContainer" width="100%" height="100%" scrollMode="normal">
-        <canvas id="canvas" width="1000" height="1000" style="cursor:crosshair;" />
+    <scrollview id="canvasContainer" width="100%" height="100%" scrollMode="normal" styleName="no-border">
+        <vbox style="padding-top: 10px;background:none;">
+            <canvas id="canvas" width="1000" height="1000" style="cursor:crosshair;" />
+        </vbox>    
     </scrollview>
 </vbox>

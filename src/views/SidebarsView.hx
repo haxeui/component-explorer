@@ -1,4 +1,6 @@
 package views;
+import haxe.ui.containers.HBox;
+import haxe.ui.containers.VBox;
 import haxe.ui.containers.SideBar;
 import haxe.ui.events.MouseEvent;
 

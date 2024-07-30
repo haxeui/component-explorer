@@ -1,0 +1,25 @@
+<vbox style="padding:10px;">
+    <menu>
+        <menu-item text="Item 1" />
+        <menu-item text="Item 2" />
+        <menu-item text="Item 3" />
+        <menu-separator />
+        <listview width="100%" height="150" style="no-border">
+            <data>
+                <item text="List Item 1" />
+                <item text="List Item 2" />
+                <item text="List Item 3" />
+                <item text="List Item 4" />
+                <item text="List Item 5" />
+                <item text="List Item 6" />
+                <item text="List Item 7" />
+                <item text="List Item 8" />
+                <item text="List Item 9" />
+            </data>
+        </listview>
+        <menu-separator />
+        <menu-item text="Item 4" />
+        <menu-item text="Item 5" />
+        <menu-item text="Item 6" />
+    </menu>
+</vbox>

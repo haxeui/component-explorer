@@ -1,4 +1,4 @@
-<vbox width="100%" height="100%">
+<vbox width="100%" height="100%" style="padding:10px;">
     <section-header text="Basic Tooltips" />
     <button text="Basic Tooltip" tooltip="This is a tooltip" />
     <slider tooltip="Click to set value" />

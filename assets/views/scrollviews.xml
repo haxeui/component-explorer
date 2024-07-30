@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Default Scrollviews" />
     
     <hbox>
@@ -162,7 +162,7 @@
         <scrollview width="200" height="200" contentHeight="100%">
             <hbox height="100%">
                 <button text="Button" />
-                <button text="Button"height="100%" />
+                <button text="Button" height="100%" />
             </hbox>
         </scrollview>
         
@@ -170,7 +170,7 @@
             <hbox height="100%">
                 <button text="Button" />
                 <button text="Button" />
-                <button text="Button"height="100%" />
+                <button text="Button" height="100%" />
                 <button text="Button" />
                 <button text="Button" />
                 <button text="Button" />
@@ -184,7 +184,7 @@
             <hbox height="100%">
                 <button text="Button" />
                 <button text="Button" />
-                <button text="Button"height="100%" />
+                <button text="Button" height="100%" />
                 <button text="Button" />
                 <button text="Button" />
                 <button text="Button" />

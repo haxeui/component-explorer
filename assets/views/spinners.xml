@@ -1,0 +1,57 @@
+<vbox style="padding:10px" width="100%">
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Default Spinners" />
+
+            <hbox style="spacing:0;border:1px solid;padding:1px" styleName="normal-border-color">
+                <vbox style="border-right: 1px solid" styleName="normal-border-color">
+                    <label text="Forward" width="100%" style="text-align:center;border-bottom:1px solid;padding:5px;" styleName="normal-border-color" />
+                    <vbox style="padding:5px">
+                        <spinner width="16" height="16" horizontalAlign="center" />
+                        <spinner width="24" height="24" horizontalAlign="center" />
+                        <spinner width="32" height="32" horizontalAlign="center" />
+                        <spinner horizontalAlign="center" />
+                    </vbox>
+                </vbox>
+                <vbox style="border-right: 1px solid" styleName="normal-border-color">
+                    <label text="Backward" width="100%" style="text-align:center;border-bottom:1px solid;padding:5px;" styleName="normal-border-color" />
+                    <vbox style="padding:5px">
+                        <spinner width="16" height="16" animationDirection="reverse" horizontalAlign="center" />
+                        <spinner width="24" height="24" animationDirection="reverse" horizontalAlign="center" />
+                        <spinner width="32" height="32" animationDirection="reverse" horizontalAlign="center" />
+                        <spinner animationDirection="reverse" horizontalAlign="center" />
+                    </vbox>    
+                </vbox>
+                <vbox>
+                    <label text="Bounce" width="100%" style="text-align:center;border-bottom:1px solid;padding:5px;" styleName="normal-border-color" />
+                    <vbox style="padding:5px">
+                        <spinner width="16" height="16" animationDirection="bounce" horizontalAlign="center" />
+                        <spinner width="24" height="24" animationDirection="bounce" horizontalAlign="center" />
+                        <spinner width="32" height="32" animationDirection="bounce" horizontalAlign="center" />
+                        <spinner animationDirection="bounce" horizontalAlign="center" />
+                    </vbox>    
+                </vbox>
+            </hbox>
+        </vbox>
+        
+        <script>
+            function onPlayStopSpinners(index) {
+                for (spinner in findComponents(haxe.ui.components.Spinner, -1)) {
+                    if (index == 0) {
+                        spinner.play();
+                    } else if (index == 1) {
+                        spinner.stop();
+                    }    
+                }
+            }
+        </script>
+
+        <vbox width="200">
+            <section-header text="Options" />
+            <button-bar selectedIndex="0" onchange="onPlayStopSpinners(this.selectedIndex)">
+                <button text="Play" />
+                <button text="Stop" />
+            </button-bar>
+        </vbox>
+    </hbox>
+</vbox>

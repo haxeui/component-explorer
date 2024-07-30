@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Left List Menus" />
     
     <hbox style="border: 1px solid $normal-border-color;padding-top:1px;padding-bottom:1px;padding-left:1px;" width="100%" height="200">

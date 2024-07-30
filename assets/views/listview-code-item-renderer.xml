@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Code Based Item Renderer" />
     <listview id="lv1" width="450" height="200">
         <my-list-view-item-renderer />

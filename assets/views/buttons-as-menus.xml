@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Left / Right Button Menus" />
     
     <hbox style="border: 1px solid $normal-border-color;padding-left:1px;padding-right:1px;" width="100%">

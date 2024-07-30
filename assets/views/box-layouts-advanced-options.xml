@@ -1,0 +1,22 @@
+<vbox width="100%" style="padding:10px">
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="" />
+        
+            <box id="box1" width="200" height="200" styleName="outline">
+
+            </box>
+        </vbox>
+
+        <vbox width="200">
+            <section-header text="Options" />
+            <grid>
+                <label text="Width:" verticalAlign="center" />
+                <slider pos="200" min="320" max="500" onchange="box1.width = this.value" />
+                
+                <label text="Height:" verticalAlign="center" />
+                <slider pos="200" min="320" max="500" onchange="box1.height = this.value" />
+            </grid>
+        </vbox>
+    </hbox>
+</vbox>

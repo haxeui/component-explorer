@@ -1,4 +1,4 @@
-<vbox width="100%">
+<vbox width="100%" style="padding:10px;">
     <section-header text="Default Notifications" />
     <button id="basicNotificationButton" text="Basic Notification" />
     <button id="nonExpiringNotificationButton" text="Non-Expiring Notification" />
