@@ -51,7 +51,7 @@
         
         <vbox width="25%" height="100%" style="padding-top: 0px;">
             <hbox width="100%" height="100%" style="padding-top: 20px">
-                <treeview id="mainTree" width="100%" height="100%" styleName="full-width borderless" style="border: none;mode:mobile;" allowFocus="false" />
+                <treeview id="mainTree" width="100%" height="100%" styleName="full-width borderless" style="border: none;" allowFocus="false" />
             </hbox>    
         </vbox>    
     </box>   

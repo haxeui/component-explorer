@@ -1,11 +1,10 @@
 <vbox width="100%" height="100%" style="padding:10px;">
     <grid width="100%" height="100%">
-        <iframe url="http://haxeui.org" width="50%" height="50%" />
-        <iframe url="http://haxeui.org" width="50%" height="50%" />
+        <iframe url="https://haxeui.org" width="50%" height="50%" />
+        <iframe url="https://haxeui.org" width="50%" height="50%" />
         
-        <iframe url="http://haxeui.org" width="50%" height="50%" />
-        <iframe url="http://haxeui.org" width="50%" height="50%" />
+        <iframe url="https://haxeui.org" width="50%" height="50%" />
+        <iframe url="https://haxeui.org" width="50%" height="50%" />
     </grid>
-    <button text="Show In Dialog" onclick="new CustomComponentDialog().show()" />
 </vbox>
     

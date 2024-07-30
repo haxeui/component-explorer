@@ -3,31 +3,31 @@
         using css to set layouts can be extremely useful for creating response layouts automatically using css media queries
     -->
     <style>
-        #box1 {
+        #css-box1 {
             layout: horizontal;
         }
-        #box2 {
+        #css-box2 {
             layout: vertical;
         }
-        #box3 {
+        #css-box3 {
             layout: grid;
             layout-columns: 3;
         }
     </style>
 
-    <box id="box1" styleName="outline" style="padding:5px;">
+    <box id="css-box1" styleName="outline" style="padding:5px;">
         <box width="100" height="25" style="background-color: #B41C2B;border:1px solid #B41C2B;background-opacity: .1" />
         <box width="100" height="25" style="background-color: #009F42;border:1px solid #009F42;background-opacity: .1" />
         <box width="100" height="25" style="background-color: #2D70E7;border:1px solid #2D70E7;background-opacity: .1" />
     </box>
 
-    <box id="box2" styleName="outline" style="padding:5px;">
+    <box id="css-box2" styleName="outline" style="padding:5px;">
         <box width="100" height="25" style="background-color: #B41C2B;border:1px solid #B41C2B;background-opacity: .1" />
         <box width="100" height="25" style="background-color: #009F42;border:1px solid #009F42;background-opacity: .1" />
         <box width="100" height="25" style="background-color: #2D70E7;border:1px solid #2D70E7;background-opacity: .1" />
     </box>
 
-    <box id="box3" styleName="outline" style="padding:5px;">
+    <box id="css-box3" styleName="outline" style="padding:5px;">
         <box width="100" height="25" style="background-color: #B41C2B;border:1px solid #B41C2B;background-opacity: .1" />
         <box width="100" height="25" style="background-color: #009F42;border:1px solid #009F42;background-opacity: .1" />
         <box width="100" height="25" style="background-color: #2D70E7;border:1px solid #2D70E7;background-opacity: .1" />
