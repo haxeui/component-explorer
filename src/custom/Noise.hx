@@ -1,5 +1,6 @@
 package custom;
 
+import haxe.ui.events.UIEvent;
 import haxe.io.Bytes;
 import haxe.ui.Toolkit;
 import haxe.ui.components.Canvas;
@@ -15,16 +16,28 @@ class Noise extends Canvas {
         super();
         componentGraphics.setProperty("html5.graphics.method", "canvas");
     }
-    
-    private override function onReady() {
-        super.onReady();
-        pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
+
+    private var _showNextFrame = false;
+
+    @:bind(this, UIEvent.SHOWN)
+    private function onShown(_) {
+        if (_showNextFrame) return;
+        _showNextFrame = true;
+        if (pixels == null) {
+            pixels = Bytes.alloc(Std.int(this.width * this.height * 4));
+        }
         frame();
+    }
+
+    @:bind(this, UIEvent.HIDDEN)
+    private function onHidden(_) {
+        _showNextFrame = false;
     }
     
     var skipFrame:Bool = false; // lets just slow it down in a hacky way bu skipping every other "frame"
     private function frame() {
-        if (skipFrame == true) {
+        if (!_showNextFrame) return;
+        if (skipFrame) {
             skipFrame = false;
             Toolkit.callLater(frame);
             return;

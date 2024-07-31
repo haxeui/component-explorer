@@ -1,14 +1,24 @@
 package custom;
 
+import haxe.ui.events.UIEvent;
 import haxe.ui.Toolkit;
 import haxe.ui.components.Canvas;
 import haxe.ui.geom.Point;
 import haxe.ui.graphics.ComponentGraphics;
 
 class DemoGraph extends Canvas {
-    public function new() {
-        super();
+    private var _showNextFrame = false;
+
+    @:bind(this, UIEvent.SHOWN)
+    private function onShown(_) {
+        if (_showNextFrame) return;
+        _showNextFrame = true;
         frame();
+    }
+
+    @:bind(this, UIEvent.HIDDEN)
+    private function onHidden(_) {
+        _showNextFrame = false;
     }
     
     private static var offset1:Float = 0;
@@ -24,6 +34,7 @@ class DemoGraph extends Canvas {
     private var _pointCDirection = 1;
     private var _pointCOffset:Float = 0;
     private function frame() {
+        if (!_showNextFrame) return;
         componentGraphics.clear();
         
         drawGrid(componentGraphics, 520, 420, 10);
