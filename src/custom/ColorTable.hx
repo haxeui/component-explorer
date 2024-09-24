@@ -20,6 +20,10 @@ class ColorTable extends Canvas {
     }
     
     private function frame() {
+        if (_isDisposed) {
+            return;
+        }
+
         drawColorTable(componentGraphics, Std.int(this.width), Std.int(this.height), 1);
     }
     

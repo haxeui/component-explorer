@@ -24,6 +24,10 @@ class Noise extends Canvas {
     
     var skipFrame:Bool = false; // lets just slow it down in a hacky way bu skipping every other "frame"
     private function frame() {
+        if (_isDisposed) {
+            return;
+        }
+
         if (skipFrame == true) {
             skipFrame = false;
             Toolkit.callLater(frame);

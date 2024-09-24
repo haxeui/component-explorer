@@ -83,3 +83,11 @@
 .normal-border-color {
     border-color: $normal-border-color;
 }
+
+.mini-badge {
+    font-size: 18px;
+    background-color:$accent-color;
+    color:white;
+    border-radius:4px;
+    padding: 1px 3px;
+}

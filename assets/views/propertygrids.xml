@@ -2,116 +2,150 @@
 <vbox style="padding:10px;">
     <hbox width="100%">
         <vbox width="100%">
-            <section-header text="Default Property Grids" />
+            <section-header text="Simple Property Grids" />
             
-            <hbox>
-                <property-grid id="pg1" width="250" height="300">
+            <hbox width="100%">
+                <property-grid id="pg1" width="100%" height="300">
                     <property-group text="Primary Group">
-                        <property id="stringProp" label="String Property" value="Value 1" />
-                        <property id="boolProp" label="Bool Property" type="boolean" value="true" />
-                        <property id="intProp" label="Int Property" type="int" value="101" />
-                        <property id="listProp" label="List Property" type="list" value="Item 1">
-                            <data>
-                                <item text="Item 1" />
-                                <item text="Item 2" />
-                                <item text="Item 3" />
-                                <item text="Item 4" />
-                                <item text="Item 5" />
-                                <item text="Item 6" />
-                            </data>
-                        </property>    
-                    </property-group>
-                    
-                    <property-group text="Secondary Group">
-                        <property label="String Property" value="Value 2" />
-                        <property label="Bool Property" type="boolean" value="false" />
-                        <property label="Int Property" type="int" value="102" />
+                        <property label="String Property" value="Value 1" />
+                        <property label="Bool Property" type="boolean" value="true" />
+                        <property label="Number Property" type="number" value="101" />
                         <property label="List Property" type="list" value="Item 2">
                             <data>
                                 <item text="Item 1" />
                                 <item text="Item 2" />
                                 <item text="Item 3" />
                                 <item text="Item 4" />
-                                <item text="Item 5" />
-                                <item text="Item 6" />
                             </data>
                         </property>    
+                        <property label="Options Property" type="options" value="B">
+                            <data>
+                                <item text="A" />
+                                <item text="B" />
+                            </data>
+                        </property>    
+                        <property label="Color Property" type="color" value="#2d70e7" />    s
                     </property-group>
                     
-                    <property-group text="Tertiary Group">
-                        <property label="String Property" value="Value 3" />
-                        <property label="Bool Property" type="boolean" value="true" />
-                        <property label="Int Property" type="int" value="103" />
+                    <property-group text="Secondary Group">
+                        <property label="String Property" value="Value 2" />
+                        <property label="Bool Property" type="boolean" value="false" />
+                        <property label="Number Property" type="number" value="202" />
                         <property label="List Property" type="list" value="Item 3">
                             <data>
                                 <item text="Item 1" />
                                 <item text="Item 2" />
                                 <item text="Item 3" />
                                 <item text="Item 4" />
-                                <item text="Item 5" />
-                                <item text="Item 6" />
                             </data>
                         </property>    
+                        <property label="Options Property" type="options" value="C">
+                            <data>
+                                <item text="A" />
+                                <item text="B" />
+                                <item text="C" />
+                            </data>
+                        </property>    
+                        <property label="Color Property" type="color" value="#009f42" />    
+                        <property label="Date Property" type="date" />    
+                    </property-group>
+                    <property-group text="Tertiary Group">
+                        <property label="String Property" value="Value 3" />
+                        <property label="Bool Property" type="boolean" value="false" />
+                        <property label="Number Property" type="number" value="303" />
+                        <property label="List Property" type="list" value="Item 4">
+                            <data>
+                                <item text="Item 1" />
+                                <item text="Item 2" />
+                                <item text="Item 3" />
+                                <item text="Item 4" />
+                            </data>
+                        </property>    
+                        <property label="Options Property" type="options" value="C">
+                            <data>
+                                <item text="A" />
+                                <item text="B" />
+                                <item text="C" />
+                            </data>
+                        </property>    
+                        <property label="Color Property" type="color" value="#b41c2b" />    
+                        <property label="Date Property" type="date" />    
                     </property-group>
                 </property-grid>
                 
-                <property-grid id="pg2" width="250" height="300">
+                <property-grid id="pg2" width="100%" height="300">
                     <property-group text="Primary Group">
-                        <hbox verticalAlign="center">
-                            <checkbox selected="true" verticalAlign="center" />
+                        <header style="spacing: 5px;">
+                            <checkbox selected="true" verticalAlign="center"/>
                             <switch verticalAlign="center" />
-                        </hbox>
-                        <property id="stringProp" label="String Property" value="Value 1" />
-                        <property id="boolProp" label="Bool Property" type="boolean" value="true" />
-                        <property id="intProp" label="Int Property" type="int" value="101" />
-                        <property id="listProp" label="List Property" type="list" value="Item 1">
-                            <data>
-                                <item text="Item 1" />
-                                <item text="Item 2" />
-                                <item text="Item 3" />
-                                <item text="Item 4" />
-                                <item text="Item 5" />
-                                <item text="Item 6" />
-                            </data>
-                        </property>    
-                    </property-group>
-                    
-                    <property-group text="Secondary Group">
-                        <progress indeterminate="true" width="50" verticalAlign="center" />
-                        <property label="String Property" value="Value 2" />
-                        <property label="Bool Property" type="boolean" value="false" />
-                        <property label="Int Property" type="int" value="102" />
+                        </header>
+                        <property label="String Property" value="Value 1" />
+                        <property label="Bool Property" type="boolean" value="true" />
+                        <property label="Number Property" type="number" value="101" />
                         <property label="List Property" type="list" value="Item 2">
                             <data>
                                 <item text="Item 1" />
                                 <item text="Item 2" />
                                 <item text="Item 3" />
                                 <item text="Item 4" />
-                                <item text="Item 5" />
-                                <item text="Item 6" />
                             </data>
                         </property>    
+                        <property label="Options Property" type="options" value="B">
+                            <data>
+                                <item text="A" />
+                                <item text="B" />
+                            </data>
+                        </property>    
+                        <property label="Color Property" type="color" value="#2d70e7" />    
                     </property-group>
                     
-                    <property-group text="Tertiary Group">
-                        <hbox verticalAlign="center">
-                            <image resource="icons/logo-haxe.png" />
-                            <image resource="icons/logo-javascript.png" />
-                            <image resource="icons/Status_Available.png" />
-                        </hbox>
-                        <property label="String Property" value="Value 3" />
-                        <property label="Bool Property" type="boolean" value="true" />
-                        <property label="Int Property" type="int" value="103" />
+                    <property-group text="Secondary Group">
+                        <header style="spacing: 5px;">
+                            <progress width="50" indeterminate="true" verticalAlign="center" />
+                            <spinner width="16" height="16" verticalAlign="center" />
+                        </header>
+                        <property label="String Property" value="Value 2" />
+                        <property label="Bool Property" type="boolean" value="false" />
+                        <property label="Number Property" type="number" value="202" />
                         <property label="List Property" type="list" value="Item 3">
                             <data>
                                 <item text="Item 1" />
                                 <item text="Item 2" />
                                 <item text="Item 3" />
                                 <item text="Item 4" />
-                                <item text="Item 5" />
-                                <item text="Item 6" />
                             </data>
                         </property>    
+                        <property label="Options Property" type="options" value="C">
+                            <data>
+                                <item text="A" />
+                                <item text="B" />
+                                <item text="C" />
+                            </data>
+                        </property>    
+                        <property label="Color Property" type="color" value="#009f42" />    
+                        <property label="Date Property" type="date" />    
+                    </property-group>
+                    <property-group text="Tertiary Group">
+                        <property label="String Property" value="Value 3" />
+                        <property label="Bool Property" type="boolean" value="false" />
+                        <property label="Number Property" type="number" value="303" />
+                        <property label="List Property" type="list" value="Item 4">
+                            <data>
+                                <item text="Item 1" />
+                                <item text="Item 2" />
+                                <item text="Item 3" />
+                                <item text="Item 4" />
+                            </data>
+                        </property>    
+                        <property label="Options Property" type="options" value="C">
+                            <data>
+                                <item text="A" />
+                                <item text="B" />
+                                <item text="C" />
+                            </data>
+                        </property>    
+                        <property label="Color Property" type="color" value="#b41c2b" />    
+                        <property label="Date Property" type="date" />    
                     </property-group>
                 </property-grid>
             </hbox>
@@ -122,5 +156,126 @@
             <section-header text="Options" />
             <checkbox text="Disable" onchange="pg1.disabled = pg2.disabled = this.selected" />
         </vbox>
-    </hbox>     
+    </hbox>    
+    
+    <spacer height="10" />
+    
+    <hbox width="100%">
+        <vbox width="100%">
+            <section-header text="Complex Property Grids" />
+            
+            <hbox width="100%">
+                <property-grid id="pg3" width="100%" height="300">
+                    <property label="Root 1" />
+                    <property label="Root 2" />
+                    <property-group text="Group 1">
+                        <property-group text="Group 1-1">
+                            <property-group text="Group 1-1-1">
+                                <property label="Prop 1-1-1-1" />
+                                <property label="Prop 1-1-1-2" />
+                            </property-group>
+                            <property-group text="Group 1-1-2">
+                                <property label="Prop 1-1-2-1" />
+                                <property label="Prop 1-1-2-2" />
+                            </property-group>
+                            <property label="Prop 1-1-1" />
+                            <property label="Prop 1-1-2" />
+                        </property-group>
+                        <property-group text="Group 1-2">
+                            <property-group text="Group 1-2-1">
+                                <property label="Prop 1-2-1-1" />
+                                <property label="Prop 1-2-1-2" />
+                            </property-group>
+                            <property-group text="Group 1-2-2">
+                                <property label="Prop 1-2-2-1" />
+                                <property label="Prop 1-2-2-2" />
+                            </property-group>
+                            <property label="Prop 1-2-1" />
+                            <property label="Prop 1-2-2" />
+                        </property-group>
+                        <property label="Prop 1-1" />
+                        <property label="Prop 1-2" />
+                    </property-group>
+                    <property-group text="Group 2">
+                        <property label="Prop 2-1" />
+                        <property-group text="Group 2-1">
+                            <property label="Prop 2-1-1" />
+                            <property-group text="Group 2-1-1">
+                                <property label="Prop 2-1-1-1" />
+                                <property label="Prop 2-1-1-2" />
+                            </property-group>
+                            <property label="Prop 2-1-2" />
+                            <property-group text="Group 2-1-2">
+                                <property label="Prop 2-1-2-1" />
+                                <property label="Prop 2-1-2-2" />
+                            </property-group>
+                            <property label="Prop 2-1-3" />
+                        </property-group>
+                        <property label="Prop 2-2" />
+                        <property-group text="Group 2-2">
+                            <property label="Prop 2-2-1" />
+                            <property-group text="Group 2-2-1">
+                                <property label="Prop 2-2-1-1" />
+                                <property label="Prop 2-2-1-2" />
+                            </property-group>
+                            <property label="Prop 2-2-2" />
+                            <property-group text="Group 2-2-2">
+                                <property label="Prop 2-2-2-1" />
+                                <property label="Prop 2-2-2-2" />
+                            </property-group>
+                            <property label="Prop 2-2-3" />
+                        </property-group>
+                        <property label="Prop 2-3" />
+                    </property-group>
+                    <property label="Root 3" />
+                    <property label="Root 4" />
+                </property-grid>
+                
+                <property-grid id="pg4" width="100%" height="300">
+                    <property label="Name" value="Object-123" />
+                    <property label="Color" type="color" value="#2d70e7" />    
+                    <property type="rotation-xyz" value="1;2;3">    
+                        <hbox width="100%" verticalAlign="center" style="padding-right: 5px;">
+                            <label text="Rotation" width="100%" verticalAlign="center"/>
+                            <image resource="haxeui-core/styles/shared/info-small.png" tooltip="Anything can go in a property label" />
+                        </hbox>
+                    </property>
+                    <property label="Name" type="options" value="GC">
+                        <hbox width="100%" height="100%" verticalAlign="center">
+                            <label text="Memory" width="100%" verticalAlign="center"/>
+                            <mini-graph width="100%" height="100%" style="border-left:1px solid $normal-border-color;" />
+                        </hbox>
+                        <data>
+                            <item text="GC" />
+                            <item text="GC+" />
+                        </data>
+                    </property>
+                    <property-group text="Additional Properties">
+                        <property-group text="Diagnostics">
+                            <header height="100%">
+                                <mini-graph width="100" height="100%" />
+                            </header>
+                            <property label="Make it all work" type="boolean" value="true" />
+                            <property label="Make it all fast" type="boolean" value="true" />
+                        </property-group>
+                        <property label="Secondary Color" type="color" value="#009f42" />
+                        <property-group-vector text="Position" />
+                        <property-group-vector text="Rotation" />
+                        <property-group-array text="Other Colors" />
+                    </property-group>
+                    <property label="Another Prop A" value="Value A" />
+                    <property label="Another Prop B" value="Value B" />
+                    <property label="Another Prop C" value="Value C" />
+                    <property label="Another Prop D" value="Value D" />
+                </property-grid>
+            </hbox>
+            
+        </vbox>
+        
+        <vbox width="200">
+            <section-header text="Options" />
+            <checkbox text="Disable" onchange="pg3.disabled = pg4.disabled = this.selected" />
+        </vbox>
+    </hbox>    
+
 </vbox>

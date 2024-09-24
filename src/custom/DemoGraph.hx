@@ -24,6 +24,10 @@ class DemoGraph extends Canvas {
     private var _pointCDirection = 1;
     private var _pointCOffset:Float = 0;
     private function frame() {
+        if (_isDisposed) {
+            return;
+        }
+        
         componentGraphics.clear();
         
         drawGrid(componentGraphics, 520, 420, 10);
