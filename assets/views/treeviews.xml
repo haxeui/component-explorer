@@ -18,6 +18,7 @@
         <vbox width="100%">
             <section-header text="Custom Treeviews" />
             <hbox>
+                <!-- styleName="full-width" must be set when using custom item renderers to correctly render things for now -->
                 <tree-view id="tv2" width="360" height="300" styleName="full-width">
                     <item-renderer layout="horizontal" width="100%">
                         <checkbox id="checked" verticalAlign="center" />
