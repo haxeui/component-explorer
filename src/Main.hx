@@ -6,7 +6,7 @@ import custom.Preloader;
 
 class Main {
     public static function main() {
-        #if js
+        #if haxeui_html5
         new haxe.ui.editors.code.monaco.MonacoLoader().register(null);
         #end
         //var dark = Browser.window.matchMedia('(prefers-color-scheme: dark)').matches;

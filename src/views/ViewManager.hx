@@ -136,7 +136,7 @@ class ViewManager {
         viewContainer.percentHeight = 100;
         
         if (ext == "hx" || ext == "xml" || ext == "css" || ext == "properties") {
-            #if js
+            #if haxeui_html5
             var editor = new haxe.ui.editors.code.CodeEditor();
             editor.percentWidth = 100;
             editor.percentHeight = 100;

@@ -18,6 +18,7 @@
 
     <components>
         <component package="custom" />
+        <exclude pattern="src/custom/IFrame.hx" unless="haxeui_html5" />
     </components>
     
     <scriptlets>
