@@ -8,6 +8,8 @@ class CustomComponentView extends View {
     }
 }
 
+#if haxeui_html5
+
 @:xml('
 <dialog title="Custom Component In Dialog" width="600" height="600" styleName="no-padding">
     <iframe url="http://haxeui.org" width="100%" height="100%" />
@@ -20,3 +22,5 @@ class CustomComponentDialog extends Dialog {
         buttons = DialogButton.CLOSE;
     }
 }
+
+#end

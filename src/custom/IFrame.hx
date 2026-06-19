@@ -1,5 +1,7 @@
 package custom;
 
+#if haxeui_html5
+
 import haxe.ui.backend.html5.HtmlUtils;
 import haxe.ui.containers.Box;
 import js.Browser;
@@ -47,3 +49,5 @@ class IFrame extends Box {
         return b;
     }
 }
+
+#end

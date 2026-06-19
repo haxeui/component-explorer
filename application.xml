@@ -15,4 +15,6 @@
 
     <haxelib name="haxeui-core" />
     <haxelib name="haxeui-openfl" />
+    
+    <define name="haxeui_allow_drag_any_component"/>
 </project>
